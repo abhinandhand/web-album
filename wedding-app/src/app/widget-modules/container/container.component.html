@@ -1,0 +1,55 @@
+<div>
+<div style="padding-left: 0%;padding-right: 0%;" class="middle-container">
+  <div id="con-marriage-info">
+      <app-couplestory [imageUrl]="weddingData?.data?.welcome"></app-couplestory>
+  </div>
+
+  <div id="con-album-label">
+      <img src="assets/rectangle.svg">
+      <span id="album" style="padding-left: 20px;padding-right: 17px;">ALBUMS</span>
+      <img style="transform: scale(-1);" src="assets/rectangle.svg">
+   
+  </div>
+
+  <div class="con-event-conatiner">
+    <app-wedding-events [weddingEventList] = "weddingData?.data?.album"></app-wedding-events>
+  </div>
+
+ 
+
+<!-- <div style="position: absolute">
+  <h1>Yooooo</h1>
+
+</div>
+
+  <div id="event-info">
+    <app-wedding-events [weddingEventList] = "weddingData?.data?.eventList"></app-wedding-events>
+  </div> -->
+  
+
+</div>
+  <div class="top-left-mandala">
+    <img class="img-mandala" src="assets/mandala.png"/>
+  </div>
+  <div class="top-right-mandala">
+      <img class="img-mandala" src="assets/mandala.png"/>
+    </div>
+    <div class="middle-left-mandala">
+        <img class="img-mandala" src="assets/mandala.png"/>
+      </div>
+      <div class="middle-right-mandala">
+          <img class="img-mandala" src="assets/mandala.png"/>
+        </div>
+        
+  
+  
+
+
+
+
+
+<!-- 
+<div class="bottom-middle-mandala">
+      <img class="mandala" src="assets/mandala.png"/>
+    </div> -->
+</div>

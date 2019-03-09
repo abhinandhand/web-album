@@ -1,0 +1,16 @@
+.footer {
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+.with-love {
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Great Vibes, Regular;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}

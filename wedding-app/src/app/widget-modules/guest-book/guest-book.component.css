@@ -1,0 +1,60 @@
+.guest-view {
+    height: 200px;
+    color: #707070;
+}
+.guest-book-label {
+    color: #1D1D1D;
+    font-family: Playfair Display, Regular;
+    font-size: 50px;
+    line-height: 67px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    text-align: center;
+
+}
+.wish-style{
+    color: #707070;
+    font-family: Great Vibes, Regular;
+    font-size: 44px;
+    line-height: 83px;
+    text-align: center;
+}
+input {
+    background-color: inherit;
+    height: 60px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #75726e7a;
+    font-size: 44px;
+    font-family: Great Vibes, Regular;
+    line-height: 83px;
+    color:#707070;
+    padding-left: 20px;
+}
+
+textarea {
+    background-color: inherit;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 2px solid #75726e7a;
+    font-size: 44px;
+    font-family: Great Vibes, Regular;
+    line-height: 83px;
+    color:#707070;
+    padding-left: 20px;
+}
+#wish-button{
+    width: 536px;
+    height: 125px;
+    font-size: 30px;
+    line-height: 80px;
+    font-family: Playfair Display, Regular;
+    background-color: #445563;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+}
