@@ -9,9 +9,8 @@ import { WeddingOverviewService } from './data-access/wedding-overview/wedding-o
 export class AppComponent implements OnInit {
 
   constructor() {}
-  
   ngOnInit(): void {
-    
+
 
   }
 
@@ -31,4 +30,6 @@ export class AppComponent implements OnInit {
       eventValue: 8
     });
   }
+
+
 }

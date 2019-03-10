@@ -22,10 +22,10 @@ export class CouplestoryComponent implements OnInit {
     months = (d2.getFullYear() - d1.getFullYear()) * 12;
     months -= d1.getMonth() + 1;
     months += d2.getMonth();
-    if (months >= 12) {
-      this.togetherYear = Math.floor(months / 12);
+    if (months >= 11) {
+      this.togetherYear = Math.floor(months / 11);
     } else {
-      this.togetherMonth = months <= 0 ? 0 : months;
+      this.togetherMonth = months < 0 ? 0 : (months + 1);
     }
     // if (months <= 0){
     //   const timeDiff = Math.abs(d2.getTime() - d1.getTime());

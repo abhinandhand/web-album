@@ -6,24 +6,24 @@
 .top-left-mandala {
     top: 0px;
     position: absolute;
-    left: 0px;
+    left: 1%;
 }
 .top-right-mandala {
     top: 0%;
     position: absolute;
-    right: 13px;
+    right: 0px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 .middle-left-mandala {
     top: 50%;
     position: absolute;
-    left: 0px;
+    left: 1%;
 }
 .middle-right-mandala {
     top: 50%;
     position: absolute;
-    right: 13px;
+    right: 0px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }

@@ -1,4 +1,4 @@
-<div >
+<div id="events">
          <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
                                     <div  *ngIf="event.type === 'large'" class="event-large-card">
                                              <img style="max-height: inherit;width: 100%" [src]="event.background"/>

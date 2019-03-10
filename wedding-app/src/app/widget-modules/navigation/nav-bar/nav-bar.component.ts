@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input } from '@angular/core';
+
+
+
 declare var $:any;
 @Component({
   selector: 'app-nav-bar',
@@ -21,7 +24,8 @@ export class NavBarComponent implements OnInit {
   sendGA() {
     setTimeout(() => {
       (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + location.hash});
-     }, 500)
+     }, 500);
    
   }
+
 }
