@@ -1,0 +1,44 @@
+
+<div class="row">
+    <div style="height: 68px" class="col col-md-12 col-lg-12">
+            <app-nav-bar  [imageUrl]="wedddingOverviewData?.data?.welcome"></app-nav-bar>
+    </div>
+   <div  class="col-sm-12 col-xs-12 col-12 col-md-12 col-lg-12 col-xl-12" style="width: 100%;">
+        <!-- <div  [ngStyle]="{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}" class="key-photo"> </div> -->
+        <div class="key-photo">
+                <!-- <div  [ngStyle]="{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}" class="key-photo"> </div>  -->
+                <!-- <img style="width: 100%" class="img-fluid" src="assets/key-photo.png"> -->
+            <img id="bg-image"  class="img-fluid" [src]="wedddingOverviewData?.data?.welcome">
+        </div>
+      <div class="parent-container"  >
+                <div  class="row">
+                    <div class="col-md-12 col-lg-12 col-xl-12" style="padding-left: 0px;padding-right: 0px" >
+                        <div   class="couple-container">
+                                <app-container   [weddingData]="wedddingOverviewData" ></app-container>
+                        </div>
+                                
+                        </div>
+                       
+                </div>
+                 <div class="row">
+                  
+                            <div style="min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;">
+                            <app-guest-book (sendWishEvent)="setGuestBookWishes($event)"></app-guest-book>
+                            <app-footer></app-footer>
+                    </div>
+                        
+                </div> 
+            </div>  
+    </div> 
+   
+ 
+<div>
+     
+</div>
+      <!-- <div style="min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;top: 2900px">  -->
+      <!-- <app-nav-bar></app-nav-bar>
+            <app-couplestory [couplestory] = "wedddingOverviewData?.data?.coupleStory"></app-couplestory>
+            <app-wedding-events [weddingDate] = "wedddingOverviewData?.data?.dateOfWedding" 
+            [weddingEventList] = "wedddingOverviewData?.data?.eventList"></app-wedding-events>
+            <app-guest-book></app-guest-book>
+           -->

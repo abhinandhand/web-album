@@ -1,0 +1,40 @@
+<div id="events">
+         <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
+                                    <div  *ngIf="event.type === 'large'" class="event-large-card">
+                                             <img style="max-height: inherit;width: 100%" [src]="event.background"/>
+                                            <div class="event-label">{{event.title}}</div>
+                                              
+                                    </div>
+                                    <div *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
+                                            <img style="max-height: inherit;width: 100%" [src]="event.background"/>
+                                                    <div class="event-label">{{event.title}}</div>
+                                     </div>
+        </div>
+
+
+
+                        
+        <div id="bottom-mandala" class="">
+                        <img style="width:68vw" src="assets/mandala-bottom.png"/>
+         </div>
+  <!-- <div *ngFor="let eventList of weddingEventList;index as i">
+            <div [ngClass]="i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)" *ngFor="let event of eventList.row;index as j">
+                <div  *ngIf="i === 0" class="event-large-card">
+                         <img style="max-height: inherit;width: 100%" [src]="event.backgroundImage"/>
+                        <div class="event-label">{{event.name}}</div>
+                          
+                </div>
+                <div *ngIf="i === 1" class="event-small-card" [ngClass]="(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'">
+                        <img style="max-height: inherit;width: 100%" [src]="event.backgroundImage"/>
+                                <div class="event-label">{{event.name}}</div>
+                 </div>
+            </div>
+    </div> -->
+    
+    <!-- <div *ngIf="albumOverviewData?.data?.albumItems?.length>0">
+        <app-albums [albumArray] ="albumOverviewData?.data?.albumItems"></app-albums>
+    </div>
+    <div *ngIf="albumOverviewData?.data?.albumItems?.length>0">
+            <app-albums [albumArray] ="albumOverviewData?.data?.albumItems"></app-albums>
+        </div> -->
+</div>

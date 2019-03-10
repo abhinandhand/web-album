@@ -1,0 +1,49 @@
+#couple-name{
+    text-align: center;
+    font-family: Great Vibes, Regular;
+    /* font-size: 142px; */
+    font-size: 8.395vw;
+    line-height: 178px;
+    color: #D0CECA;
+    margin-top: 32px;
+    z-index: 200;
+
+}
+#marriage-date {
+    text-align: center;
+    font-family: Playfair Display, Regular;
+    font-size: 60px;
+    line-height: 80px;
+    color: #303B44;
+}
+#marriage-date-summary{
+    text-align: center;
+    font-family: Playfair Display, Regular;
+    font-size: 30px;
+    line-height: 40px;
+    word-spacing: 10;
+    color: #303B44;
+    margin-top: 8px;
+
+}
+.couple-name-div{
+    align-items: center;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.couple-name-bg{
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff52;
+    position: absolute;
+    /* background: url('http://localhost:8600/assets/key-photo.png'); */
+    background-position: bottom;
+    z-index: -1;
+    filter: blur(26px);
+}
+.couple-name-bg:before{
+    
+}

@@ -1,0 +1,90 @@
+.img-mandala{
+    width: 18vw;
+    height: 609.75px;
+    opacity: .81;
+}
+.top-left-mandala {
+    top: 0px;
+    position: absolute;
+    left: 1%;
+}
+.top-right-mandala {
+    top: 0%;
+    position: absolute;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.middle-left-mandala {
+    top: 50%;
+    position: absolute;
+    left: 1%;
+}
+.middle-right-mandala {
+    top: 50%;
+    position: absolute;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.bottom-img-mandala{
+    width: 335px;
+    height: 960px;
+    opacity: .81;
+}
+.bottom-middle-mandala {
+    bottom: 0px;
+    position: absolute;
+    left: auto;
+    right: auto;
+    -webkit-transform: scaleX(-1);
+    transform: rotate(-90deg);
+}
+#con-marriage-info{
+    height: 420PX;
+    width: 100%;
+    /* background-color: rgba(0,0,0, 0.4); */
+    position: absolute;
+    opacity: 0.8;
+    /* padding: 41px 0px 41px 0; */
+}
+#con-event-info {
+    height: 385PX;
+    background-color: #FFFF;
+    background-color: rgba(0,0,0, 0.4);
+    position: absolute;
+    left: 23%;
+    right: 23%;
+    top: -188px;
+    opacity: 0.8;
+
+}
+.middle-container {
+    position: absolute;
+    left: 21.6666%;
+    right: 21.666%;
+    top: -217px;
+}
+#con-album-label {
+    font-family: layfair Display, Regular;
+    font-size: 3.4895vw;
+    text-align: center;
+    word-spacing: 10;
+    line-height: 67px;
+    color: #445563;
+    opacity: 1;
+    position: absolute;
+    top: 500px;
+    width: 100%;
+}
+.con-event-conatiner {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+    /* min-height: 200px; */
+}
+/* .bottom-img-mandala{
+    width: 59vw;
+    height: 216px;
+    opacity: .81;
+} */
