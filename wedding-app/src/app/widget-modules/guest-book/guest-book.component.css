@@ -3,12 +3,12 @@
     color: #707070;
 }
 .guest-book-label {
+    padding-top: 93px;
     color: #1D1D1D;
     font-family: Playfair Display, Regular;
     font-size: 50px;
     line-height: 67px;
     text-transform: uppercase;
-    margin-top: 100px;
     text-align: center;
 
 }

@@ -48,20 +48,23 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 812px) {
   
     .event-small-card-conatiner {
         width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 30px;
     }
     .small-card-right-padding{
         padding-right: 0px;
     }
     .small-card-left-padding{
-        padding-right: 0px;
+        padding-left: 0px;
     }
     .event-label{
-        font-size: 5.7vw;
+        font-size: 5.2vw;
+    }
+    .event-big-card-conatiner {
+        margin-bottom: 30px;
     }
     
   }
@@ -72,20 +75,23 @@
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
+    .event-big-card-conatiner {
+        margin-bottom: 30px;
+    }
     
     .event-small-card-conatiner {
         width: 100%;
-        padding-bottom: 10px;
+        padding-bottom: 30px;
     }
 
    .small-card-right-padding{
        padding-right: 0px;
    }
    .small-card-left-padding{
-    padding-right: 0px;
+    padding-left: 0px;
 }
 .event-label{
-    font-size: 5.7vw;
+    font-size: 5vw;
 }
     
   }

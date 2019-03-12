@@ -44,8 +44,15 @@
     font-weight: bold;
 
 }
+.nav-height{
+    height: 68px;
+}
 /*Landscape Mobile*/
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 812px) {
+
+    .nav-height{
+        height: 48px;
+    }
   
     .nav-items-flex {
         font-size: 0.950rem;
@@ -54,6 +61,10 @@
   }
 /*Portrait Mobile */
   @media (min-width: 320px) and (max-width: 480px) {
+
+    .nav-height{
+        height: 48px;
+    }
     .nav-items-flex {
         font-size: 0.950rem;
     }

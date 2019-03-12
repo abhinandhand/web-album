@@ -12,41 +12,23 @@ export class HomeComponent implements OnInit {
   wedddingOverviewData: any;
   isSetBoolean = true;
   ngOnInit() {
-
+    this.fetchWedOverview();
     $('#bg-image').on('load',function(){
-     // alert();
-      /*parent container deciding top position*/
-$('.parent-container').css({'top' : $('#bg-image').height()});
+     $('.parent-container').css({'top' : $('#bg-image').height()});
     });
-    
     $(window).on('load' , (function() {
-      /*parent container deciding top position*/
-$('.parent-container').css({'top' : $('#bg-image').height()});
-/*couple container deciding height*/
-$('.couple-container').height($('.con-event-conatiner').height() +
-$('#marriage-date-summary').height() + $('#con-album-label').height()+
-$('#bottom-mandala').height() - 95);
-      setTimeout(() => {
-/*parent container deciding top position*/
-$('.parent-container').css({'top' : $('#bg-image').height()});
-/*couple container deciding height*/
-$('.couple-container').height($('.con-event-conatiner').height() +
-$('#marriage-date-summary').height() + $('#con-album-label').height()+
-$('#bottom-mandala').height() - 95);
-      },1000);
+    $('.parent-container').css({'top' : $('#bg-image').height()});
     }));
     $( window ).resize(function() {
-     setContainer();
-    });
-    this.fetchWedOverview();
-    function setContainer () {
-      /*parent container deciding top position*/
       $('.parent-container').css({'top' : $('#bg-image').height()});
-      /*couple container deciding height*/
-      $('.couple-container').height($('.con-event-conatiner').height() +
-      $('#marriage-date-summary').height() + $('#con-album-label').height()+
-      $('#bottom-mandala').height() - 95);
-    }
+    });
+    // function setContainer () {
+    //   /*parent container deciding top position*/
+    //   $('.parent-container').css({'top' : $('#bg-image').height()});
+    //   /*couple container deciding height*/
+    //   $('.couple-container').height($('.con-event-container').height() +
+    //   $('.duration-summary').height() + $('#con-album-label').height() -95);
+    // }
   }
 
   

@@ -6,7 +6,7 @@
 .top-left-mandala {
     top: 0px;
     position: absolute;
-    left: 1%;
+    left: 0%;
 }
 .top-right-mandala {
     top: 0%;
@@ -41,10 +41,9 @@
     transform: rotate(-90deg);
 }
 #con-marriage-info{
-    height: 420PX;
     width: 100%;
     /* background-color: rgba(0,0,0, 0.4); */
-    position: absolute;
+    /* position: absolute; */
     opacity: 0.8;
     /* padding: 41px 0px 41px 0; */
 }
@@ -60,10 +59,8 @@
 
 }
 .middle-container {
-    position: absolute;
-    left: 21.6666%;
-    right: 21.666%;
-    top: -217px;
+    margin-left: 21.666%;
+    margin-right: 21.666%;
 }
 #con-album-label {
     font-family: layfair Display, Regular;
@@ -73,12 +70,9 @@
     line-height: 67px;
     color: #445563;
     opacity: 1;
-    position: absolute;
-    top: 500px;
-    width: 100%;
+    margin-top: 20px;
 }
-.con-event-conatiner {
-    position: absolute;
+.con-event-container {
     top: 600px;
     width: 100%;
     /* min-height: 200px; */
@@ -95,17 +89,17 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 812px) {
   
     .middle-container {
         width: 100%;
         top: -116px;
-        left: 0;
-        right: 0;
+        margin-left: 0%;
+        margin-right: 0%;
         
     }
     #con-marriage-info{
-        height: 232px;
+        height: 116px;
         left: 10.6666%;
         right: 10.666%;
         width: auto;
@@ -118,7 +112,7 @@
     .con-album-label-hr{
         width: 18%;
     }
-    .con-event-conatiner {
+    .con-event-container {
         top: 383px;
         background-color: #E4E0DD;
     }
@@ -129,11 +123,11 @@
     .middle-container {
         top: -88px;
         width: 100%;
-        left: 0;
-        right: 0;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     #con-marriage-info{
-        height: 178px;
+        height: 89px;
         left: 10.6666%;
         right: 10.666%;
         width: auto;
@@ -147,7 +141,7 @@
     .con-album-label-hr{
         width: 0%;
     }
-    .con-event-conatiner {
+    .con-event-container {
         top: 300px;
         background-color: #E4E0DD;
     }
