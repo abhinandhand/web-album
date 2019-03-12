@@ -37,13 +37,91 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ffffff52;
+    background: #526b53de;
     position: absolute;
-    /* background: url('http://localhost:8600/assets/key-photo.png'); */
     background-position: bottom;
     z-index: -1;
-    filter: blur(26px);
+    /* -webkit-filter: blur(26px); */
+    /* filter: blur(26px); */
+}
+.duration{
+    font-size: 34px;
 }
 .couple-name-bg:before{
     
 }
+.duration-summary {
+    height:210px;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+     #couple-name{
+        font-size: 13.395vw;
+        line-height: 0;
+        color: #D0CECA;
+        margin-top: 17px;
+       }
+       .couple-name-div{
+        height: 116px;
+       }
+
+       #marriage-date-summary{
+        font-size: 4vw;
+        line-height: 30px;
+       }
+       .duration{
+        font-size: 4vw;
+      }
+      #marriage-date {
+        font-size: 6.5vw;
+        line-height: 35px;
+      }
+      .duration-summary {
+        height: 116px;
+      }
+    
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+   #couple-name{
+    font-size: 13.395vw;
+    line-height: 0;
+    color: #D0CECA;
+    margin-top: 17px;
+   }
+   .couple-name-div{
+    height: 89px;
+   }
+
+   #marriage-date-summary{
+           font-size: 4vw;
+           line-height: 30px;
+       }
+    .duration{
+        font-size: 4vw;
+      }
+    #marriage-date {
+        font-size: 6vw;
+        line-height: 28px;
+      }
+
+      .duration-summary{
+        height: 89px;
+      }
+  }
+
+
+    

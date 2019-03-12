@@ -42,3 +42,50 @@
     display: flex;
     justify-content: center;
 }
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .event-small-card-conatiner {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .small-card-right-padding{
+        padding-right: 0px;
+    }
+    .small-card-left-padding{
+        padding-right: 0px;
+    }
+    .event-label{
+        font-size: 5.7vw;
+    }
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .event-small-card-conatiner {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+   .small-card-right-padding{
+       padding-right: 0px;
+   }
+   .small-card-left-padding{
+    padding-right: 0px;
+}
+.event-label{
+    font-size: 5.7vw;
+}
+    
+  }

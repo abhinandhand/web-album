@@ -88,3 +88,69 @@
     height: 216px;
     opacity: .81;
 } */
+
+
+  /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .middle-container {
+        width: 100%;
+        top: -116px;
+        left: 0;
+        right: 0;
+        
+    }
+    #con-marriage-info{
+        height: 232px;
+        left: 10.6666%;
+        right: 10.666%;
+        width: auto;
+    }
+    #con-album-label {
+        top: 282px;
+        font-size: 5.4895vw;
+    }
+    
+    .con-album-label-hr{
+        width: 18%;
+    }
+    .con-event-conatiner {
+        top: 383px;
+        background-color: #E4E0DD;
+    }
+  }
+
+/*Portrait Mobile */
+@media (min-width: 320px) and (max-width: 480px) {
+    .middle-container {
+        top: -88px;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    #con-marriage-info{
+        height: 178px;
+        left: 10.6666%;
+        right: 10.666%;
+        width: auto;
+    }
+
+    #con-album-label {
+        top: 222px;
+        font-size: 5.4895vw;
+    }
+
+    .con-album-label-hr{
+        width: 0%;
+    }
+    .con-event-conatiner {
+        top: 300px;
+        background-color: #E4E0DD;
+    }
+  }
+
+  

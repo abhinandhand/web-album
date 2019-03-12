@@ -44,3 +44,18 @@
     font-weight: bold;
 
 }
+/*Landscape Mobile*/
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .nav-items-flex {
+        font-size: 0.950rem;
+    }
+    
+  }
+/*Portrait Mobile */
+  @media (min-width: 320px) and (max-width: 480px) {
+    .nav-items-flex {
+        font-size: 0.950rem;
+    }
+  }
+  
