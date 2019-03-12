@@ -18,7 +18,7 @@
 .middle-left-mandala {
     top: 50%;
     position: absolute;
-    left: 1%;
+    left: 0;
 }
 .middle-right-mandala {
     top: 50%;
@@ -63,7 +63,7 @@
     margin-right: 21.666%;
 }
 #con-album-label {
-    font-family: layfair Display, Regular;
+    font-family: Playfair Display, Regular;
     font-size: 3.4895vw;
     text-align: center;
     word-spacing: 10;
