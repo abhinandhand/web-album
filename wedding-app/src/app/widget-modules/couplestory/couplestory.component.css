@@ -7,6 +7,7 @@
     color: #D0CECA;
     margin-top: 32px;
     z-index: 200;
+    
 
 }
 #marriage-date {
@@ -23,7 +24,6 @@
     line-height: 40px;
     word-spacing: 10;
     color: #303B44;
-    margin-top: 8px;
 
 }
 .couple-name-div{
@@ -32,6 +32,10 @@
     display: flex;
     justify-content: center;
     position: relative;
+    position: absolute;
+    top: -201px;
+    left: 21.6666%;
+    right: 21.666%;
 }
 .couple-name-bg{
     left: 0;
@@ -59,7 +63,7 @@
   ##Screen = B/w 481px to 767px
 */
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 812px) {
 
      #couple-name{
         font-size: 13.395vw;
@@ -69,6 +73,9 @@
        }
        .couple-name-div{
         height: 116px;
+        left: 7%;
+        right: 7%;
+        top: -116px;
        }
 
        #marriage-date-summary{
@@ -104,6 +111,9 @@
    }
    .couple-name-div{
     height: 89px;
+    left: 7%;
+    right: 7%;
+    top: -89px;
    }
 
    #marriage-date-summary{
