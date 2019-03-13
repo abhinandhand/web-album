@@ -10,9 +10,10 @@ declare var $:any;
 })
 export class NavBarComponent implements OnInit {
   @Input() imageUrl: string;
-
+  isCollapsed:boolean;
   constructor() { }
   ngOnInit() {
+    this.isCollapsed = true;
     $('guestlink').click(function() {
       // $( '#guestbook' ).scroll();
       $('html, body').animate({
@@ -25,6 +26,9 @@ export class NavBarComponent implements OnInit {
     setTimeout(() => {
       (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + location.hash});
      }, 500);
+  }
+  onCollapse() {
+    alert('jj');
   }
 
 }

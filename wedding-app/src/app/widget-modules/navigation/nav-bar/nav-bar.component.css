@@ -51,22 +51,31 @@
 @media (min-width: 481px) and (max-width: 812px) {
 
     .nav-height{
-        height: 48px;
+       height: unset;
     }
   
     .nav-items-flex {
         font-size: 0.950rem;
     }
-    
+    ul li{
+        z-index: 3;
+        padding:13px;
+        font-family: Playfair Display, Regular;
+    }
   }
 /*Portrait Mobile */
   @media (min-width: 320px) and (max-width: 480px) {
 
     .nav-height{
-        height: 48px;
+       height: unset;
     }
     .nav-items-flex {
         font-size: 0.950rem;
+    }
+    ul li{
+        z-index: 3;
+        padding:13px;
+        font-family: Playfair Display, Regular;
     }
   }
   
