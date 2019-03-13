@@ -12,4 +12,12 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  // fbShare(){
+  //   FB.ui({
+  //     display: 'popup',
+  //     method: 'share',
+  //     href: 'https://developers.facebook.com/docs/',
+  //   }, function(response){});
+  // }
+
 }
