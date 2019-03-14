@@ -1,13 +1,31 @@
 <div id="events">
+                
+                                
+               
+
          <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
                                     <div  *ngIf="event.type === 'large'" class="event-large-card">
-                                             <img style="max-height: inherit;width: 100%" [src]="event.background"/>
-                                            <div class="event-label">{{event.title}}</div>
+                                                <a  class="tilter tilter--1">
+                                                                <figure class="tilter__figure">
+                                                                        <img class="tilter__image" [src]="event.background" alt="img02" />
+                                                                        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                                                        <div class="event-label">{{event.title}}</div>
+                                                                </figure>
+                                                        </a>
+                                            <!-- <img style="max-height: inherit;width: 100%" [src]="event.background"/>
+                                            <div class="event-label">{{event.title}}</div> -->
                                               
                                     </div>
                                     <div *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
-                                            <img style="max-height: inherit;width: 100%" [src]="event.background"/>
-                                                    <div class="event-label">{{event.title}}</div>
+                                                <a  class="tilter tilter--1">
+                                                                <figure class="tilter__figure">
+                                                                        <img class="tilter__image" [src]="event.background" alt="img02" />
+                                                                        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                                                        <div class="event-label">{{event.title}}</div>
+                                                                </figure>
+                                                        </a>   
+                                        <!-- <img style="max-height: inherit;width: 100%" [src]="event.background"/>
+                                                    <div class="event-label">{{event.title}}</div> -->
                                      </div>
         </div>
 
