@@ -24,10 +24,14 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/anime.css",
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/jquery.min.js"
+              "src/assets/jquery.min.js",
+              "src/assets/js/anime.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/perspective.js"
             ]
           },
           "configurations": {
