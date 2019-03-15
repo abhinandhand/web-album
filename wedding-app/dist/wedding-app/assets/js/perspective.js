@@ -163,8 +163,7 @@
         });
     }
     init();
-    var pater = document.querySelector('.pater'),
-        paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+    var pater = document.querySelector('.pater');
 
     pater.addEventListener('mouseenter', function() {
         anime.remove(pathEl);

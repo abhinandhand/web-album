@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+declare var $:any;
 
 @Component({
   selector: 'app-albums',
@@ -11,20 +12,20 @@ export class AlbumsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  //   $(document).ready(function() {
-  //     $('#flipbook').turn({
-  //       width: 1000,
-  //       height: 600,
-  //       autoCenter: true
-  //     });
+    $(document).ready(function() {
+      $('#flipbook').turn({
+        width: 1000,
+        height: 600,
+        autoCenter: true
+      });
 
-  // });
-  }
+  });
+}
   ngAfterViewInit() {
-    // $('#flipbook').turn({
-    //   width: 1400,
-    //   height: 600,
-    //   autoCenter: true
-    // });
+    $('#flipbook').turn({
+      width: 1400,
+      height: 600,
+      autoCenter: true
+    });
   }
 }

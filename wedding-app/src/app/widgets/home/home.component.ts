@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { WeddingOverviewService } from '../../data-access/wedding-overview/wedding-overview.service';
 declare var $:any;
 declare var anime: any;
+declare var TiltFx: any;
 
 @Component({
   selector: 'app-home',
