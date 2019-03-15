@@ -339,20 +339,20 @@ var AlbumsComponent = /** @class */ (function () {
     function AlbumsComponent() {
     }
     AlbumsComponent.prototype.ngOnInit = function () {
-        //   $(document).ready(function() {
-        //     $('#flipbook').turn({
-        //       width: 1000,
-        //       height: 600,
-        //       autoCenter: true
-        //     });
-        // });
+        $(document).ready(function () {
+            $('#flipbook').turn({
+                width: 1000,
+                height: 600,
+                autoCenter: true
+            });
+        });
     };
     AlbumsComponent.prototype.ngAfterViewInit = function () {
-        // $('#flipbook').turn({
-        //   width: 1400,
-        //   height: 600,
-        //   autoCenter: true
-        // });
+        $('#flipbook').turn({
+            width: 1400,
+            height: 600,
+            autoCenter: true
+        });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
@@ -810,7 +810,7 @@ module.exports = ".event-big-card-conatiner {\r\n    width: 100%;\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"events\">\n         <div *ngFor=\"let event of weddingEventList;index as i\" [ngClass]=\"event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\">\n                                    <div  *ngIf=\"event.type === 'large'\" class=\"event-large-card\">\n                                             <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                            <div class=\"event-label\">{{event.title}}</div>\n                                              \n                                    </div>\n                                    <div *ngIf=\"event.type !== 'large'\" class=\"event-small-card\" [ngClass]=\"(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'\">\n                                            <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                                    <div class=\"event-label\">{{event.title}}</div>\n                                     </div>\n        </div>\n\n\n\n           <div class=\"d-none d-sm-none d-md-none d-lg-block\">\n                <div id=\"bottom-mandala\" >\n                        <img style=\"width:68vw\" src=\"assets/mandala-bottom.png\"/>\n                </div>\n           </div>             \n        \n  <!-- <div *ngFor=\"let eventList of weddingEventList;index as i\">\n            <div [ngClass]=\"i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\" *ngFor=\"let event of eventList.row;index as j\">\n                <div  *ngIf=\"i === 0\" class=\"event-large-card\">\n                         <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                        <div class=\"event-label\">{{event.name}}</div>\n                          \n                </div>\n                <div *ngIf=\"i === 1\" class=\"event-small-card\" [ngClass]=\"(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'\">\n                        <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                                <div class=\"event-label\">{{event.name}}</div>\n                 </div>\n            </div>\n    </div> -->\n    \n    <!-- <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n        <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n    </div>\n    <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n            <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n        </div> -->\n</div>"
+module.exports = "<div id=\"events\">\n                \n                                \n               \n\n         <div *ngFor=\"let event of weddingEventList;index as i\" [ngClass]=\"event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\">\n                                    <div  *ngIf=\"event.type === 'large'\" class=\"event-large-card\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>\n                                            <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                            <div class=\"event-label\">{{event.title}}</div> -->\n                                              \n                                    </div>\n                                    <div *ngIf=\"event.type !== 'large'\" class=\"event-small-card\" [ngClass]=\"(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>   \n                                        <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                                    <div class=\"event-label\">{{event.title}}</div> -->\n                                     </div>\n        </div>\n\n\n\n           <div class=\"d-none d-sm-none d-md-none d-lg-block\">\n                <div id=\"bottom-mandala\" >\n                        <img style=\"width:68vw\" src=\"assets/mandala-bottom.png\"/>\n                </div>\n           </div>             \n        \n  <!-- <div *ngFor=\"let eventList of weddingEventList;index as i\">\n            <div [ngClass]=\"i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\" *ngFor=\"let event of eventList.row;index as j\">\n                <div  *ngIf=\"i === 0\" class=\"event-large-card\">\n                         <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                        <div class=\"event-label\">{{event.name}}</div>\n                          \n                </div>\n                <div *ngIf=\"i === 1\" class=\"event-small-card\" [ngClass]=\"(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'\">\n                        <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                                <div class=\"event-label\">{{event.name}}</div>\n                 </div>\n            </div>\n    </div> -->\n    \n    <!-- <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n        <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n    </div>\n    <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n            <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n        </div> -->\n</div>"
 
 /***/ }),
 
@@ -834,8 +834,6 @@ var WeddingEventsComponent = /** @class */ (function () {
     function WeddingEventsComponent(albumOverviewService) {
         this.albumOverviewService = albumOverviewService;
     }
-    WeddingEventsComponent.prototype.ngOnInit = function () {
-    };
     WeddingEventsComponent.prototype.fetchAlbum = function (albumUrl) {
         var _this = this;
         this.albumOverviewService.getAlbumOverview(albumUrl).subscribe(function (data) {
@@ -928,6 +926,9 @@ var HomeComponent = /** @class */ (function () {
         this.wedOverviewService.getWeddingOverview().subscribe(function (data) {
             _this.wedddingOverviewData = data;
             _this.setGuestBookWishes(Event);
+            setTimeout(function () {
+                _this.initialiseAnime();
+            }, 5000);
         });
     };
     ;
@@ -948,6 +949,167 @@ var HomeComponent = /** @class */ (function () {
                     });
                 }, 5000);
             }
+        });
+    };
+    HomeComponent.prototype.initialiseAnime = function () {
+        var tiltSettings = [{},
+            {
+                movement: {
+                    imgWrapper: {
+                        translation: { x: 10, y: 10, z: 30 },
+                        rotation: { x: 0, y: -10, z: 0 },
+                        reverseAnimation: { duration: 200, easing: 'easeOutQuad' }
+                    },
+                    lines: {
+                        translation: { x: 10, y: 10, z: [0, 70] },
+                        rotation: { x: 0, y: 0, z: -2 },
+                        reverseAnimation: { duration: 2000, easing: 'easeOutExpo' }
+                    },
+                    caption: {
+                        rotation: { x: 0, y: 0, z: 2 },
+                        reverseAnimation: { duration: 200, easing: 'easeOutQuad' }
+                    },
+                    overlay: {
+                        translation: { x: 10, y: -10, z: 0 },
+                        rotation: { x: 0, y: 0, z: 2 },
+                        reverseAnimation: { duration: 2000, easing: 'easeOutExpo' }
+                    },
+                    shine: {
+                        translation: { x: 100, y: 100, z: 0 },
+                        reverseAnimation: { duration: 200, easing: 'easeOutQuad' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    imgWrapper: {
+                        rotation: { x: -5, y: 10, z: 0 },
+                        reverseAnimation: { duration: 900, easing: 'easeOutCubic' }
+                    },
+                    caption: {
+                        translation: { x: 30, y: 30, z: [0, 40] },
+                        rotation: { x: [0, 15], y: 0, z: 0 },
+                        reverseAnimation: { duration: 1200, easing: 'easeOutExpo' }
+                    },
+                    overlay: {
+                        translation: { x: 10, y: 10, z: [0, 20] },
+                        reverseAnimation: { duration: 1000, easing: 'easeOutExpo' }
+                    },
+                    shine: {
+                        translation: { x: 100, y: 100, z: 0 },
+                        reverseAnimation: { duration: 900, easing: 'easeOutCubic' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    imgWrapper: {
+                        rotation: { x: -5, y: 10, z: 0 },
+                        reverseAnimation: { duration: 50, easing: 'easeOutQuad' }
+                    },
+                    caption: {
+                        translation: { x: 20, y: 20, z: 0 },
+                        reverseAnimation: { duration: 200, easing: 'easeOutQuad' }
+                    },
+                    overlay: {
+                        translation: { x: 5, y: -5, z: 0 },
+                        rotation: { x: 0, y: 0, z: 6 },
+                        reverseAnimation: { duration: 1000, easing: 'easeOutQuad' }
+                    },
+                    shine: {
+                        translation: { x: 50, y: 50, z: 0 },
+                        reverseAnimation: { duration: 50, easing: 'easeOutQuad' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    imgWrapper: {
+                        translation: { x: 0, y: -8, z: 0 },
+                        rotation: { x: 3, y: 3, z: 0 },
+                        reverseAnimation: { duration: 1200, easing: 'easeOutExpo' }
+                    },
+                    lines: {
+                        translation: { x: 15, y: 15, z: [0, 15] },
+                        reverseAnimation: { duration: 1200, easing: 'easeOutExpo' }
+                    },
+                    overlay: {
+                        translation: { x: 0, y: 8, z: 0 },
+                        reverseAnimation: { duration: 600, easing: 'easeOutExpo' }
+                    },
+                    caption: {
+                        translation: { x: 10, y: -15, z: 0 },
+                        reverseAnimation: { duration: 900, easing: 'easeOutExpo' }
+                    },
+                    shine: {
+                        translation: { x: 50, y: 50, z: 0 },
+                        reverseAnimation: { duration: 1200, easing: 'easeOutExpo' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    lines: {
+                        translation: { x: -5, y: 5, z: 0 },
+                        reverseAnimation: { duration: 1000, easing: 'easeOutExpo' }
+                    },
+                    caption: {
+                        translation: { x: 15, y: 15, z: 0 },
+                        rotation: { x: 0, y: 0, z: 3 },
+                        reverseAnimation: { duration: 1500, easing: 'easeOutElastic', elasticity: 700 }
+                    },
+                    overlay: {
+                        translation: { x: 15, y: -15, z: 0 },
+                        reverseAnimation: { duration: 500, easing: 'easeOutExpo' }
+                    },
+                    shine: {
+                        translation: { x: 50, y: 50, z: 0 },
+                        reverseAnimation: { duration: 500, easing: 'easeOutExpo' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    imgWrapper: {
+                        translation: { x: 5, y: 5, z: 0 },
+                        reverseAnimation: { duration: 800, easing: 'easeOutQuart' }
+                    },
+                    caption: {
+                        translation: { x: 10, y: 10, z: [0, 50] },
+                        reverseAnimation: { duration: 1000, easing: 'easeOutQuart' }
+                    },
+                    shine: {
+                        translation: { x: 50, y: 50, z: 0 },
+                        reverseAnimation: { duration: 800, easing: 'easeOutQuart' }
+                    }
+                }
+            },
+            {
+                movement: {
+                    lines: {
+                        translation: { x: 40, y: 40, z: 0 },
+                        reverseAnimation: { duration: 1500, easing: 'easeOutElastic' }
+                    },
+                    caption: {
+                        translation: { x: 20, y: 20, z: 0 },
+                        rotation: { x: 0, y: 0, z: -5 },
+                        reverseAnimation: { duration: 1000, easing: 'easeOutExpo' }
+                    },
+                    overlay: {
+                        translation: { x: -30, y: -30, z: 0 },
+                        rotation: { x: 0, y: 0, z: 3 },
+                        reverseAnimation: { duration: 750, easing: 'easeOutExpo' }
+                    },
+                    shine: {
+                        translation: { x: 100, y: 100, z: 0 },
+                        reverseAnimation: { duration: 750, easing: 'easeOutExpo' }
+                    }
+                }
+            }];
+        var idx = 0;
+        [].slice.call(document.querySelectorAll('a.tilter')).forEach(function (el, pos) {
+            idx = pos % 2 === 0 ? idx + 1 : idx;
+            new TiltFx(el, tiltSettings[idx - 1]);
         });
     };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

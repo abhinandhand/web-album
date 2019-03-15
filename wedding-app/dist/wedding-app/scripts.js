@@ -390,8 +390,7 @@ k.getValue=K;k.path=function(a){a=f.str(a)?F(a)[0]:a;return{path:a,value:a.getTo
         });
     }
     init();
-    var pater = document.querySelector('.pater'),
-        paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
+    var pater = document.querySelector('.pater');
 
     pater.addEventListener('mouseenter', function() {
         anime.remove(pathEl);
