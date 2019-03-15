@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import { CouplestoryComponent } from './widget-modules/couplestory/couplestory.component';
 import { WeddingEventsComponent } from './widget-modules/wedding-events/wedding-events.component';
 import { CommentsComponent } from './widget-modules/comments/comments.component';
-import { AlbumsComponent } from './widget-modules/albums/albums.component';
+import { AlbumsComponent } from './widgets/albums/albums.component';
 import { NavBarComponent } from './widget-modules/navigation/nav-bar/nav-bar.component';
 import { HomeComponent } from './widgets/home/home.component';
 import { GuestBookComponent } from './widget-modules/guest-book/guest-book.component';

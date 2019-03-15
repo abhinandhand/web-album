@@ -390,27 +390,7 @@ k.getValue=K;k.path=function(a){a=f.str(a)?F(a)[0]:a;return{path:a,value:a.getTo
         });
     }
     init();
-    var pater = document.querySelector('.pater');
-
-    pater.addEventListener('mouseenter', function() {
-        anime.remove(pathEl);
-        anime({
-            targets: pathEl,
-            d: paths.active,
-            duration: 400,
-            easing: 'easeOutQuad'
-        });
-    });
-
-    pater.addEventListener('mouseleave', function() {
-        anime.remove(pathEl);
-        anime({
-            targets: pathEl,
-            d: paths.default,
-            duration: 400,
-            easing: 'easeOutExpo'
-        });
-    });
+    
 })();
 ;
 //# sourceMappingURL=scripts.js.map
