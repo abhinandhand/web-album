@@ -28,7 +28,9 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/jquery.min.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
               "src/assets/js/anime.min.js",
               "src/assets/js/main.js",
               "src/assets/js/perspective.js"
