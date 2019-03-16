@@ -29,8 +29,15 @@
 
             </div>
             <div class="modal-body">
-                <div style="margin: 0px 12.5%;height: 83%;">
-                    <img style=" width: 100%;height: 100%;" [src]="imgUrl" />
+                <div style="margin: 0px 6.5%;height: 83%;">
+                        <div id="flipbook" class="sample-flipbook" style="    border-radius: 17px;" >
+                            <div class="hard shadow" >
+                                <img style="width: 100%;height: 100%;" [src]="imgUrl"/>
+                            </div>
+                            <div class="own size shadow" style="width: 100%;height: 100%;" *ngFor="let image of albumData?.data?.albumItems">
+                                    <img style="width: 100%;height: 100%;" [src]="image?.albumArt"/>
+                            </div>
+                        </div>
                 </div>
 
             </div>

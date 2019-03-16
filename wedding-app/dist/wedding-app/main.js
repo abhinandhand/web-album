@@ -37,12 +37,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/home/home.component */ "./src/app/widgets/home/home.component.ts");
+/* harmony import */ var _widgets_albums_albums_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/albums/albums.component */ "./src/app/widgets/albums/albums.component.ts");
 
 
 
 
-var routes = [{ path: '', component: _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
-    { path: '', redirectTo: '/', pathMatch: 'full' },
+
+var routes = [{ path: '', component: _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"],
+        children: [
+            { path: 'albums/:name/:url', component: _widgets_albums_albums_component__WEBPACK_IMPORTED_MODULE_4__["AlbumsComponent"], data: { url: '' } },
+        ] }, { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: '**', component: _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -51,7 +55,6 @@ var AppRoutingModule = /** @class */ (function () {
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, {
-                    scrollPositionRestoration: 'enabled',
                     anchorScrolling: 'enabled', scrollOffset: [0, 68]
                 })],
             exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
@@ -158,7 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _widget_modules_couplestory_couplestory_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widget-modules/couplestory/couplestory.component */ "./src/app/widget-modules/couplestory/couplestory.component.ts");
 /* harmony import */ var _widget_modules_wedding_events_wedding_events_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widget-modules/wedding-events/wedding-events.component */ "./src/app/widget-modules/wedding-events/wedding-events.component.ts");
 /* harmony import */ var _widget_modules_comments_comments_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widget-modules/comments/comments.component */ "./src/app/widget-modules/comments/comments.component.ts");
-/* harmony import */ var _widget_modules_albums_albums_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widget-modules/albums/albums.component */ "./src/app/widget-modules/albums/albums.component.ts");
+/* harmony import */ var _widgets_albums_albums_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/albums/albums.component */ "./src/app/widgets/albums/albums.component.ts");
 /* harmony import */ var _widget_modules_navigation_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widget-modules/navigation/nav-bar/nav-bar.component */ "./src/app/widget-modules/navigation/nav-bar/nav-bar.component.ts");
 /* harmony import */ var _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/home/home.component */ "./src/app/widgets/home/home.component.ts");
 /* harmony import */ var _widget_modules_guest_book_guest_book_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widget-modules/guest-book/guest-book.component */ "./src/app/widget-modules/guest-book/guest-book.component.ts");
@@ -193,7 +196,7 @@ var AppModule = /** @class */ (function () {
                 _widget_modules_couplestory_couplestory_component__WEBPACK_IMPORTED_MODULE_9__["CouplestoryComponent"],
                 _widget_modules_wedding_events_wedding_events_component__WEBPACK_IMPORTED_MODULE_10__["WeddingEventsComponent"],
                 _widget_modules_comments_comments_component__WEBPACK_IMPORTED_MODULE_11__["CommentsComponent"],
-                _widget_modules_albums_albums_component__WEBPACK_IMPORTED_MODULE_12__["AlbumsComponent"],
+                _widgets_albums_albums_component__WEBPACK_IMPORTED_MODULE_12__["AlbumsComponent"],
                 _widget_modules_navigation_nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_13__["NavBarComponent"],
                 _widgets_home_home_component__WEBPACK_IMPORTED_MODULE_14__["HomeComponent"],
                 _widget_modules_guest_book_guest_book_component__WEBPACK_IMPORTED_MODULE_15__["GuestBookComponent"],
@@ -293,80 +296,6 @@ var WeddingOverviewService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], WeddingOverviewService);
     return WeddingOverviewService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/widget-modules/albums/albums.component.css":
-/*!************************************************************!*\
-  !*** ./src/app/widget-modules/albums/albums.component.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ".sample-flipbook{\n\twidth:400px;\n\theight:200px;\n\ttransition:margin-left 0.2s;\n}\n\n.sample-flipbook .page{\n\twidth:200px;\n\theight:200px;\n\tbackground-color:white;\n\tline-height:300px;\n\tfont-size:20px;\n}\n\n.sample-flipbook .page-wrapper{\n\t-webkit-perspective:2000px;\n\t-ms-perspective:2000px;\n\t-o-perspective:2000px;\n\tperspective:2000px;\n}\n\n.sample-flipbook .hard{\n\tbackground:#ccc !important;\n\tcolor:#333;\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n\tfont-weight:bold;\n}\n\n.sample-flipbook .odd{\n\tbackground:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));\n\tbackground-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n\t\n}\n\n.sample-flipbook .even{\n\tbackground:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));\n\tbackground-image:linear-gradient(left, #fff 95%, #dadada 100%);\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n}\n\n/****app*/\n\n.fit-top-container {\n    width: 1000px;\n    height: 500px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd2lkZ2V0LW1vZHVsZXMvYWxidW1zL2FsYnVtcy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0NBQ0MsWUFBWTtDQUNaLGFBQWE7Q0FLYiw0QkFBNEI7Q0FDNUI7O0FBRUQ7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUNiLHVCQUF1QjtDQUN2QixrQkFBa0I7Q0FDbEIsZUFBZTtDQUNmOztBQUVEO0NBQ0MsMkJBQTJCO0NBRTNCLHVCQUF1QjtDQUN2QixzQkFBc0I7Q0FDdEIsbUJBQW1CO0NBQ25COztBQUVEO0NBQ0MsMkJBQTJCO0NBQzNCLFdBQVc7Q0FHWCxpQ0FBaUM7Q0FDakMsa0NBQWtDO0NBQ2xDLDhCQUE4QjtDQUM5QixpQkFBaUI7Q0FDakI7O0FBRUQ7Q0FDQyx5R0FBeUc7Q0FLekcsZ0VBQWdFO0NBR2hFLGlDQUFpQztDQUNqQyxrQ0FBa0M7Q0FDbEMsOEJBQThCOztDQUU5Qjs7QUFFRDtDQUNDLHlHQUF5RztDQUt6RywrREFBK0Q7Q0FHL0QsaUNBQWlDO0NBQ2pDLGtDQUFrQztDQUNsQyw4QkFBOEI7Q0FDOUI7O0FBRUQsVUFBVTs7QUFDVjtJQUNJLGNBQWM7SUFDZCxjQUFjO0NBQ2pCIiwiZmlsZSI6InNyYy9hcHAvd2lkZ2V0LW1vZHVsZXMvYWxidW1zL2FsYnVtcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNhbXBsZS1mbGlwYm9va3tcblx0d2lkdGg6NDAwcHg7XG5cdGhlaWdodDoyMDBweDtcblx0LXdlYmtpdC10cmFuc2l0aW9uOm1hcmdpbi1sZWZ0IDAuMnM7XG5cdC1tb3otdHJhbnNpdGlvbjptYXJnaW4tbGVmdCAwLjJzO1xuXHQtbXMtdHJhbnNpdGlvbjptYXJnaW4tbGVmdCAwLjJzO1xuXHQtby10cmFuc2l0aW9uOm1hcmdpbi1sZWZ0IDAuMnM7XG5cdHRyYW5zaXRpb246bWFyZ2luLWxlZnQgMC4ycztcbn1cblxuLnNhbXBsZS1mbGlwYm9vayAucGFnZXtcblx0d2lkdGg6MjAwcHg7XG5cdGhlaWdodDoyMDBweDtcblx0YmFja2dyb3VuZC1jb2xvcjp3aGl0ZTtcblx0bGluZS1oZWlnaHQ6MzAwcHg7XG5cdGZvbnQtc2l6ZToyMHB4O1xufVxuXG4uc2FtcGxlLWZsaXBib29rIC5wYWdlLXdyYXBwZXJ7XG5cdC13ZWJraXQtcGVyc3BlY3RpdmU6MjAwMHB4O1xuXHQtbW96LXBlcnNwZWN0aXZlOjIwMDBweDtcblx0LW1zLXBlcnNwZWN0aXZlOjIwMDBweDtcblx0LW8tcGVyc3BlY3RpdmU6MjAwMHB4O1xuXHRwZXJzcGVjdGl2ZToyMDAwcHg7XG59XG5cbi5zYW1wbGUtZmxpcGJvb2sgLmhhcmR7XG5cdGJhY2tncm91bmQ6I2NjYyAhaW1wb3J0YW50O1xuXHRjb2xvcjojMzMzO1xuXHQtd2Via2l0LWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtbW96LWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtby1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW1zLWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHRib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0Zm9udC13ZWlnaHQ6Ym9sZDtcbn1cblxuLnNhbXBsZS1mbGlwYm9vayAub2Rke1xuXHRiYWNrZ3JvdW5kOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLCByaWdodCB0b3AsIGxlZnQgdG9wLCBjb2xvci1zdG9wKDAuOTUsICNGRkYpLCBjb2xvci1zdG9wKDEsICNEQURBREEpKTtcblx0YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudChyaWdodCwgI0ZGRiA5NSUsICNDNEM0QzQgMTAwJSk7XG5cdGJhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQocmlnaHQsICNGRkYgOTUlLCAjQzRDNEM0IDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1tcy1saW5lYXItZ3JhZGllbnQocmlnaHQsICNGRkYgOTUlLCAjQzRDNEM0IDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1vLWxpbmVhci1ncmFkaWVudChyaWdodCwgI0ZGRiA5NSUsICNDNEM0QzQgMTAwJSk7XG5cdGJhY2tncm91bmQtaW1hZ2U6bGluZWFyLWdyYWRpZW50KHJpZ2h0LCAjRkZGIDk1JSwgI0M0QzRDNCAxMDAlKTtcblx0LXdlYmtpdC1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW1vei1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW8tYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1tcy1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0Ym94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdFxufVxuXG4uc2FtcGxlLWZsaXBib29rIC5ldmVue1xuXHRiYWNrZ3JvdW5kOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLCBsZWZ0IHRvcCwgcmlnaHQgdG9wLCBjb2xvci1zdG9wKDAuOTUsICNmZmYpLCBjb2xvci1zdG9wKDEsICNkYWRhZGEpKTtcblx0YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTotbW96LWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KGxlZnQsICNmZmYgOTUlLCAjZGFkYWRhIDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1vLWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTpsaW5lYXItZ3JhZGllbnQobGVmdCwgI2ZmZiA5NSUsICNkYWRhZGEgMTAwJSk7XG5cdC13ZWJraXQtYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1tb3otYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1vLWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtbXMtYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdGJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xufVxuXG4vKioqKmFwcCovXG4uZml0LXRvcC1jb250YWluZXIge1xuICAgIHdpZHRoOiAxMDAwcHg7XG4gICAgaGVpZ2h0OiA1MDBweDtcbn0iXX0= */"
-
-/***/ }),
-
-/***/ "./src/app/widget-modules/albums/albums.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/widget-modules/albums/albums.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n  <div>\n        <div id=\"flipbook\" class=\"sample-flipbook\"  >\n          <div *ngFor=\"let image of albumArray\" [ngStyle]=\"{'background':'url(' +image?.albumArt+ ')'}\"></div>\n        </div>\n    </div>\n</div>\n\n<!-- <div id=\"flipbook\" class=\"sample-flipbook\">\n    <div style=\"background-image:url(assets/pages/1.jpg)\"></div>\n\t\t\t<div (mousedown)=\"sendPhotoClickEvent()\" style=\"background-image:url(assets/pages/2.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/3.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/4.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/5.jpg)\"></div>\n  </div> -->\n"
-
-/***/ }),
-
-/***/ "./src/app/widget-modules/albums/albums.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/widget-modules/albums/albums.component.ts ***!
-  \***********************************************************/
-/*! exports provided: AlbumsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlbumsComponent", function() { return AlbumsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var AlbumsComponent = /** @class */ (function () {
-    function AlbumsComponent() {
-    }
-    AlbumsComponent.prototype.ngOnInit = function () {
-        $(document).ready(function () {
-            $('#flipbook').turn({
-                width: 1000,
-                height: 600,
-                autoCenter: true
-            });
-        });
-    };
-    AlbumsComponent.prototype.ngAfterViewInit = function () {
-        $('#flipbook').turn({
-            width: 1400,
-            height: 600,
-            autoCenter: true
-        });
-    };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
-    ], AlbumsComponent.prototype, "albumArray", void 0);
-    AlbumsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-albums',
-            template: __webpack_require__(/*! ./albums.component.html */ "./src/app/widget-modules/albums/albums.component.html"),
-            styles: [__webpack_require__(/*! ./albums.component.css */ "./src/app/widget-modules/albums/albums.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], AlbumsComponent);
-    return AlbumsComponent;
 }());
 
 
@@ -587,7 +516,7 @@ module.exports = ".footer {\n    height: 68px;\n    background-color: #E4E0DD;\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"share\" >\n    <div class=\"footer with-love\">\n        <span>with <img src=\"assets/heart.svg\"/> from Jason</span>\n    </div>\n\n    <div class=\"d-none d-sm-none d-md-block\">\n            <div id=\"social-icons\">\n                    <span class=\"share-label\">Share:</span>\n                    <a href=\"http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com\" target=\"_blank\"><img style=\"padding: 0 9px;\" src=\"assets/fb.svg\"/></a>\n                    <a href=\"https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diya-aron.s3-website.ap-south-1.amazonaws.com\" target=\"_blank\"><img style=\"padding: 0 9px;\" src=\"assets/twitter.svg\"/></a>\n                    <img style=\"padding: 0 9px;\" src=\"assets/insta.svg\"/>\n            </div>\n    </div>\n</div>\n\n"
+module.exports = "<div id=\"share\">\n    <div class=\"footer with-love\">\n        <span>with\n            <img src=\"assets/heart.svg\" /> from Jason</span>\n    </div>\n\n    <div class=\"d-none d-sm-none d-md-block\">\n        <div id=\"social-icons\">\n            <span class=\"share-label\">Share:</span>\n            <a href=\"http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com\" target=\"_blank\">\n                <img style=\"padding: 0 9px;\" src=\"assets/fb.svg\" />\n            </a>\n            <a href=\"https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diya-aron.s3-website.ap-south-1.amazonaws.com\"\n                target=\"_blank\">\n                <img style=\"padding: 0 9px;\" src=\"assets/twitter.svg\" />\n            </a>\n            <img style=\"padding: 0 9px;\" src=\"assets/insta.svg\" />\n        </div>\n    </div>\n</div>\n<!-- <button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n    Launch demo modal\n</button> -->\n"
 
 /***/ }),
 
@@ -810,7 +739,7 @@ module.exports = ".event-big-card-conatiner {\r\n    width: 100%;\r\n    padding
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"events\">\n                \n                                \n               \n\n         <div *ngFor=\"let event of weddingEventList;index as i\" [ngClass]=\"event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\">\n                                    <div  *ngIf=\"event.type === 'large'\" class=\"event-large-card\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>\n                                            <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                            <div class=\"event-label\">{{event.title}}</div> -->\n                                              \n                                    </div>\n                                    <div *ngIf=\"event.type !== 'large'\" class=\"event-small-card\" [ngClass]=\"(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>   \n                                        <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                                    <div class=\"event-label\">{{event.title}}</div> -->\n                                     </div>\n        </div>\n\n\n\n           <div class=\"d-none d-sm-none d-md-none d-lg-block\">\n                <div id=\"bottom-mandala\" >\n                        <img style=\"width:68vw\" src=\"assets/mandala-bottom.png\"/>\n                </div>\n           </div>             \n        \n  <!-- <div *ngFor=\"let eventList of weddingEventList;index as i\">\n            <div [ngClass]=\"i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\" *ngFor=\"let event of eventList.row;index as j\">\n                <div  *ngIf=\"i === 0\" class=\"event-large-card\">\n                         <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                        <div class=\"event-label\">{{event.name}}</div>\n                          \n                </div>\n                <div *ngIf=\"i === 1\" class=\"event-small-card\" [ngClass]=\"(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'\">\n                        <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                                <div class=\"event-label\">{{event.name}}</div>\n                 </div>\n            </div>\n    </div> -->\n    \n    <!-- <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n        <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n    </div>\n    <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n            <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n        </div> -->\n</div>"
+module.exports = "<div id=\"events\">\n                \n                                \n               \n\n         <div *ngFor=\"let event of weddingEventList;index as i\" [ngClass]=\"event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\">\n                                    <div [routerLink]=\"['/albums',event.title,event.background]\"  *ngIf=\"event.type === 'large'\" class=\"event-large-card\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>\n                                            <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                            <div class=\"event-label\">{{event.title}}</div> -->\n                                              \n                                    </div>\n                                    <div [routerLink]=\"['/albums',event.title,event.background]\"  *ngIf=\"event.type !== 'large'\" class=\"event-small-card\" [ngClass]=\"(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'\">\n                                                <a  class=\"tilter tilter--1\">\n                                                                <figure class=\"tilter__figure\">\n                                                                        <img class=\"tilter__image\" [src]=\"event.background\" alt=\"img02\" />\n                                                                        <div class=\"tilter__deco tilter__deco--shine\"><div></div></div>\n                                                                        <div class=\"event-label\">{{event.title}}</div>\n                                                                </figure>\n                                                        </a>   \n                                        <!-- <img style=\"max-height: inherit;width: 100%\" [src]=\"event.background\"/>\n                                                    <div class=\"event-label\">{{event.title}}</div> -->\n                                     </div>\n        </div>\n\n\n\n           <div class=\"d-none d-sm-none d-md-none d-lg-block\">\n                <div id=\"bottom-mandala\" >\n                        <img style=\"width:68vw\" src=\"assets/mandala-bottom.png\"/>\n                </div>\n           </div>             \n        \n  <!-- <div *ngFor=\"let eventList of weddingEventList;index as i\">\n            <div [ngClass]=\"i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'\" (click)=\"fetchAlbum(event.action)\" *ngFor=\"let event of eventList.row;index as j\">\n                <div  *ngIf=\"i === 0\" class=\"event-large-card\">\n                         <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                        <div class=\"event-label\">{{event.name}}</div>\n                          \n                </div>\n                <div *ngIf=\"i === 1\" class=\"event-small-card\" [ngClass]=\"(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'\">\n                        <img style=\"max-height: inherit;width: 100%\" [src]=\"event.backgroundImage\"/>\n                                <div class=\"event-label\">{{event.name}}</div>\n                 </div>\n            </div>\n    </div> -->\n    \n    <!-- <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n        <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n    </div>\n    <div *ngIf=\"albumOverviewData?.data?.albumItems?.length>0\">\n            <app-albums [albumArray] =\"albumOverviewData?.data?.albumItems\"></app-albums>\n        </div> -->\n</div>"
 
 /***/ }),
 
@@ -859,6 +788,113 @@ var WeddingEventsComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/widgets/albums/albums.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/widgets/albums/albums.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".sample-flipbook{\n\twidth:400px;\n\theight:200px;\n\ttransition:margin-left 0.2s;\n}\n\n.sample-flipbook .page{\n\twidth:200px;\n\theight:200px;\n\tbackground-color:white;\n\tline-height:300px;\n\tfont-size:20px;\n}\n\n.sample-flipbook .page-wrapper{\n\t-webkit-perspective:2000px;\n\t-ms-perspective:2000px;\n\t-o-perspective:2000px;\n\tperspective:2000px;\n}\n\n.sample-flipbook .hard{\n\tbackground:#ccc !important;\n\tcolor:#333;\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n\tfont-weight:bold;\n}\n\n.sample-flipbook .odd{\n\tbackground:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));\n\tbackground-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n\t\n}\n\n.sample-flipbook .even{\n\tbackground:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));\n\tbackground-image:linear-gradient(left, #fff 95%, #dadada 100%);\n\t-o-box-shadow:inset 0 0 5px #666;\n\t-ms-box-shadow:inset 0 0 5px #666;\n\tbox-shadow:inset 0 0 5px #666;\n}\n\n/****app*/\n\n.fit-top-container {\n    width: 1000px;\n    height: 500px;\n}\n\n.share-photo {\n\tfont-family: Playfair Display, Regular;\n    font-size: 1vw;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd2lkZ2V0cy9hbGJ1bXMvYWxidW1zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxZQUFZO0NBQ1osYUFBYTtDQUtiLDRCQUE0QjtDQUM1Qjs7QUFFRDtDQUNDLFlBQVk7Q0FDWixhQUFhO0NBQ2IsdUJBQXVCO0NBQ3ZCLGtCQUFrQjtDQUNsQixlQUFlO0NBQ2Y7O0FBRUQ7Q0FDQywyQkFBMkI7Q0FFM0IsdUJBQXVCO0NBQ3ZCLHNCQUFzQjtDQUN0QixtQkFBbUI7Q0FDbkI7O0FBRUQ7Q0FDQywyQkFBMkI7Q0FDM0IsV0FBVztDQUdYLGlDQUFpQztDQUNqQyxrQ0FBa0M7Q0FDbEMsOEJBQThCO0NBQzlCLGlCQUFpQjtDQUNqQjs7QUFFRDtDQUNDLHlHQUF5RztDQUt6RyxnRUFBZ0U7Q0FHaEUsaUNBQWlDO0NBQ2pDLGtDQUFrQztDQUNsQyw4QkFBOEI7O0NBRTlCOztBQUVEO0NBQ0MseUdBQXlHO0NBS3pHLCtEQUErRDtDQUcvRCxpQ0FBaUM7Q0FDakMsa0NBQWtDO0NBQ2xDLDhCQUE4QjtDQUM5Qjs7QUFFRCxVQUFVOztBQUNWO0lBQ0ksY0FBYztJQUNkLGNBQWM7Q0FDakI7O0FBQ0Q7Q0FDQyx1Q0FBdUM7SUFDcEMsZUFBZTtDQUNsQiIsImZpbGUiOiJzcmMvYXBwL3dpZGdldHMvYWxidW1zL2FsYnVtcy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNhbXBsZS1mbGlwYm9va3tcblx0d2lkdGg6NDAwcHg7XG5cdGhlaWdodDoyMDBweDtcblx0LXdlYmtpdC10cmFuc2l0aW9uOm1hcmdpbi1sZWZ0IDAuMnM7XG5cdC1tb3otdHJhbnNpdGlvbjptYXJnaW4tbGVmdCAwLjJzO1xuXHQtbXMtdHJhbnNpdGlvbjptYXJnaW4tbGVmdCAwLjJzO1xuXHQtby10cmFuc2l0aW9uOm1hcmdpbi1sZWZ0IDAuMnM7XG5cdHRyYW5zaXRpb246bWFyZ2luLWxlZnQgMC4ycztcbn1cblxuLnNhbXBsZS1mbGlwYm9vayAucGFnZXtcblx0d2lkdGg6MjAwcHg7XG5cdGhlaWdodDoyMDBweDtcblx0YmFja2dyb3VuZC1jb2xvcjp3aGl0ZTtcblx0bGluZS1oZWlnaHQ6MzAwcHg7XG5cdGZvbnQtc2l6ZToyMHB4O1xufVxuXG4uc2FtcGxlLWZsaXBib29rIC5wYWdlLXdyYXBwZXJ7XG5cdC13ZWJraXQtcGVyc3BlY3RpdmU6MjAwMHB4O1xuXHQtbW96LXBlcnNwZWN0aXZlOjIwMDBweDtcblx0LW1zLXBlcnNwZWN0aXZlOjIwMDBweDtcblx0LW8tcGVyc3BlY3RpdmU6MjAwMHB4O1xuXHRwZXJzcGVjdGl2ZToyMDAwcHg7XG59XG5cbi5zYW1wbGUtZmxpcGJvb2sgLmhhcmR7XG5cdGJhY2tncm91bmQ6I2NjYyAhaW1wb3J0YW50O1xuXHRjb2xvcjojMzMzO1xuXHQtd2Via2l0LWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtbW96LWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtby1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW1zLWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHRib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0Zm9udC13ZWlnaHQ6Ym9sZDtcbn1cblxuLnNhbXBsZS1mbGlwYm9vayAub2Rke1xuXHRiYWNrZ3JvdW5kOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLCByaWdodCB0b3AsIGxlZnQgdG9wLCBjb2xvci1zdG9wKDAuOTUsICNGRkYpLCBjb2xvci1zdG9wKDEsICNEQURBREEpKTtcblx0YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudChyaWdodCwgI0ZGRiA5NSUsICNDNEM0QzQgMTAwJSk7XG5cdGJhY2tncm91bmQtaW1hZ2U6LW1vei1saW5lYXItZ3JhZGllbnQocmlnaHQsICNGRkYgOTUlLCAjQzRDNEM0IDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1tcy1saW5lYXItZ3JhZGllbnQocmlnaHQsICNGRkYgOTUlLCAjQzRDNEM0IDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1vLWxpbmVhci1ncmFkaWVudChyaWdodCwgI0ZGRiA5NSUsICNDNEM0QzQgMTAwJSk7XG5cdGJhY2tncm91bmQtaW1hZ2U6bGluZWFyLWdyYWRpZW50KHJpZ2h0LCAjRkZGIDk1JSwgI0M0QzRDNCAxMDAlKTtcblx0LXdlYmtpdC1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW1vei1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0LW8tYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1tcy1ib3gtc2hhZG93Omluc2V0IDAgMCA1cHggIzY2Njtcblx0Ym94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdFxufVxuXG4uc2FtcGxlLWZsaXBib29rIC5ldmVue1xuXHRiYWNrZ3JvdW5kOi13ZWJraXQtZ3JhZGllbnQobGluZWFyLCBsZWZ0IHRvcCwgcmlnaHQgdG9wLCBjb2xvci1zdG9wKDAuOTUsICNmZmYpLCBjb2xvci1zdG9wKDEsICNkYWRhZGEpKTtcblx0YmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTotbW96LWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTotbXMtbGluZWFyLWdyYWRpZW50KGxlZnQsICNmZmYgOTUlLCAjZGFkYWRhIDEwMCUpO1xuXHRiYWNrZ3JvdW5kLWltYWdlOi1vLWxpbmVhci1ncmFkaWVudChsZWZ0LCAjZmZmIDk1JSwgI2RhZGFkYSAxMDAlKTtcblx0YmFja2dyb3VuZC1pbWFnZTpsaW5lYXItZ3JhZGllbnQobGVmdCwgI2ZmZiA5NSUsICNkYWRhZGEgMTAwJSk7XG5cdC13ZWJraXQtYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1tb3otYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdC1vLWJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xuXHQtbXMtYm94LXNoYWRvdzppbnNldCAwIDAgNXB4ICM2NjY7XG5cdGJveC1zaGFkb3c6aW5zZXQgMCAwIDVweCAjNjY2O1xufVxuXG4vKioqKmFwcCovXG4uZml0LXRvcC1jb250YWluZXIge1xuICAgIHdpZHRoOiAxMDAwcHg7XG4gICAgaGVpZ2h0OiA1MDBweDtcbn1cbi5zaGFyZS1waG90byB7XG5cdGZvbnQtZmFtaWx5OiBQbGF5ZmFpciBEaXNwbGF5LCBSZWd1bGFyO1xuICAgIGZvbnQtc2l6ZTogMXZ3O1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/widgets/albums/albums.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/widgets/albums/albums.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"modal fade show\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"false\"\n    style=\"display: block\">\n    <div style=\"max-width: 100%;height: 100%;margin: 0;\" class=\"modal-dialog\" role=\"document\">\n        <div style=\"height: 100%;border:0;    border-radius: 0;\" class=\"modal-content\">\n            <div class=\"modal-header\" style=\"border-bottom: none;\">\n                <!-- <h5 class=\"modal-title\" id=\"exampleModalLabel\">Modal title</h5> -->\n                <!-- <button type=\"button\" class=\"close\" data-dismiss=\"modal\" routerLink=\"/\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button> -->\n\n                <div class=\"close\" data-dismiss=\"modal\" routerLink=\"/\" aria-label=\"Close\" style=\"margin: 20px 0px 0px 6vw;    width: 211px;\">\n                    <img style=\"width: 40px;\" src=\"assets/left-arrow.svg\">\n                </div>\n                <div class=\"d-none d-sm-none d-md-block\">\n                    <h2 style=\"    font-family: Playfair Display, Regular;\n                        font-size: 2.4895vw;\">{{eventName}}</h2>\n                </div>\n                <div class=\"d-none d-sm-none d-md-block\" style=\"margin: 20px 6vw 0px 0px;\" id=\"social-icons\">\n                    <span class=\"share-label\">Share Photo:</span>\n                    <a href=\"http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com\" target=\"_blank\">\n                        <img style=\"padding: 0 9px;\" src=\"assets/fb.svg\" />\n                    </a>\n                    <a href=\"https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diya-aron.s3-website.ap-south-1.amazonaws.com\"\n                        target=\"_blank\">\n                        <img style=\"padding: 0 9px;\" src=\"assets/twitter.svg\" />\n                    </a>\n                    <img style=\"padding: 0 9px;\" src=\"assets/insta.svg\" />\n                </div>\n\n            </div>\n            <div class=\"modal-body\">\n                <div style=\"margin: 0px 6.5%;height: 83%;\">\n                        <div id=\"flipbook\" class=\"sample-flipbook\" style=\"    border-radius: 17px;\" >\n                            <div class=\"hard shadow\" >\n                                <img style=\"width: 100%;height: 100%;\" [src]=\"imgUrl\"/>\n                            </div>\n                            <div class=\"own size shadow\" style=\"width: 100%;height: 100%;\" *ngFor=\"let image of albumData?.data?.albumItems\">\n                                    <img style=\"width: 100%;height: 100%;\" [src]=\"image?.albumArt\"/>\n                            </div>\n                        </div>\n                </div>\n\n            </div>\n            <!-- <div class=\"modal-footer\">\n                \n               \n            </div> -->\n        </div>\n    </div>\n</div>\n<!-- <div>\n  <div>\n        <div id=\"flipbook\" class=\"sample-flipbook\"  >\n          <div *ngFor=\"let image of albumArray\" [ngStyle]=\"{'background':'url(' +image?.albumArt+ ')'}\"></div>\n        </div>\n    </div>\n</div> -->\n\n<!-- <div id=\"flipbook\" class=\"sample-flipbook\">\n    <div style=\"background-image:url(assets/pages/1.jpg)\"></div>\n\t\t\t<div (mousedown)=\"sendPhotoClickEvent()\" style=\"background-image:url(assets/pages/2.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/3.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/4.jpg)\"></div>\n\t\t\t<div style=\"background-image:url(assets/pages/5.jpg)\"></div>\n  </div> -->"
+
+/***/ }),
+
+/***/ "./src/app/widgets/albums/albums.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/widgets/albums/albums.component.ts ***!
+  \****************************************************/
+/*! exports provided: AlbumsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlbumsComponent", function() { return AlbumsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _data_access_album_overview_album_overview_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../data-access/album-overview/album-overview.service */ "./src/app/data-access/album-overview/album-overview.service.ts");
+
+
+
+
+var AlbumsComponent = /** @class */ (function () {
+    function AlbumsComponent(route, albumService) {
+        this.route = route;
+        this.albumService = albumService;
+        this.albumUrl = 'https://gist.githubusercontent.com/SachinBharadwaj/ddfae61610bc3713c39506202e2b2d91/raw/470b93abaeb0f2ee3e55247e77de4c1cc2d36ee5/albumAPI.json';
+    }
+    AlbumsComponent.prototype.handleWheelEvent = function (event) {
+        event.preventDefault();
+    };
+    AlbumsComponent.prototype.fetchAlbumData = function () {
+        var _this = this;
+        this.albumService.getAlbumOverview(this.albumUrl).subscribe(function (data) {
+            _this.albumData = data;
+            _this.intialiseFlip();
+            //console.log(this.al);
+        });
+    };
+    AlbumsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params.subscribe(function (params) {
+            _this.imgUrl = params.url;
+            _this.eventName = params.name;
+        });
+        // this.route.data.subscribe(v => this.imgUrl = v);
+        this.fetchAlbumData();
+    };
+    // ngAfterViewInit() {
+    // $('#flipbook').turn({
+    //   width: 1400,
+    //   height: 600,
+    //   autoCenter: true
+    // });
+    //}
+    AlbumsComponent.prototype.intialiseFlip = function () {
+        $(document).ready(function () {
+            $('#flipbook').turn({
+                display: 'single',
+                width: '100%',
+                height: 600,
+                autoCenter: true,
+                duration: 1000,
+                inclination: 90,
+                gradients: true
+            });
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])('wheel', ['$event']),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Function),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:returntype", void 0)
+    ], AlbumsComponent.prototype, "handleWheelEvent", null);
+    AlbumsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-albums',
+            template: __webpack_require__(/*! ./albums.component.html */ "./src/app/widgets/albums/albums.component.html"),
+            styles: [__webpack_require__(/*! ./albums.component.css */ "./src/app/widgets/albums/albums.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _data_access_album_overview_album_overview_service__WEBPACK_IMPORTED_MODULE_3__["AlbumOverviewService"]])
+    ], AlbumsComponent);
+    return AlbumsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/widgets/home/home.component.css":
 /*!*************************************************!*\
   !*** ./src/app/widgets/home/home.component.css ***!
@@ -877,7 +913,7 @@ module.exports = ".key-photo {\n    height: 1000px;\n    background-repeat: no-r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"row\">\n    <div class=\"col-12 col-sm-12 col-md-12 col-lg-12\">\n      <app-nav-bar\n        [imageUrl]=\"wedddingOverviewData?.data?.welcome\"\n      ></app-nav-bar>\n    </div>\n  </div>\n  <div class=\"key-photo\">\n    <img\n      style=\"display: none\"\n      onload=\"this.style.display = 'block'\"\n      id=\"bg-image\"\n      class=\"img-fluid\"\n      [src]=\"wedddingOverviewData?.data?.welcome\"\n    />\n  </div>\n\n  <div class=\"container-fluid-nomax\">\n        <div class=\"parent-container\">\n          <div>\n              <div style=\"padding-left: 0px;padding-right: 0px\" >\n              <div class=\"couple-container\">\n                <app-container [weddingData]=\"wedddingOverviewData\" ></app-container>\n              </div>\n            </div>\n            <div style=\"padding-left: 0px;padding-right: 0px\">\n                <div style=\"min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;\">\n                    <app-guest-book (sendWishEvent)=\"setGuestBookWishes($event)\"></app-guest-book>\n                </div>\n            </div>\n            <div style=\"padding-left: 0px;padding-right: 0px;\">\n                <app-footer></app-footer>\n\n            </div>\n                \n          </div>\n          </div>\n        </div>\n\n    </div>\n\n    \n\n\n<!-- <div style=\"min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;top: 2900px\">  -->\n<!-- <app-nav-bar></app-nav-bar>\n            <app-couplestory [couplestory] = \"wedddingOverviewData?.data?.coupleStory\"></app-couplestory>\n            <app-wedding-events [weddingDate] = \"wedddingOverviewData?.data?.dateOfWedding\" \n            [weddingEventList] = \"wedddingOverviewData?.data?.eventList\"></app-wedding-events>\n            <app-guest-book></app-guest-book>\n           -->\n<!-- <div  [ngStyle]=\"{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}\" class=\"key-photo\"> </div> -->\n<!--   <div class=\"key-photo\" >\n                      <div  [ngStyle]=\"{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}\" class=\"key-photo\"> </div> \n                        <img style=\"width: 100%\" class=\"img-fluid\" src=\"assets/key-photo.png\">\n                    <img style='display: none' onload=\"this.style.display = 'block'\" id=\"bg-image\"  class=\"img-fluid\" [src]=\"wedddingOverviewData?.data?.welcome\">\n        </div> -->\n"
+module.exports = "<div>\n    <router-outlet></router-outlet>\n  <div class=\"row\">\n    <div class=\"col-12 col-sm-12 col-md-12 col-lg-12\">\n      <app-nav-bar\n        [imageUrl]=\"wedddingOverviewData?.data?.welcome\"\n      ></app-nav-bar>\n    </div>\n  </div>\n  <div class=\"key-photo\">\n    <img\n      style=\"display: none\"\n      onload=\"this.style.display = 'block'\"\n      id=\"bg-image\"\n      class=\"img-fluid\"\n      [src]=\"wedddingOverviewData?.data?.welcome\"\n    />\n  </div>\n\n  <div class=\"container-fluid-nomax\">\n        <div class=\"parent-container\">\n          <div>\n              <div style=\"padding-left: 0px;padding-right: 0px\" >\n              <div class=\"couple-container\">\n                <app-container [weddingData]=\"wedddingOverviewData\" ></app-container>\n              </div>\n            </div>\n            <div style=\"padding-left: 0px;padding-right: 0px\">\n                <div style=\"min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;\">\n                    <app-guest-book (sendWishEvent)=\"setGuestBookWishes($event)\"></app-guest-book>\n                </div>\n            </div>\n            <div style=\"padding-left: 0px;padding-right: 0px;\">\n                <app-footer></app-footer>\n\n            </div>\n                \n          </div>\n          </div>\n        </div>\n\n    </div>\n\n    \n\n\n<!-- <div style=\"min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;top: 2900px\">  -->\n<!-- <app-nav-bar></app-nav-bar>\n            <app-couplestory [couplestory] = \"wedddingOverviewData?.data?.coupleStory\"></app-couplestory>\n            <app-wedding-events [weddingDate] = \"wedddingOverviewData?.data?.dateOfWedding\" \n            [weddingEventList] = \"wedddingOverviewData?.data?.eventList\"></app-wedding-events>\n            <app-guest-book></app-guest-book>\n           -->\n<!-- <div  [ngStyle]=\"{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}\" class=\"key-photo\"> </div> -->\n<!--   <div class=\"key-photo\" >\n                      <div  [ngStyle]=\"{'background-image':'url(' +wedddingOverviewData.data.welcome+ ')'}\" class=\"key-photo\"> </div> \n                        <img style=\"width: 100%\" class=\"img-fluid\" src=\"assets/key-photo.png\">\n                    <img style='display: none' onload=\"this.style.display = 'block'\" id=\"bg-image\"  class=\"img-fluid\" [src]=\"wedddingOverviewData?.data?.welcome\">\n        </div> -->\n"
 
 /***/ }),
 

@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AlbumOverviewService {
-
   constructor(private http: HttpClient) { }
 
   getAlbumOverview(url) {
