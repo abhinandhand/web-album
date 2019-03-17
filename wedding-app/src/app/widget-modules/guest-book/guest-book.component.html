@@ -11,23 +11,10 @@
       <div id="guest-book-turn">
         <div *ngFor="let wish of wishes.data.wishList" style="    background: url(assets/book.jpg); background-repeat: no-repeat;">
           <div style="height: 100%;padding: 0px 98px;">
-            <div style="position: absolute;
-            left: 27%;
-            width: 61%;
-            top: 10%;
-            overflow-y: scroll;
-            height: 54%;
-            justify-content: center;
-            align-items: center;
-            display: flex;">
+            <div style="position: absolute;left: 27%;width: 61%;top: 10%;overflow-y: scroll;height: 54%;justify-content: center;align-items: center;display: flex;">
               <h1 class="wish-style">{{wish.message}}</h1>
             </div>
-
-            <div style="    width: max-content;
-            position: absolute;
-            right: 13%;
-            position: absolute;
-            bottom: 14%;">
+            <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
               <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">- {{wish.name}}</p>
               <p class="loc-date">{{wish.location}}</p>
               <p class="loc-date">{{wish.modifiedDate | date }}</p>

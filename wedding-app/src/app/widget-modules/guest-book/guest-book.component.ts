@@ -68,15 +68,14 @@ export class GuestBookComponent implements OnInit {
     this.showConfirmMsg = true;
     $('#word').text(this.wishObj.message);
     this.wishes.data.wishList.push(this.wishObj);
-    let element = $(`<div  style="background: url('assets/page-right.png')">
+    let element = $(`<div style="background: url(assets/book.jpg); background-repeat: no-repeat;">
     <div style="height: 100%;padding: 0px 98px;">
-      <div style=" display: flex;justify-content: center;align-items: center;    height: 390px;
-      overflow-y: scroll;">
+    <div style="position: absolute;left: 27%;width: 61%;top: 10%;overflow-y: scroll;height: 54%;justify-content: center;align-items: center;display: flex;">
           <h1 style="color: #707070; font-family: Great Vibes, Regular; font-size: 44px; line-height: 83px; text-align: center;">`
       + this.wishObj.message + `</h1>
       </div>
-      <div style="width: max-content;position: absolute;right: 14%;">
-      <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">`
+      <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
+        <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">`
       + this.wishObj.name + `</p>
       <p style="text-align: center; font-family: Playfair Display;font-style: italic;font-size: 18px;: #707070;margin-bottom: 2px;">`
       + this.wishObj.location + `</p>
