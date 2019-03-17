@@ -561,7 +561,7 @@ var FooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".guest-view {\n    height: 200px;\n    color: #707070;\n}\n.guest-book-label {\n    padding-top: 93px;\n    color: #1D1D1D;\n    font-family: Playfair Display, Regular;\n    font-size: 50px;\n    line-height: 67px;\n    text-transform: uppercase;\n    text-align: center;\n\n}\n.wish-style{\n    color: #707070;\n    font-family: Great Vibes, Regular;\n    font-size: 44px;\n    line-height: 83px;\n    text-align: center;\n}\ninput {\n    background-color: inherit;\n    height: 60px;\n    width: 100%;\n    border: 0;\n    outline: 0;\n    background: transparent;\n    border-bottom: 2px solid #75726e7a;\n    font-size: 44px;\n    font-family: Great Vibes, Regular;\n    line-height: 83px;\n    color:#707070;\n    padding-left: 20px;\n}\ntextarea {\n    background-color: inherit;\n    width: 100%;\n    border: 0;\n    outline: 0;\n    background: transparent;\n    border-bottom: 2px solid #75726e7a;\n    font-size: 44px;\n    font-family: Great Vibes, Regular;\n    line-height: 83px;\n    color:#707070;\n    padding-left: 20px;\n}\n#wish-button{\n    width: 536px;\n    height: 125px;\n    font-size: 30px;\n    line-height: 80px;\n    font-family: Playfair Display, Regular;\n    background-color: #445563;\n    color: #FFFFFF;\n    border-radius: 10px;\n\n}\n.form-width {\n    margin-left: 25%;\n    margin-right: 25%;\n}\n.btn-div{\n    margin-top: 75px; \n    text-align: center;   \n    padding-bottom: 25%;\n}\n/* \n  ##Device = Low Resolution Tablets, Mobiles (Landscape)\n  ##Screen = B/w 481px to 767px\n*/\n@media (min-width: 481px) and (max-width: 812px) {\n    .con-album-label-hr{\n        width: 0%;\n    }\n    .guest-book-label{\n        padding-top: 55px;\n        font-size: 36px;\n    }\n    #wish-button {\n        width: 100%;\n    height: 87px;\n    font-size: 22px;\n    line-height: 71px;\n    }\n    .form-width {\n        margin-left: 12%;\n        margin-right: 12%;\n    }\n\n    .btn-div{\n        margin-top: 61px;\n    }\n}\n/*Portrait Mobile */\n@media (min-width: 320px) and (max-width: 480px) {\n    .con-album-label-hr{\n        width: 0%;\n    }\n    .guest-book-label{\n        padding-top: 55px;\n        font-size: 34px;\n    }\n\n    .form-width {\n        margin-left: 12%;\n        margin-right: 12%;\n    }\n    #wish-button {\n        width: 100%;\n    height: 87px;\n    font-size: 22px;\n    line-height: 71px;\n    }\n    .btn-div{\n        margin-top: 61px;\n    }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd2lkZ2V0LW1vZHVsZXMvZ3Vlc3QtYm9vay9ndWVzdC1ib29rLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxjQUFjO0lBQ2QsZUFBZTtDQUNsQjtBQUNEO0lBQ0ksa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZix1Q0FBdUM7SUFDdkMsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQiwwQkFBMEI7SUFDMUIsbUJBQW1COztDQUV0QjtBQUNEO0lBQ0ksZUFBZTtJQUNmLGtDQUFrQztJQUNsQyxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLG1CQUFtQjtDQUN0QjtBQUNEO0lBQ0ksMEJBQTBCO0lBQzFCLGFBQWE7SUFDYixZQUFZO0lBQ1osVUFBVTtJQUNWLFdBQVc7SUFDWCx3QkFBd0I7SUFDeEIsbUNBQW1DO0lBQ25DLGdCQUFnQjtJQUNoQixrQ0FBa0M7SUFDbEMsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxtQkFBbUI7Q0FDdEI7QUFFRDtJQUNJLDBCQUEwQjtJQUMxQixZQUFZO0lBQ1osVUFBVTtJQUNWLFdBQVc7SUFDWCx3QkFBd0I7SUFDeEIsbUNBQW1DO0lBQ25DLGdCQUFnQjtJQUNoQixrQ0FBa0M7SUFDbEMsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxtQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLGFBQWE7SUFDYixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQix1Q0FBdUM7SUFDdkMsMEJBQTBCO0lBQzFCLGVBQWU7SUFDZixvQkFBb0I7O0NBRXZCO0FBQ0Q7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0NBQ3JCO0FBQ0Q7SUFDSSxpQkFBaUI7SUFDakIsbUJBQW1CO0lBQ25CLG9CQUFvQjtDQUN2QjtBQUdEOzs7RUFHRTtBQUVGO0lBQ0k7UUFDSSxVQUFVO0tBQ2I7SUFDRDtRQUNJLGtCQUFrQjtRQUNsQixnQkFBZ0I7S0FDbkI7SUFDRDtRQUNJLFlBQVk7SUFDaEIsYUFBYTtJQUNiLGdCQUFnQjtJQUNoQixrQkFBa0I7S0FDakI7SUFDRDtRQUNJLGlCQUFpQjtRQUNqQixrQkFBa0I7S0FDckI7O0lBRUQ7UUFDSSxpQkFBaUI7S0FDcEI7Q0FDSjtBQUVELG9CQUFvQjtBQUNwQjtJQUNJO1FBQ0ksVUFBVTtLQUNiO0lBQ0Q7UUFDSSxrQkFBa0I7UUFDbEIsZ0JBQWdCO0tBQ25COztJQUVEO1FBQ0ksaUJBQWlCO1FBQ2pCLGtCQUFrQjtLQUNyQjtJQUNEO1FBQ0ksWUFBWTtJQUNoQixhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtLQUNqQjtJQUNEO1FBQ0ksaUJBQWlCO0tBQ3BCO0NBQ0oiLCJmaWxlIjoic3JjL2FwcC93aWRnZXQtbW9kdWxlcy9ndWVzdC1ib29rL2d1ZXN0LWJvb2suY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ndWVzdC12aWV3IHtcbiAgICBoZWlnaHQ6IDIwMHB4O1xuICAgIGNvbG9yOiAjNzA3MDcwO1xufVxuLmd1ZXN0LWJvb2stbGFiZWwge1xuICAgIHBhZGRpbmctdG9wOiA5M3B4O1xuICAgIGNvbG9yOiAjMUQxRDFEO1xuICAgIGZvbnQtZmFtaWx5OiBQbGF5ZmFpciBEaXNwbGF5LCBSZWd1bGFyO1xuICAgIGZvbnQtc2l6ZTogNTBweDtcbiAgICBsaW5lLWhlaWdodDogNjdweDtcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcblxufVxuLndpc2gtc3R5bGV7XG4gICAgY29sb3I6ICM3MDcwNzA7XG4gICAgZm9udC1mYW1pbHk6IEdyZWF0IFZpYmVzLCBSZWd1bGFyO1xuICAgIGZvbnQtc2l6ZTogNDRweDtcbiAgICBsaW5lLWhlaWdodDogODNweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5pbnB1dCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogaW5oZXJpdDtcbiAgICBoZWlnaHQ6IDYwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyOiAwO1xuICAgIG91dGxpbmU6IDA7XG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gICAgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkICM3NTcyNmU3YTtcbiAgICBmb250LXNpemU6IDQ0cHg7XG4gICAgZm9udC1mYW1pbHk6IEdyZWF0IFZpYmVzLCBSZWd1bGFyO1xuICAgIGxpbmUtaGVpZ2h0OiA4M3B4O1xuICAgIGNvbG9yOiM3MDcwNzA7XG4gICAgcGFkZGluZy1sZWZ0OiAyMHB4O1xufVxuXG50ZXh0YXJlYSB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogaW5oZXJpdDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBib3JkZXI6IDA7XG4gICAgb3V0bGluZTogMDtcbiAgICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDtcbiAgICBib3JkZXItYm90dG9tOiAycHggc29saWQgIzc1NzI2ZTdhO1xuICAgIGZvbnQtc2l6ZTogNDRweDtcbiAgICBmb250LWZhbWlseTogR3JlYXQgVmliZXMsIFJlZ3VsYXI7XG4gICAgbGluZS1oZWlnaHQ6IDgzcHg7XG4gICAgY29sb3I6IzcwNzA3MDtcbiAgICBwYWRkaW5nLWxlZnQ6IDIwcHg7XG59XG4jd2lzaC1idXR0b257XG4gICAgd2lkdGg6IDUzNnB4O1xuICAgIGhlaWdodDogMTI1cHg7XG4gICAgZm9udC1zaXplOiAzMHB4O1xuICAgIGxpbmUtaGVpZ2h0OiA4MHB4O1xuICAgIGZvbnQtZmFtaWx5OiBQbGF5ZmFpciBEaXNwbGF5LCBSZWd1bGFyO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICM0NDU1NjM7XG4gICAgY29sb3I6ICNGRkZGRkY7XG4gICAgYm9yZGVyLXJhZGl1czogMTBweDtcblxufVxuLmZvcm0td2lkdGgge1xuICAgIG1hcmdpbi1sZWZ0OiAyNSU7XG4gICAgbWFyZ2luLXJpZ2h0OiAyNSU7XG59XG4uYnRuLWRpdntcbiAgICBtYXJnaW4tdG9wOiA3NXB4OyBcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7ICAgXG4gICAgcGFkZGluZy1ib3R0b206IDI1JTtcbn1cblxuXG4vKiBcbiAgIyNEZXZpY2UgPSBMb3cgUmVzb2x1dGlvbiBUYWJsZXRzLCBNb2JpbGVzIChMYW5kc2NhcGUpXG4gICMjU2NyZWVuID0gQi93IDQ4MXB4IHRvIDc2N3B4XG4qL1xuXG5AbWVkaWEgKG1pbi13aWR0aDogNDgxcHgpIGFuZCAobWF4LXdpZHRoOiA4MTJweCkge1xuICAgIC5jb24tYWxidW0tbGFiZWwtaHJ7XG4gICAgICAgIHdpZHRoOiAwJTtcbiAgICB9XG4gICAgLmd1ZXN0LWJvb2stbGFiZWx7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1NXB4O1xuICAgICAgICBmb250LXNpemU6IDM2cHg7XG4gICAgfVxuICAgICN3aXNoLWJ1dHRvbiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogODdweDtcbiAgICBmb250LXNpemU6IDIycHg7XG4gICAgbGluZS1oZWlnaHQ6IDcxcHg7XG4gICAgfVxuICAgIC5mb3JtLXdpZHRoIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEyJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxMiU7XG4gICAgfVxuXG4gICAgLmJ0bi1kaXZ7XG4gICAgICAgIG1hcmdpbi10b3A6IDYxcHg7XG4gICAgfVxufVxuXG4vKlBvcnRyYWl0IE1vYmlsZSAqL1xuQG1lZGlhIChtaW4td2lkdGg6IDMyMHB4KSBhbmQgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgICAuY29uLWFsYnVtLWxhYmVsLWhye1xuICAgICAgICB3aWR0aDogMCU7XG4gICAgfVxuICAgIC5ndWVzdC1ib29rLWxhYmVse1xuICAgICAgICBwYWRkaW5nLXRvcDogNTVweDtcbiAgICAgICAgZm9udC1zaXplOiAzNHB4O1xuICAgIH1cblxuICAgIC5mb3JtLXdpZHRoIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEyJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxMiU7XG4gICAgfVxuICAgICN3aXNoLWJ1dHRvbiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogODdweDtcbiAgICBmb250LXNpemU6IDIycHg7XG4gICAgbGluZS1oZWlnaHQ6IDcxcHg7XG4gICAgfVxuICAgIC5idG4tZGl2e1xuICAgICAgICBtYXJnaW4tdG9wOiA2MXB4O1xuICAgIH1cbn1cbiJdfQ== */"
+module.exports = ".guest-view {\n    height: 200px;\n    color: #707070;\n}\n.guest-book-label {\n    padding-top: 93px;\n    color: #1D1D1D;\n    font-family: Playfair Display, Regular;\n    font-size: 50px;\n    line-height: 67px;\n    text-transform: uppercase;\n    text-align: center;\n\n}\n.wish-style{\n    color: #707070;\n    font-family: Great Vibes, Regular;\n    font-size: 44px;\n    line-height: 83px;\n    text-align: center;\n}\n.loc-date{\n    text-align: center;\n    font-family: Playfair Display;\n    font-style: italic;\n    font-size: 18px;\n    color: #707070;\n    margin-bottom: 2px;\n}\n/* span.wish-style:before{\n    content:\"''\";\n    font-size: 322px;\n    color: #FF418A;\n    transform: rotate(180deg);\n    opacity: .32;\n\n}\nspan.wish-style:after{\n    content:\"''\";\n    font-size: 322px;\n    color: #FF418A;\n    opacity: .32;\n\n} */\ninput {\n    background-color: inherit;\n    height: 60px;\n    width: 100%;\n    border: 0;\n    outline: 0;\n    background: transparent;\n    border-bottom: 2px solid #75726e7a;\n    font-size: 44px;\n    font-family: Great Vibes, Regular;\n    line-height: 83px;\n    color:#707070;\n    padding-left: 20px;\n}\ntextarea {\n    background-color: inherit;\n    width: 100%;\n    border: 0;\n    outline: 0;\n    background: transparent;\n    border-bottom: 2px solid #75726e7a;\n    font-size: 44px;\n    font-family: Great Vibes, Regular;\n    line-height: 83px;\n    color:#707070;\n    padding-left: 20px;\n}\n#wish-button{\n    width: 536px;\n    height: 125px;\n    font-size: 30px;\n    line-height: 80px;\n    font-family: Playfair Display, Regular;\n    background-color: #445563;\n    color: #FFFFFF;\n    border-radius: 10px;\n\n}\n.form-width {\n    margin-left: 22%;\n    margin-right: 22%;\n    margin-top: 8%\n}\n.btn-div{\n    margin-top: 75px; \n    text-align: center;   \n    padding-bottom: 25%;\n}\n/* \n  ##Device = Low Resolution Tablets, Mobiles (Landscape)\n  ##Screen = B/w 481px to 767px\n*/\n@media (min-width: 481px) and (max-width: 812px) {\n    .con-album-label-hr{\n        width: 0%;\n    }\n    .guest-book-label{\n        padding-top: 55px;\n        font-size: 36px;\n    }\n    #wish-button {\n        width: 100%;\n    height: 87px;\n    font-size: 22px;\n    line-height: 71px;\n    }\n    .form-width {\n        margin-left: 12%;\n        margin-right: 12%;\n    }\n\n    .btn-div{\n        margin-top: 61px;\n    }\n}\n/*Portrait Mobile */\n@media (min-width: 320px) and (max-width: 480px) {\n    .con-album-label-hr{\n        width: 0%;\n    }\n    .guest-book-label{\n        padding-top: 55px;\n        font-size: 34px;\n    }\n\n    .form-width {\n        margin-left: 12%;\n        margin-right: 12%;\n    }\n    #wish-button {\n        width: 100%;\n    height: 87px;\n    font-size: 22px;\n    line-height: 71px;\n    }\n    .btn-div{\n        margin-top: 61px;\n    }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvd2lkZ2V0LW1vZHVsZXMvZ3Vlc3QtYm9vay9ndWVzdC1ib29rLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxjQUFjO0lBQ2QsZUFBZTtDQUNsQjtBQUNEO0lBQ0ksa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZix1Q0FBdUM7SUFDdkMsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQiwwQkFBMEI7SUFDMUIsbUJBQW1COztDQUV0QjtBQUNEO0lBQ0ksZUFBZTtJQUNmLGtDQUFrQztJQUNsQyxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLG1CQUFtQjtDQUN0QjtBQUNEO0lBQ0ksbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixtQkFBbUI7Q0FDdEI7QUFDRDs7Ozs7Ozs7Ozs7Ozs7SUFjSTtBQUNKO0lBQ0ksMEJBQTBCO0lBQzFCLGFBQWE7SUFDYixZQUFZO0lBQ1osVUFBVTtJQUNWLFdBQVc7SUFDWCx3QkFBd0I7SUFDeEIsbUNBQW1DO0lBQ25DLGdCQUFnQjtJQUNoQixrQ0FBa0M7SUFDbEMsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxtQkFBbUI7Q0FDdEI7QUFFRDtJQUNJLDBCQUEwQjtJQUMxQixZQUFZO0lBQ1osVUFBVTtJQUNWLFdBQVc7SUFDWCx3QkFBd0I7SUFDeEIsbUNBQW1DO0lBQ25DLGdCQUFnQjtJQUNoQixrQ0FBa0M7SUFDbEMsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxtQkFBbUI7Q0FDdEI7QUFDRDtJQUNJLGFBQWE7SUFDYixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQix1Q0FBdUM7SUFDdkMsMEJBQTBCO0lBQzFCLGVBQWU7SUFDZixvQkFBb0I7O0NBRXZCO0FBQ0Q7SUFDSSxpQkFBaUI7SUFDakIsa0JBQWtCO0lBQ2xCLGNBQWM7Q0FDakI7QUFDRDtJQUNJLGlCQUFpQjtJQUNqQixtQkFBbUI7SUFDbkIsb0JBQW9CO0NBQ3ZCO0FBR0Q7OztFQUdFO0FBRUY7SUFDSTtRQUNJLFVBQVU7S0FDYjtJQUNEO1FBQ0ksa0JBQWtCO1FBQ2xCLGdCQUFnQjtLQUNuQjtJQUNEO1FBQ0ksWUFBWTtJQUNoQixhQUFhO0lBQ2IsZ0JBQWdCO0lBQ2hCLGtCQUFrQjtLQUNqQjtJQUNEO1FBQ0ksaUJBQWlCO1FBQ2pCLGtCQUFrQjtLQUNyQjs7SUFFRDtRQUNJLGlCQUFpQjtLQUNwQjtDQUNKO0FBRUQsb0JBQW9CO0FBQ3BCO0lBQ0k7UUFDSSxVQUFVO0tBQ2I7SUFDRDtRQUNJLGtCQUFrQjtRQUNsQixnQkFBZ0I7S0FDbkI7O0lBRUQ7UUFDSSxpQkFBaUI7UUFDakIsa0JBQWtCO0tBQ3JCO0lBQ0Q7UUFDSSxZQUFZO0lBQ2hCLGFBQWE7SUFDYixnQkFBZ0I7SUFDaEIsa0JBQWtCO0tBQ2pCO0lBQ0Q7UUFDSSxpQkFBaUI7S0FDcEI7Q0FDSiIsImZpbGUiOiJzcmMvYXBwL3dpZGdldC1tb2R1bGVzL2d1ZXN0LWJvb2svZ3Vlc3QtYm9vay5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmd1ZXN0LXZpZXcge1xuICAgIGhlaWdodDogMjAwcHg7XG4gICAgY29sb3I6ICM3MDcwNzA7XG59XG4uZ3Vlc3QtYm9vay1sYWJlbCB7XG4gICAgcGFkZGluZy10b3A6IDkzcHg7XG4gICAgY29sb3I6ICMxRDFEMUQ7XG4gICAgZm9udC1mYW1pbHk6IFBsYXlmYWlyIERpc3BsYXksIFJlZ3VsYXI7XG4gICAgZm9udC1zaXplOiA1MHB4O1xuICAgIGxpbmUtaGVpZ2h0OiA2N3B4O1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG59XG4ud2lzaC1zdHlsZXtcbiAgICBjb2xvcjogIzcwNzA3MDtcbiAgICBmb250LWZhbWlseTogR3JlYXQgVmliZXMsIFJlZ3VsYXI7XG4gICAgZm9udC1zaXplOiA0NHB4O1xuICAgIGxpbmUtaGVpZ2h0OiA4M3B4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5sb2MtZGF0ZXtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1mYW1pbHk6IFBsYXlmYWlyIERpc3BsYXk7XG4gICAgZm9udC1zdHlsZTogaXRhbGljO1xuICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICBjb2xvcjogIzcwNzA3MDtcbiAgICBtYXJnaW4tYm90dG9tOiAycHg7XG59XG4vKiBzcGFuLndpc2gtc3R5bGU6YmVmb3Jle1xuICAgIGNvbnRlbnQ6XCInJ1wiO1xuICAgIGZvbnQtc2l6ZTogMzIycHg7XG4gICAgY29sb3I6ICNGRjQxOEE7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMTgwZGVnKTtcbiAgICBvcGFjaXR5OiAuMzI7XG5cbn1cbnNwYW4ud2lzaC1zdHlsZTphZnRlcntcbiAgICBjb250ZW50OlwiJydcIjtcbiAgICBmb250LXNpemU6IDMyMnB4O1xuICAgIGNvbG9yOiAjRkY0MThBO1xuICAgIG9wYWNpdHk6IC4zMjtcblxufSAqL1xuaW5wdXQge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGluaGVyaXQ7XG4gICAgaGVpZ2h0OiA2MHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlcjogMDtcbiAgICBvdXRsaW5lOiAwO1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGJvcmRlci1ib3R0b206IDJweCBzb2xpZCAjNzU3MjZlN2E7XG4gICAgZm9udC1zaXplOiA0NHB4O1xuICAgIGZvbnQtZmFtaWx5OiBHcmVhdCBWaWJlcywgUmVndWxhcjtcbiAgICBsaW5lLWhlaWdodDogODNweDtcbiAgICBjb2xvcjojNzA3MDcwO1xuICAgIHBhZGRpbmctbGVmdDogMjBweDtcbn1cblxudGV4dGFyZWEge1xuICAgIGJhY2tncm91bmQtY29sb3I6IGluaGVyaXQ7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgYm9yZGVyOiAwO1xuICAgIG91dGxpbmU6IDA7XG4gICAgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gICAgYm9yZGVyLWJvdHRvbTogMnB4IHNvbGlkICM3NTcyNmU3YTtcbiAgICBmb250LXNpemU6IDQ0cHg7XG4gICAgZm9udC1mYW1pbHk6IEdyZWF0IFZpYmVzLCBSZWd1bGFyO1xuICAgIGxpbmUtaGVpZ2h0OiA4M3B4O1xuICAgIGNvbG9yOiM3MDcwNzA7XG4gICAgcGFkZGluZy1sZWZ0OiAyMHB4O1xufVxuI3dpc2gtYnV0dG9ue1xuICAgIHdpZHRoOiA1MzZweDtcbiAgICBoZWlnaHQ6IDEyNXB4O1xuICAgIGZvbnQtc2l6ZTogMzBweDtcbiAgICBsaW5lLWhlaWdodDogODBweDtcbiAgICBmb250LWZhbWlseTogUGxheWZhaXIgRGlzcGxheSwgUmVndWxhcjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDQ1NTYzO1xuICAgIGNvbG9yOiAjRkZGRkZGO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG5cbn1cbi5mb3JtLXdpZHRoIHtcbiAgICBtYXJnaW4tbGVmdDogMjIlO1xuICAgIG1hcmdpbi1yaWdodDogMjIlO1xuICAgIG1hcmdpbi10b3A6IDglXG59XG4uYnRuLWRpdntcbiAgICBtYXJnaW4tdG9wOiA3NXB4OyBcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7ICAgXG4gICAgcGFkZGluZy1ib3R0b206IDI1JTtcbn1cblxuXG4vKiBcbiAgIyNEZXZpY2UgPSBMb3cgUmVzb2x1dGlvbiBUYWJsZXRzLCBNb2JpbGVzIChMYW5kc2NhcGUpXG4gICMjU2NyZWVuID0gQi93IDQ4MXB4IHRvIDc2N3B4XG4qL1xuXG5AbWVkaWEgKG1pbi13aWR0aDogNDgxcHgpIGFuZCAobWF4LXdpZHRoOiA4MTJweCkge1xuICAgIC5jb24tYWxidW0tbGFiZWwtaHJ7XG4gICAgICAgIHdpZHRoOiAwJTtcbiAgICB9XG4gICAgLmd1ZXN0LWJvb2stbGFiZWx7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1NXB4O1xuICAgICAgICBmb250LXNpemU6IDM2cHg7XG4gICAgfVxuICAgICN3aXNoLWJ1dHRvbiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogODdweDtcbiAgICBmb250LXNpemU6IDIycHg7XG4gICAgbGluZS1oZWlnaHQ6IDcxcHg7XG4gICAgfVxuICAgIC5mb3JtLXdpZHRoIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEyJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxMiU7XG4gICAgfVxuXG4gICAgLmJ0bi1kaXZ7XG4gICAgICAgIG1hcmdpbi10b3A6IDYxcHg7XG4gICAgfVxufVxuXG4vKlBvcnRyYWl0IE1vYmlsZSAqL1xuQG1lZGlhIChtaW4td2lkdGg6IDMyMHB4KSBhbmQgKG1heC13aWR0aDogNDgwcHgpIHtcbiAgICAuY29uLWFsYnVtLWxhYmVsLWhye1xuICAgICAgICB3aWR0aDogMCU7XG4gICAgfVxuICAgIC5ndWVzdC1ib29rLWxhYmVse1xuICAgICAgICBwYWRkaW5nLXRvcDogNTVweDtcbiAgICAgICAgZm9udC1zaXplOiAzNHB4O1xuICAgIH1cblxuICAgIC5mb3JtLXdpZHRoIHtcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEyJTtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxMiU7XG4gICAgfVxuICAgICN3aXNoLWJ1dHRvbiB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogODdweDtcbiAgICBmb250LXNpemU6IDIycHg7XG4gICAgbGluZS1oZWlnaHQ6IDcxcHg7XG4gICAgfVxuICAgIC5idG4tZGl2e1xuICAgICAgICBtYXJnaW4tdG9wOiA2MXB4O1xuICAgIH1cbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -572,7 +572,7 @@ module.exports = ".guest-view {\n    height: 200px;\n    color: #707070;\n}\n.gu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"guestbook\">\n  <div class=\"guest-book-label\">\n    <img class=\"con-album-label-hr\" src=\"assets/rectangle.svg\" />\n    <span id=\"album\" style=\"padding-left: 20px;padding-right: 17px;\">Guest Book</span>\n    <img class=\"con-album-label-hr\" style=\"transform: scale(-1);\" src=\"assets/rectangle.svg\" />\n  </div>\n\n  <div style=\"margin-top: 63px;\" >\n        <div  class=\"guest-view\">\n          <h1 class=\"wish-style\" id=\"word\"></h1>\n        </div>\n  </div>\n\n  <div *ngIf=\"showForm\" class=\"form-width\" >\n        <form (ngSubmit)=\"guestForm.form.valid && onSubmit()\" #guestForm=\"ngForm\">\n          <div>\n            <input name=\"name\" [(ngModel)]=\"wishObj.name\" placeholder=\"Your Name\" required/>\n          </div>\n          <div style=\"margin-top: 75px;\">\n              <input name=\"message\" [(ngModel)]=\"wishObj.location\" placeholder=\"Your Location\" required/>\n          </div>\n          <div style=\"margin-top: 75px;\">\n              <input name=\"email\" [(ngModel)]=\"wishObj.email\" placeholder=\"Your Email\"/>\n          </div>\n          <div style=\"margin-top: 75px;\">\n              <textarea name=\"message\" [(ngModel)]=\"wishObj.message\" placeholder=\"Your Message\" required></textarea>\n            </div>\n\n            <div class=\"btn-div\">\n              <button type=\"submit\" id=\"wish-button\">Wish the lovely couple</button>\n            </div>\n            \n        </form>\n\n      </div>\n  <!-- <div  *ngIf=\"!showForm && showConfirmMsg\" style=\"margin-left: 25%; margin-right: 25%;\">\n          <h1 class=\"wish-style\" id=\"word\">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)=\"showForm=true;\">Edit</a></h1>\n      </div> -->\n</div>\n\n<!--  \n      <div >\n          <div class=\"container\">\n              <h1></h1>\n              <form (ngSubmit)=\"guestForm.form.valid && onSubmit()\" #guestForm=\"ngForm\">\n                <div class=\"form-group\">\n                  <label for=\"name\">Name</label>\n                  <input name=\"name\" [(ngModel)]=\"wishObj.name\" type=\"text\" class=\"form-control\" id=\"name\" required #name=\"ngModel\">\n                  \n                </div>\n                <div class=\"form-group\">\n                  <label for=\"alterEgo\">Message</label>\n                  <input name=\"message\" [(ngModel)]=\"wishObj.Message\" type=\"text\" class=\"form-control\" id=\"alterEgo\">\n                </div>\n          \n                <button type=\"submit\" class=\"btn btn-success\">post</button>\n          \n              </form>\n          </div>\n    \n      </div>\n      -->"
+module.exports = "<div id=\"guestbook\">\n  <div class=\"guest-book-label\">\n    <img class=\"con-album-label-hr\" src=\"assets/rectangle.svg\" />\n    <span id=\"album\" style=\"padding-left: 20px;padding-right: 17px;\">Guest Book</span>\n    <img class=\"con-album-label-hr\" style=\"transform: scale(-1);\" src=\"assets/rectangle.svg\" />\n  </div>\n\n  <div style=\"margin-top: 63px;     display: flex;\n  justify-content: center;height: 604px;\">\n    <div class=\"guest-view\" style=\"position: relative;\">\n      <div id=\"guest-book-turn\">\n        <div *ngFor=\"let wish of wishes.data.wishList\" style=\"background: url('assets/page-right.png')\">\n          <div style=\"height: 100%;padding: 0px 98px;\">\n            <div style=\" display: flex;justify-content: center;align-items: center;    height: 390px;\n            overflow-y: scroll;\">\n                <h1 class=\"wish-style\">{{wish.message}}</h1>\n            </div>\n\n            <div style=\"width: max-content;     position: absolute;\n            right: 14%;\">\n              <p style=\"font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;\">- {{wish.name}}</p>\n              <p class=\"loc-date\">{{wish.location}}</p>\n              <p  class=\"loc-date\">{{wish.modifiedDate | date }}</p>\n            </div>\n          </div>\n          <div>\n\n          </div>\n        </div>\n\n        <!-- <div style=\"background: url('assets/page-right.png')\">hello</div> -->\n\n        <!-- <div style=\"background: url('assets/page-right.png')\">hhh</div> -->\n      </div>\n    </div>\n  </div>\n  <!-- <div ng-repeat=\"item in wishes.data.wishList\" style=\"background: url('assets/page.png')\">Hello</div>\n           -->\n  <!-- <h1 class=\"wish-style\" id=\"word\"></h1> -->\n  <div *ngIf=\"showForm\" class=\"form-width\">\n    <form (ngSubmit)=\"guestForm.form.valid && onSubmit(wishes.data.wishList)\" #guestForm=\"ngForm\">\n      <div>\n        <input name=\"name\" [(ngModel)]=\"wishObj.name\" placeholder=\"Your Name\" required/>\n      </div>\n      <div style=\"margin-top: 75px;\">\n        <input name=\"message\" [(ngModel)]=\"wishObj.location\" placeholder=\"Your Location\" required/>\n      </div>\n      <div style=\"margin-top: 75px;\">\n        <input name=\"email\" [(ngModel)]=\"wishObj.email\" placeholder=\"Your Email\" />\n      </div>\n      <div style=\"margin-top: 75px;\">\n        <textarea name=\"message\" [(ngModel)]=\"wishObj.message\" placeholder=\"Your Message\" required></textarea>\n      </div>\n\n      <div class=\"btn-div\">\n        <button type=\"submit\" id=\"wish-button\">Wish the lovely couple</button>\n      </div>\n\n    </form>\n\n  </div>\n  <!-- <div  *ngIf=\"!showForm && showConfirmMsg\" style=\"margin-left: 25%; margin-right: 25%;\">\n          <h1 class=\"wish-style\" id=\"word\">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)=\"showForm=true;\">Edit</a></h1>\n      </div> -->\n</div>\n\n<!--  \n      <div >\n          <div class=\"container\">\n              <h1></h1>\n              <form (ngSubmit)=\"guestForm.form.valid && onSubmit()\" #guestForm=\"ngForm\">\n                <div class=\"form-group\">\n                  <label for=\"name\">Name</label>\n                  <input name=\"name\" [(ngModel)]=\"wishObj.name\" type=\"text\" class=\"form-control\" id=\"name\" required #name=\"ngModel\">\n                  \n                </div>\n                <div class=\"form-group\">\n                  <label for=\"alterEgo\">Message</label>\n                  <input name=\"message\" [(ngModel)]=\"wishObj.Message\" type=\"text\" class=\"form-control\" id=\"alterEgo\">\n                </div>\n          \n                <button type=\"submit\" class=\"btn btn-success\">post</button>\n          \n              </form>\n          </div>\n    \n      </div>\n      -->"
 
 /***/ }),
 
@@ -592,29 +592,82 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var isPrevious = false;
+var defaultInterval;
 var GuestBookComponent = /** @class */ (function () {
     function GuestBookComponent(wedOverviewService) {
         this.wedOverviewService = wedOverviewService;
         this.sendWishEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.wishes = [{}];
         this.showForm = true;
         this.showConfirmMsg = false;
         this.wishObj = {};
     }
     GuestBookComponent.prototype.ngOnInit = function () {
+        this.setGuestBookWishes();
     };
+    GuestBookComponent.prototype.setGuestBookWishes = function () {
+        var _this = this;
+        this.wedOverviewService.getWishes().subscribe(function (data) {
+            _this.wishes = data;
+            _this.initialiseGuestBookTurn(data);
+        });
+    };
+    GuestBookComponent.prototype.initialiseGuestBookTurn = function (wishArray) {
+        setTimeout(function () {
+            $('#guest-book-turn').turn({
+                display: 'single',
+                width: 1000,
+                height: 604,
+                autoCenter: true,
+                duration: 1400,
+                when: {
+                    turned: function (e, page, pageObj) {
+                        if (wishArray.data.wishList.length === page) {
+                            clearInterval(defaultInterval);
+                        }
+                    }
+                }
+            });
+        }, 100);
+        defaultInterval = setInterval(function () {
+            $('#guest-book-turn').turn('next');
+            // if(isPrevious){
+            //   $('#guest-book-turn').turn('previous');
+            // }else {
+            //   $('#guest-book-turn').turn('next');
+            // }
+        }, 5000);
+    };
+    ;
     GuestBookComponent.prototype.refreshWishes = function () {
         this.sendWishEvent.emit('true');
     };
-    GuestBookComponent.prototype.onSubmit = function () {
+    GuestBookComponent.prototype.onSubmit = function (wishes) {
         var _this = this;
         this.showForm = false;
         this.showConfirmMsg = true;
         $('#word').text(this.wishObj.message);
+        this.wishes.data.wishList.push(this.wishObj);
+        var element = $("<div  style=\"background: url('assets/page-right.png')\">\n    <div style=\"height: 100%;padding: 0px 98px;\">\n      <div style=\" display: flex;justify-content: center;align-items: center;    height: 390px;\n      overflow-y: scroll;\">\n          <h1 style=\"color: #707070; font-family: Great Vibes, Regular; font-size: 44px; line-height: 83px; text-align: center;\">"
+            + this.wishObj.message + "</h1>\n      </div>\n      <div style=\"width: max-content;position: absolute;right: 14%;\">\n      <p style=\"font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;\">"
+            + this.wishObj.name + "</p>\n      <p style=\"text-align: center; font-family: Playfair Display;font-style: italic;font-size: 18px;: #707070;margin-bottom: 2px;\">"
+            + this.wishObj.location + "</p>\n      </div>\n    </div>\n    <div>\n\n    </div>\n  </div>");
+        $('#guest-book-turn').turn('addPage', element);
+        $('#guest-book-turn').turn('page', wishes.length);
         this.postWish();
+        clearInterval(defaultInterval);
         setTimeout(function () {
+            isPrevious = true;
             _this.showForm = false;
             _this.showConfirmMsg = false;
-        }, 10000);
+            var submitInterval = setInterval(function () {
+                if ($('#guest-book-turn').turn('page') === 1) {
+                    clearInterval(submitInterval);
+                }
+                $('#guest-book-turn').turn('previous');
+            }, 5000);
+        }, 3000);
     };
     GuestBookComponent.prototype.postWish = function () {
         var _this = this;
@@ -833,6 +886,8 @@ var AlbumsComponent = /** @class */ (function () {
         this.route = route;
         this.albumService = albumService;
         this.albumUrl = 'https://gist.githubusercontent.com/SachinBharadwaj/ddfae61610bc3713c39506202e2b2d91/raw/470b93abaeb0f2ee3e55247e77de4c1cc2d36ee5/albumAPI.json';
+        this.imgArray = ['https://images.pexels.com/photos/974320/pexels-photo-974320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            'https://images.pexels.com/photos/203561/pexels-photo-203561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'];
     }
     AlbumsComponent.prototype.handleWheelEvent = function (event) {
         event.preventDefault();
@@ -841,12 +896,18 @@ var AlbumsComponent = /** @class */ (function () {
         var _this = this;
         this.albumService.getAlbumOverview(this.albumUrl).subscribe(function (data) {
             _this.albumData = data;
-            _this.intialiseFlip();
+            _this.intialiseFlip(_this.imgArray);
             //console.log(this.al);
         });
     };
     AlbumsComponent.prototype.ngOnInit = function () {
+        // $(document).ready(function () {
+        //   var obj = ['https://images.pixieset.com/96161171/9ed66e1e2b22ba5a247b0a25f61cf3da-large.jpg',
+        //     'https://images.pixieset.com/96161171/9ed66e1e2b22ba5a247b0a25f61cf3da-large.jpg'];
+        //   //$('#mybook').onebook(obj);
+        //   $('#mybook').onebook(obj,{skin:['light','dark'], bgDark:'#56998c url(assets/bg.jpg)',bgLight:'#d97f6f url(./i/bg2.jpg)', border:0, cesh:false});
         var _this = this;
+        // });
         this.route.params.subscribe(function (params) {
             _this.imgUrl = params.url;
             _this.eventName = params.name;
@@ -854,23 +915,27 @@ var AlbumsComponent = /** @class */ (function () {
         // this.route.data.subscribe(v => this.imgUrl = v);
         this.fetchAlbumData();
     };
-    // ngAfterViewInit() {
-    // $('#flipbook').turn({
-    //   width: 1400,
-    //   height: 600,
-    //   autoCenter: true
-    // });
-    //}
-    AlbumsComponent.prototype.intialiseFlip = function () {
+    AlbumsComponent.prototype.ngAfterViewChecked = function () {
+        // $('#flipbook').turn({
+        //   width: 1400,
+        //   height: 600,
+        //   autoCenter: true
+        // });
+    };
+    AlbumsComponent.prototype.intialiseFlip = function (obj) {
         $(document).ready(function () {
+            //     let obj = ['https://images.pexels.com/photos/974320/pexels-photo-974320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+            // 'https://images.pexels.com/photos/203561/pexels-photo-203561.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'];
+            // 			$('#mybook').onebook(obj,{
+            // 				flip: 'basic'
+            // 			});
             $('#flipbook').turn({
-                display: 'single',
+                display: 'double',
                 width: '100%',
                 height: 600,
                 autoCenter: true,
                 duration: 1000,
-                inclination: 90,
-                gradients: true
+                inclination: 90
             });
         });
     };
@@ -961,32 +1026,12 @@ var HomeComponent = /** @class */ (function () {
         var _this = this;
         this.wedOverviewService.getWeddingOverview().subscribe(function (data) {
             _this.wedddingOverviewData = data;
-            _this.setGuestBookWishes(Event);
             setTimeout(function () {
                 _this.initialiseAnime();
             }, 5000);
         });
     };
     ;
-    HomeComponent.prototype.setGuestBookWishes = function ($event) {
-        var _this = this;
-        console.log('called');
-        var wishData = {};
-        var count = 0;
-        this.wedOverviewService.getWishes().subscribe(function (data) {
-            wishData = data;
-            if (_this.isSetBoolean) {
-                $('#word').text(wishData.data.wishList[0].message);
-                _this.isSetBoolean = false;
-                setInterval(function () {
-                    count++;
-                    $('#word').fadeOut(400, function () {
-                        $(this).text(wishData.data.wishList[count % wishData.data.wishList.length].message).fadeIn(400);
-                    });
-                }, 5000);
-            }
-        });
-    };
     HomeComponent.prototype.initialiseAnime = function () {
         var tiltSettings = [{},
             {
