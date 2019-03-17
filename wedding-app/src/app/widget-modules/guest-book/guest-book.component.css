@@ -92,7 +92,35 @@ textarea {
     padding-bottom: 25%;
 }
 
+.tq{
+    font-family: Great Vibes, Regular;
+    font-size: 90px;
+    color: #FF418A;
+    opacity: .81;
+}
+.tq-msg{
+    font-family: Playfair Display, Regular;
+    font-size: 30px;
+    line-height: 83px;
+    color: #707070;
 
+}
+#tq-div{
+    width: 60vw;
+    padding: 50px;
+    border-radius: 15px;
+    background: #E4E0DD;
+    text-align: center;
+}
+.btn-gotit{
+    background-color: #445563;
+    border-radius: 10px;
+    width: 177px;
+    height: 73px;
+    font-family: Playfair Display,Regular;
+    color: #FFFFFF;
+    font-size: 30px;
+}
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px

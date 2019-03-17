@@ -28,15 +28,27 @@
       </div>
     </div>
   </div>
-  <div class="">
-
-  </div>
+  <div class="modal" id="confirmModal">
+      <div class="modal-dialog">
+        <div class="modal-content" style="justify-content: center;align-items: center;background-color: none">
+       
+          <div class="modal-body" id="tq-div">
+            <h1 class="tq">Thank you</h1>
+            <p class="tq-msg">...for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on the edit button.</p>
+            <div style="text-align: right">
+                <button data-dismiss="modal" class="btn-gotit" (click)="iAgree(wishes.data.wishList)">Got it</button>
+            </div>
+           </div>
+         
+        </div>
+      </div>
+    </div>
 
   <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
            -->
   <!-- <h1 class="wish-style" id="word"></h1> -->
   <div *ngIf="showForm" class="form-width">
-    <form (ngSubmit)="guestForm.form.valid && onSubmit(wishes.data.wishList)" #guestForm="ngForm">
+    <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm">
       <div>
         <input name="name" [(ngModel)]="wishObj.name" placeholder="Your Name" required/>
       </div>
@@ -51,7 +63,7 @@
       </div>
 
       <div class="btn-div">
-        <button type="submit" id="wish-button">Wish the lovely couple</button>
+        <button  type="submit" id="wish-button">Wish the lovely couple</button>
       </div>
 
     </form>
