@@ -5,34 +5,71 @@
     <img class="con-album-label-hr" style="transform: scale(-1);" src="assets/rectangle.svg" />
   </div>
 
-  <div style="margin-top: 63px;" >
-        <div  class="guest-view">
-          <h1 class="wish-style" id="word"></h1>
+  <div style="margin-top: 63px;     display: flex;
+  justify-content: center;height: 604px;">
+    <div class="guest-view" style="position: relative;width: 100%">
+      <div id="guest-book-turn">
+        <div *ngFor="let wish of wishes.data.wishList" style="    background: url(assets/book.jpg); background-repeat: no-repeat;">
+          <div style="height: 100%;padding: 0px 98px;">
+            <div style="position: absolute;
+            left: 27%;
+            width: 61%;
+            top: 10%;
+            overflow-y: scroll;
+            height: 54%;
+            justify-content: center;
+            align-items: center;
+            display: flex;">
+              <h1 class="wish-style">{{wish.message}}</h1>
+            </div>
+
+            <div style="    width: max-content;
+            position: absolute;
+            right: 13%;
+            position: absolute;
+            bottom: 14%;">
+              <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">- {{wish.name}}</p>
+              <p class="loc-date">{{wish.location}}</p>
+              <p class="loc-date">{{wish.modifiedDate | date }}</p>
+            </div>
+          </div>
         </div>
+
+        <!-- <div style="background: url('assets/page-right.png')">hello</div> -->
+
+        <!-- <div style="background: url('assets/page-right.png')">hhh</div> -->
+      </div>
+    </div>
+  </div>
+  <div class="">
+
   </div>
 
-  <div *ngIf="showForm" class="form-width" >
-        <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm">
-          <div>
-            <input name="name" [(ngModel)]="wishObj.name" placeholder="Your Name" required/>
-          </div>
-          <div style="margin-top: 75px;">
-              <input name="message" [(ngModel)]="wishObj.location" placeholder="Your Location" required/>
-          </div>
-          <div style="margin-top: 75px;">
-              <input name="email" [(ngModel)]="wishObj.email" placeholder="Your Email"/>
-          </div>
-          <div style="margin-top: 75px;">
-              <textarea name="message" [(ngModel)]="wishObj.message" placeholder="Your Message" required></textarea>
-            </div>
-
-            <div class="btn-div">
-              <button type="submit" id="wish-button">Wish the lovely couple</button>
-            </div>
-            
-        </form>
-
+  <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
+           -->
+  <!-- <h1 class="wish-style" id="word"></h1> -->
+  <div *ngIf="showForm" class="form-width">
+    <form (ngSubmit)="guestForm.form.valid && onSubmit(wishes.data.wishList)" #guestForm="ngForm">
+      <div>
+        <input name="name" [(ngModel)]="wishObj.name" placeholder="Your Name" required/>
       </div>
+      <div style="margin-top: 75px;">
+        <input name="message" [(ngModel)]="wishObj.location" placeholder="Your Location" required/>
+      </div>
+      <div style="margin-top: 75px;">
+        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your Email" />
+      </div>
+      <div style="margin-top: 75px;">
+        <textarea name="message" [(ngModel)]="wishObj.message" placeholder="Your Message" required></textarea>
+      </div>
+
+      <div class="btn-div">
+        <button type="submit" id="wish-button">Wish the lovely couple</button>
+      </div>
+
+    </form>
+
+  </div>
   <!-- <div  *ngIf="!showForm && showConfirmMsg" style="margin-left: 25%; margin-right: 25%;">
           <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)="showForm=true;">Edit</a></h1>
       </div> -->

@@ -19,6 +19,29 @@
     line-height: 83px;
     text-align: center;
 }
+.loc-date{
+    text-align: center;
+    font-family: Playfair Display;
+    font-style: italic;
+    font-size: 18px;
+    color: #707070;
+    margin-bottom: 2px;
+}
+/* span.wish-style:before{
+    content:"''";
+    font-size: 322px;
+    color: #FF418A;
+    transform: rotate(180deg);
+    opacity: .32;
+
+}
+span.wish-style:after{
+    content:"''";
+    font-size: 322px;
+    color: #FF418A;
+    opacity: .32;
+
+} */
 input {
     background-color: inherit;
     height: 60px;
@@ -59,8 +82,9 @@ textarea {
 
 }
 .form-width {
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 8%
 }
 .btn-div{
     margin-top: 75px; 
