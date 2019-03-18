@@ -12,7 +12,7 @@ export class AlbumsComponent implements OnInit {
   imgUrl: any;
   eventName: string;
   albumData : any;
-  albumUrl = 'https://gist.githubusercontent.com/SachinBharadwaj/ddfae61610bc3713c39506202e2b2d91/raw/470b93abaeb0f2ee3e55247e77de4c1cc2d36ee5/albumAPI.json';
+  albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080';
   
   
   constructor(private route: ActivatedRoute,private albumService: AlbumOverviewService) {

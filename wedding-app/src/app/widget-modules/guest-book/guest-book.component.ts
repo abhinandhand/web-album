@@ -118,6 +118,7 @@ export class GuestBookComponent implements OnInit {
       }, 5000);
     }, 3000);
   }
+  /*
   // console.log('called');
   //   var wishData : any = {};
   //   let count = 0;
@@ -130,7 +131,7 @@ export class GuestBookComponent implements OnInit {
   //       $(this).text(wishData.data.wishList[count % wishData.data.wishList.length].message).fadeIn(400);
   //     });
   //   }, 5000);
-  // }
+  // }*/
 
 
 }
