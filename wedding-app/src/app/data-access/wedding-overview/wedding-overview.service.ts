@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class WeddingOverviewService {
-  endpoint = 'http://ec2-54-191-183-21.us-west-2.compute.amazonaws.com:8080/';
+  // endpoint = 'https://gist.githubusercontent.com/SachinBharadwaj/18001dbea2aaacb97ac6ec23b3585d43/raw/af9015cbb33636b5830bf2e4dff7d339793839b8/index.json';
+  endpoint = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/';
   constructor(private http: HttpClient) { }
 
   getWeddingOverview() {
@@ -19,7 +20,8 @@ export class WeddingOverviewService {
   }
 
   getWishes() {
-    return this.http.get(this.endpoint + 'guestbook');
+   return this.http.get(this.endpoint + 'guestbook');
+   // return this.http.get(this.endpoint);
   }
 
 }
