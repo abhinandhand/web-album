@@ -46,6 +46,14 @@
 }
 .nav-height{
     height: 68px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.nav-transcluent{
+    color: #f1f1f1;
+    filter: blur(6px);
+    background-color: #ffff;
+     opacity: 0.6;
 }
 /*Landscape Mobile*/
 @media (min-width: 481px) and (max-width: 812px) {
