@@ -4,11 +4,21 @@
     /* font-size: 142px; */
     font-size: 8.395vw;
     line-height: 178px;
-    color: #D0CECA;
+    color: #9d45278a;
+    /* color: #D0CECA; */
     margin-top: 32px;
     z-index: 200;
     
 
+}
+.cp-bg{
+    color: #f1f1f1;
+    filter: blur(6px);
+    background-color: #ffff;
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    height: 107%;
 }
 #marriage-date {
     text-align: center;
@@ -68,15 +78,17 @@
      #couple-name{
         font-size: 13.395vw;
         line-height: 0;
-        color: #D0CECA;
+        color: #9d45278a;
         margin-top: 17px;
        }
        .couple-name-div{
-        height: 116px;
-        left: 7%;
-        right: 7%;
-        top: -116px;
+        position: relative;
+        top: 0px;
+        height: 106px;
+        left: 0px;
+        right: 0px;
        }
+    
 
        #marriage-date-summary{
         font-size: 4vw;
@@ -106,15 +118,17 @@
    #couple-name{
     font-size: 13.395vw;
     line-height: 0;
-    color: #D0CECA;
+    color: #9d45278a;
     margin-top: 17px;
    }
    .couple-name-div{
-    height: 89px;
-    left: 7%;
-    right: 7%;
-    top: -89px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 106px;
    }
+  
 
    #marriage-date-summary{
            font-size: 4vw;

@@ -1,12 +1,5 @@
 <div>
     <router-outlet></router-outlet>
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-      <app-nav-bar
-        [imageUrl]="wedddingOverviewData?.data?.welcome"
-      ></app-nav-bar>
-    </div>
-  </div>
   <div class="key-photo">
     <img
       style="display: none"
@@ -16,7 +9,13 @@
       [src]="wedddingOverviewData?.data?.welcome"
     />
   </div>
-
+  <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <app-nav-bar
+          [imageUrl]="wedddingOverviewData?.data?.welcome"
+        ></app-nav-bar>
+      </div>
+    </div>
   <div class="container-fluid-nomax">
         <div class="parent-container">
           <div>
