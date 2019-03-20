@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { WishForm } from './wish-form';
 import { WeddingOverviewService } from '../../data-access/wedding-overview/wedding-overview.service';
 import { element } from 'protractor';
@@ -10,7 +10,8 @@ var defaultInterval;
 @Component({
   selector: 'app-guest-book',
   templateUrl: './guest-book.component.html',
-  styleUrls: ['./guest-book.component.css']
+  styleUrls: ['./guest-book.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class GuestBookComponent implements OnInit {
 
@@ -35,8 +36,8 @@ export class GuestBookComponent implements OnInit {
     setTimeout(() => {
       $('#guest-book-turn').turn({
         display: 'single',
-        width: '90%',
-        height: 604,
+        width: $('#guest-book-cont').width() - 20,
+        height: $('#guest-book-cont').height(),
         autoCenter: true,
         duration: 1400,
         when: {
@@ -87,23 +88,22 @@ export class GuestBookComponent implements OnInit {
 
   iAgree(wishes) {
     clearInterval(defaultInterval);
-    let element = $(`<div style="background: url(assets/book.jpg); background-repeat: no-repeat;">
+    let element = $( `<div>
+    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/book.jpg">
+    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
     <div style="height: 100%;padding: 0px 98px;">
-    <div style="position: absolute;left: 27%;width: 61%;top: 10%;overflow-y:
-    scroll;height: 54%;justify-content: center;align-items: center;display: flex;">
-          <h1 style="color: #707070; font-family: Great Vibes, Regular; font-size: 44px; line-height: 83px; text-align: center;">`
-      + this.wishObj.message + `</h1>
-      </div>
-      <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
-        <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">`
-      + this.wishObj.name + `</p>
-      <p style="text-align: center; font-family: Playfair Display;font-style: italic;font-size: 18px;: #707070;margin-bottom: 2px;">`
-      + this.wishObj.location + `</p>
-      </div>
-    </div>
-    <div>
-    </div>
-  </div>`);
+      <div class="guest-book-wish-text">
+        <h1 class="wish-style">` + this.wishObj.message + `</h1></div>
+        <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
+          <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">` +
+          this.wishObj.name +`</p>
+          <p style="text-align: center; font-family: Playfair Display;font-style: italic;font-size: 18px;: #707070;margin-bottom: 2px;">`
+          + this.wishObj.location + `</p>
+          </div>
+        </div>
+        <div>`
+      );
+
     $('#guest-book-turn').turn('addPage', element);
     $('#guest-book-turn').turn('page', wishes.length);
     setTimeout(() => {
