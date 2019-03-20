@@ -5,13 +5,14 @@
     <img class="con-album-label-hr" style="transform: scale(-1);" src="assets/rectangle.svg" />
   </div>
 
-  <div style="margin-top: 63px;     display: flex;
-  justify-content: center;height: 604px;">
+  <div id="guest-book-cont">
     <div class="guest-view" style="position: relative;width: 100%">
       <div id="guest-book-turn">
-        <div *ngFor="let wish of wishes.data.wishList" style="    background: url(assets/book.jpg); background-repeat: no-repeat;">
+        <div  *ngFor="let wish of wishes.data.wishList">
+          <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/book.jpg">
+          <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
           <div style="height: 100%;padding: 0px 98px;">
-            <div style="position: absolute;left: 27%;width: 61%;top: 10%;overflow-y: scroll;height: 54%;justify-content: center;align-items: center;display: flex;">
+            <div class="guest-book-wish-text">
               <h1 class="wish-style">{{wish.message}}</h1>
             </div>
             <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
