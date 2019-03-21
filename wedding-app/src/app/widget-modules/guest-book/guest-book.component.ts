@@ -31,7 +31,9 @@ export class GuestBookComponent implements OnInit {
       this.initialiseGuestBookTurn(data);
     });
   }
+  sizeFlipBook(){
 
+  }
   initialiseGuestBookTurn(wishArray) {
     setTimeout(() => {
       $('#guest-book-turn').turn({
@@ -50,6 +52,10 @@ export class GuestBookComponent implements OnInit {
       });
     }, 100);
 
+    $(window).resize(() => {
+      $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20,$('#guest-book-cont').height() - 20);
+      $('#guest-book-turn').turn('resize');
+    });
     defaultInterval = setInterval(() => {
       $('#guest-book-turn').turn('next');
       // if(isPrevious){
@@ -103,7 +109,7 @@ export class GuestBookComponent implements OnInit {
         </div>
         <div>`
       );
-
+    $('#guest-book-turn').turn('resize');
     $('#guest-book-turn').turn('addPage', element);
     $('#guest-book-turn').turn('page', wishes.length);
     setTimeout(() => {
@@ -114,6 +120,7 @@ export class GuestBookComponent implements OnInit {
         if($('#guest-book-turn').turn('page') === 1) {
           clearInterval(submitInterval);
         }
+        $('#guest-book-turn').turn('resize');
         $('#guest-book-turn').turn('previous');
       }, 5000);
     }, 3000);
