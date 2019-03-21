@@ -143,6 +143,14 @@ textarea {
     font-size: 30px;
 }
 
+.guest-wisher-info {
+    width: max-content;
+    position: absolute;
+    right: 13%;
+    position: absolute; 
+    bottom: 14%;
+}
+
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -177,10 +185,15 @@ textarea {
     }
     .wish-style {
      font-size: 40px;
-     line-height: 64px;
+     line-height: 48px;
     }
     .guest-book-wish-text {
-        left: 20%;
+        left: 18%;
+        width: 66%;
+        height: 56%;
+    }
+    .guest-wisher-info {
+        bottom: 8%;
     }
 }
 
@@ -212,10 +225,15 @@ textarea {
         height: 400px;
     }
     .guest-book-wish-text {
-        left: 20%;
+        left: 18%;
+        width: 66%;
+        height: 56%;
     }
     .wish-style {
         font-size: 40px;
-        line-height: 64px;
+        line-height: 48px;
+    }
+    .guest-wisher-info {
+        bottom: 8%;
     }
 }
