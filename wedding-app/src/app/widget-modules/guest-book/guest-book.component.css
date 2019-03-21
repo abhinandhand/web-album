@@ -9,6 +9,8 @@
     line-height: 67px;
     text-transform: uppercase;
     text-align: center;
+    margin-left: 7%;
+    margin-right: 7%;
 
 }
 .guest-book-wish-text {
@@ -47,6 +49,37 @@
     font-size: 18px;
     color: #707070;
     margin-bottom: 2px;
+}
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    height: 1.5em;
+    font-family: Playfair Display, Regular;
+    font-size: 3.4895vw;
+    text-align: center;
+    color: #1D1D1D;
+    letter-spacing: 4px;
+  }
+  .hr-text::before{
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top : 50%;
+    width: 100%;
+    height: 2px;
+
+  }
+  .hr-text::after{
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    background-color: #f6f2ee;
 }
 /* span.wish-style:before{
     content:"''";
@@ -162,8 +195,9 @@ textarea {
         width: 0%;
     }
     .guest-book-label{
+        margin-left: 0%;
+    margin-right: 0%;
         padding-top: 55px;
-        font-size: 36px;
     }
     #wish-button {
     width: 100%;
@@ -195,6 +229,10 @@ textarea {
     .guest-wisher-info {
         bottom: 8%;
     }
+    .hr-text {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
 }
 
 /*Portrait Mobile */
@@ -204,7 +242,8 @@ textarea {
     }
     .guest-book-label{
         padding-top: 55px;
-        font-size: 34px;
+        margin-left: 0%;
+    margin-right: 0%;
     }
 
     .form-width {
@@ -235,5 +274,9 @@ textarea {
     }
     .guest-wisher-info {
         bottom: 8%;
+    }
+    .hr-text {
+        font-size: 36px;
+        letter-spacing: 3px;
     }
 }

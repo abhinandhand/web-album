@@ -53,11 +53,11 @@ export class GuestBookComponent implements OnInit {
     }, 100);
 
     $(window).resize(() => {
-      $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20,$('#guest-book-cont').height() - 20);
+      $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20, $('#guest-book-cont').height() - 20);
       $('#guest-book-turn').turn('resize');
     });
     defaultInterval = setInterval(() => {
-      $('#guest-book-turn').turn('next');
+     // $('#guest-book-turn').turn('next');
       // if(isPrevious){
       //   $('#guest-book-turn').turn('previous');
       // }else {
@@ -109,9 +109,9 @@ export class GuestBookComponent implements OnInit {
         </div>
         <div>`
       );
-    $('#guest-book-turn').turn('resize');
+     $('#guest-book-turn').turn('resize');
     $('#guest-book-turn').turn('addPage', element);
-    $('#guest-book-turn').turn('page', wishes.length);
+    $('#guest-book-turn').turn('page', wishes.length + 1);
     setTimeout(() => {
       isPrevious = true;
       this.showForm = false;
