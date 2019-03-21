@@ -1,6 +1,6 @@
 <div>
     <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation">
-        <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{} " class="nav-container nav-transcluent"></div>
+        <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'68px'} " class="nav-container nav-transcluent"></div>
         <!-- <div [ngStyle]="{'background-image':'url(' +imageUrl+ ')'}" class="nav-container"></div> -->
         <div class="navbar-light" style="z-index: 3;">
             <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="onCollapse()">
@@ -22,7 +22,7 @@
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
                 <div class="nav-flex">
                     <div class="nav-items-flex">
-                        <a style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">HOME</a>
+                        <a href="#home" [fragment]="'home'" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">HOME</a>
                     </div>
                     <div class="nav-items-flex">
                         <a href="#album" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
@@ -41,7 +41,7 @@
             <div class="d-block d-sm-block d-md-none">
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
                     <li class="nav-item">
-                        <a (click)="isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
+                        <a href="#home" [fragment]="'home'" (click)="isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
                             routerLink="/" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item">
