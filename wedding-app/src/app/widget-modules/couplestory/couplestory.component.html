@@ -1,0 +1,19 @@
+<div>
+    <div class="couple-name-div">
+            <!-- <div class="couple-name-bg"  [ngStyle]="{'background':'url('+ imageUrl +')'}" ></div>  -->
+                <!-- <div class="couple-name-bg"   ></div>  -->
+                <div  class="cp-bg d-none d-sm-none d-md-none d-lg-block"></div>
+                <h1 id="couple-name">{{'Aaron & Diya'}}</h1> 
+    </div>
+    <div class="duration-summary">
+         <div  class="nav-container"></div>
+            <div id="marriage-date-summary">
+                    <span style="padding-left: 20px;padding-right: 17px;">celebrating <span *ngIf="togetherMonth>=0" class="duration">{{togetherMonth}} month</span> <span *ngIf="togetherYear>=0" class="duration">{{togetherYear}} year</span> of togetherness
+                    </span>
+                 <div>since</div>
+            </div>
+            <h1 id="marriage-date">10 February 2019</h1>
+    </div>
+</div>
+
+

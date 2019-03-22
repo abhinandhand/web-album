@@ -1,0 +1,109 @@
+<div id="guestbook">
+  <div class="guest-book-label">
+      <hr id="album" class="hr-text" data-content="GUEST BOOK">
+    <!-- <img class="con-album-label-hr" src="assets/rectangle.svg" />
+    <span id="album" style="padding-left: 20px;padding-right: 17px;">Guest Book</span>
+    <img class="con-album-label-hr" style="transform: scale(-1);" src="assets/rectangle.svg" /> -->
+  </div>
+
+  <div id="guest-book-cont">
+    <div class="guest-view" style="position: relative;width: 100%">
+      <div id="guest-book-turn">
+        <div  *ngFor="let wish of wishes.data.wishList">
+          <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/book.jpg">
+          <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
+          <div style="height: 100%;padding: 0px 98px;">
+            <div class="guest-book-wish-text">
+              <h1 class="wish-style">{{wish.message}}</h1>
+            </div>
+            <div class="guest-wisher-info">
+              <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">- {{wish.name}}</p>
+              <p class="loc-date">{{wish.location}}</p>
+              <p class="loc-date">{{wish.modifiedDate | date }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div style="background: url('assets/page-right.png')">hello</div> -->
+
+        <!-- <div style="background: url('assets/page-right.png')">hhh</div> -->
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="confirmModal">
+      <div class="modal-dialog">
+        <div class="modal-content" style="justify-content: center;align-items: center;background-color: none">
+       
+          <div class="modal-body" id="tq-div">
+            <h1 class="tq">Thank you</h1>
+            <p class="tq-msg">...for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on the edit button.</p>
+            <div style="text-align: right">
+                <button data-dismiss="modal" class="btn-gotit" (click)="iAgree(wishes.data.wishList)">Got it</button>
+            </div>
+           </div>
+         
+        </div>
+      </div>
+    </div>
+
+  <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
+           -->
+  <!-- <h1 class="wish-style" id="word"></h1> -->
+  <div *ngIf="showForm" class="form-width">
+    <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
+      <div>
+        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name" required/>
+      </div>
+      <div *ngIf="guestForm.submitted && name.invalid">
+        <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>
+      </div>
+      <div style="margin-top: 75px;">
+        <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Your Location" required/>
+      </div>
+      <div *ngIf="guestForm.submitted && location.invalid">
+          <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
+        </div>
+      <div style="margin-top: 75px;">
+        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your Email" />
+      </div>
+      <div style="margin-top: 75px;">
+        <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Your Message" required></textarea>
+      </div>
+      <div *ngIf="guestForm.submitted && message.invalid">
+          <span style="color: #ff000091;" *ngIf="message.errors.required">Message is required</span>
+        </div>
+
+      <div class="btn-div">
+        <button  type="submit" id="wish-button">Wish the lovely couple</button>
+      </div>
+
+    </form>
+
+  </div>
+  <!-- <div  *ngIf="!showForm && showConfirmMsg" style="margin-left: 25%; margin-right: 25%;">
+          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)="showForm=true;">Edit</a></h1>
+      </div> -->
+</div>
+
+<!--  
+      <div >
+          <div class="container">
+              <h1></h1>
+              <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input name="name" [(ngModel)]="wishObj.name" type="text" class="form-control" id="name" required #name="ngModel">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="alterEgo">Message</label>
+                  <input name="message" [(ngModel)]="wishObj.Message" type="text" class="form-control" id="alterEgo">
+                </div>
+          
+                <button type="submit" class="btn btn-success">post</button>
+          
+              </form>
+          </div>
+    
+      </div>
+      -->

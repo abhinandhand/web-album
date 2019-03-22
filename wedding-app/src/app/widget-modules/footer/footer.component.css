@@ -1,0 +1,30 @@
+.footer {
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+.with-love {
+    display: flex;
+    justify-content: center;
+    font-family: Great Vibes, Regular;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+#share {
+    display: flex;
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+#social-icons {
+    position: absolute;
+    right: 8%;
+    bottom: 19px;
+}
+.share-label{
+    font-family: Playfair Display, Regular;
+    font-size: 15px;
+    color: #445563;
+    padding: 0px 9px;
+}

@@ -1,0 +1,54 @@
+.key-photo {
+    height: 1000px;
+    background-repeat: no-repeat;
+    position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index: -10;
+    width: 100%
+}
+#bg-image{
+   width: 100%
+}
+.parent-container {
+    position: relative;
+    top:900px;
+}
+.couple-container {
+    min-height: 1000px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+.container-fluid-nomax {
+	padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 812px) {
+    .couple-container {
+        padding-bottom: 30px;
+    }
+    
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .couple-container {
+        padding-bottom: 30px;
+    }
+  
+}
