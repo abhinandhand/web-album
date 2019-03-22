@@ -1,12 +1,12 @@
 <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false"
     style="display: block">
-    <div style="max-width: 100%;height: 100%;margin: 0;" class="modal-dialog" role="document">
+    <div style="max-width: 100%;height: 100%;margin: 0;"  role="document">
         <div style="height: 100%;border:0;    border-radius: 0;" class="modal-content">
-            <!-- <div class="modal-header" style="border-bottom: none;">
-                <div class="close" data-dismiss="modal" routerLink="/" aria-label="Close" style="margin: 20px 0px 0px 6vw;    width: 211px;">
+            <div class="modal-header" style="border-bottom: none; width: 100%;height: 50px">
+                <!-- <div class="close" data-dismiss="modal" routerLink="/" aria-label="Close" style="margin: 20px 0px 0px 6vw;    width: 211px;">
                     <img style="width: 40px;" src="assets/left-arrow.svg">
                 </div>
-                <div class="d-none d-sm-none d-md-block">
+                <div class="">
                     <h2 style="    font-family: Playfair Display, Regular;
                         font-size: 2.4895vw;">{{eventName}}</h2>
                 </div>
@@ -20,13 +20,24 @@
                         <img style="padding: 0 9px;" src="assets/twitter.svg" />
                     </a>
                     <img style="padding: 0 9px;" src="assets/insta.svg" />
-                </div>
+                </div> -->
 
-            </div> -->
-                <div style="justify-content: center;align-items: center;display: flex;">
-                <div class="img-container-album" style="margin: 0px 6.5%; border: 2px solid red;max-width: 95%; max-height:95%;overflow: hidden;display: flex; justify-content: center;">
-                      <img  style="width: 100%;height: auto;" src="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg"/>
-                </div>
+            </div> 
+                <div style="justify-content: center;align-items: center;display: flex;height: 100%;position: relative;">
+                    <div class="d-none d-sm-none d-md-none d-lg-block"><button (click)="prevImage()">dd</button></div>
+                <div class="img-container-album" style="border: 0.5px solid blue">
+                        <!-- <img    class="img1"  src="https://images.pixieset.com/96161171/8369170047efc5f7ba20ee9d0231c4cb-xlarge.jpg"/>
+                         -->
+                        <!-- <img  style="height: auto;width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/8f4f58a3c99cb0ec69338b4f6528205e-large.jpg"/>
+                -->
+                        <!-- <img  style="height: auto;max-width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg"/>
+                         -->
+                        <!-- <img   class="img1"  src="https://images.pixieset.com/96161171/086a155aa26902daa83cabd32a97ea9b-xlarge.jpg"/>
+             -->
+                      <img style="display: none"
+                      onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
+                    </div>
+                    <div class="d-none d-sm-none d-md-none d-lg-block" (click)="nextImage()"><button>dd</button></div>
                         <!-- <div id="flipbook" class="sample-flipbook" style="    border-radius: 17px;" >
                             <div class="hard shadow" >
                                 <img style="width: 100%;height: 100%;" [src]="imgUrl"/>
