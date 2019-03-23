@@ -81,11 +81,11 @@ export class GuestBookComponent implements OnInit {
   }
 
   postWish() {
+    this.iAgree(this.wishes.data.wishList);
     return this.wedOverviewService.sendWishes(this.wishObj).subscribe(
       data => {
         console.log(data);
         setTimeout(() => {
-          this.refreshWishes();
         }, 5000);
       }, error => {
         console.log(error);
@@ -116,7 +116,6 @@ export class GuestBookComponent implements OnInit {
     setTimeout(() => {
       isPrevious = true;
       this.showForm = false;
-      this.showConfirmMsg = false;
       var submitInterval = setInterval(() => {
         if($('#guest-book-turn').turn('page') === 1) {
           clearInterval(submitInterval);

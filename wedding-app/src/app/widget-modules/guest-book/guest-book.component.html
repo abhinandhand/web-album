@@ -30,7 +30,9 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="confirmModal">
+
+
+  <!-- <div class="modal" id="confirmModal">
       <div class="modal-dialog">
         <div class="modal-content" style="justify-content: center;align-items: center;background-color: none">
        
@@ -44,7 +46,7 @@
          
         </div>
       </div>
-    </div>
+    </div> -->
 
   <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
            -->
@@ -80,9 +82,10 @@
     </form>
 
   </div>
-  <!-- <div  *ngIf="!showForm && showConfirmMsg" style="margin-left: 25%; margin-right: 25%;">
-          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)="showForm=true;">Edit</a></h1>
-      </div> -->
+  <div  *ngIf="!showForm && showConfirmMsg" class="tq-wish">
+          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a style="    font-weight: bold;
+            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;">Edit</a></h1>
+      </div>
 </div>
 
 <!--  
