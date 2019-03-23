@@ -92,18 +92,29 @@ intialiseImage() {
 
 
  nextImage() {
-   this.index = this.index + 1;
-   setTimeout(() => {
-    this.resizeImg(this.index);
-   },100);
+   if(this.albumData.data.length > this.index+1) {
+    $('.img1' + this.index).fadeOut(550, () => {
+      $('.img1' + this.index).attr('src',this.albumData.data[this.index + 1].url);
+      this.index = this.index + 1;
+     setTimeout(() => {
+      this.resizeImg(this.index);
+     },100);
+  }).fadeIn(1000);
+   }
   //this.currentImg = this.albumData.data[index].url;
  }
 
  prevImage() {
-  this.index = this.index - 1;
-  setTimeout(() => {
-    this.resizeImg(this.index);
-   },100);
+   if(this.index >=1){
+    $('.img1' + this.index).fadeOut(550, () => {
+      $('.img1' + this.index).attr('src',this.albumData.data[this.index - 1].url);
+      this.index = this.index - 1;
+     setTimeout(() => {
+      this.resizeImg(this.index);
+     },100);
+  }).fadeIn(1000);
+   }
+ 
   //this.currentImg = this.albumData.data[index + 1].url;
  }
 
