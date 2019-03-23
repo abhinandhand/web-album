@@ -24,7 +24,7 @@
             </div> 
             <div class="modal-body" style="padding: 0;">
                     <div class="img-con">
-                            <div class="d-none d-sm-none d-md-none d-lg-block" (click)="prevImage()" style="    position: absolute;
+                            <div class="d-none d-sm-none d-md-none d-lg-block" *ngIf="index >= 1"  (click)="prevImage()" style="    position: absolute;
                             top: 41%;
                             left: 31px;"><i class="fa fa-chevron-circle-left" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
                         <div  class="img-container-album" >
@@ -39,7 +39,7 @@
                               <img (swiperight)="nextImage()" (swipeleft)="prevImage()" (click)="nextImage()" style="display: none"
                               onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
                             </div>
-                            <div class="d-none d-sm-none d-md-none d-lg-block" (click)="nextImage()" style="    position: absolute;
+                            <div class="d-none d-sm-none d-md-none d-lg-block" *ngIf="albumData.data.length > index+1"  (click)="nextImage()" style="    position: absolute;
                             top: 41%;
                             right: 31px;"><i class="fa fa-chevron-circle-right" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
                                 <!-- <div id="flipbook" class="sample-flipbook" style="    border-radius: 17px;" >
