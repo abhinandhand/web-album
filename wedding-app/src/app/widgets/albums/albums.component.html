@@ -23,11 +23,11 @@
 
             </div> 
             <div class="modal-body" style="padding: 0;">
-                    <div style="justify-content: center;align-items: center;display: flex;height: 77%;position: relative;">
+                    <div class="img-con">
                             <div class="d-none d-sm-none d-md-none d-lg-block" (click)="prevImage()" style="    position: absolute;
                             top: 41%;
                             left: 31px;"><i class="fa fa-chevron-circle-left" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
-                        <div class="img-container-album" >
+                        <div  class="img-container-album" >
                                 <!-- <img    class="img1"  src="https://images.pixieset.com/96161171/8369170047efc5f7ba20ee9d0231c4cb-xlarge.jpg"/>
                                  -->
                                 <!-- <img  style="height: auto;width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/8f4f58a3c99cb0ec69338b4f6528205e-large.jpg"/>
@@ -36,7 +36,7 @@
                                  -->
                                 <!-- <img   class="img1"  src="https://images.pixieset.com/96161171/086a155aa26902daa83cabd32a97ea9b-xlarge.jpg"/>
                      -->
-                              <img style="display: none"
+                              <img (swiperight)="nextImage()" (swipeleft)="prevImage()" (click)="nextImage()" style="display: none"
                               onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
                             </div>
                             <div class="d-none d-sm-none d-md-none d-lg-block" (click)="nextImage()" style="    position: absolute;
