@@ -1,5 +1,5 @@
 .key-photo {
-    height: 1000px;
+    /* height: 1000px; */
     background-repeat: no-repeat;
     position: fixed;
     -webkit-background-size: cover;
@@ -7,10 +7,12 @@
     -o-background-size: cover;
     background-size: cover;
     z-index: -10;
-    width: 100%
+    width: 100%;
+    margin-top: -125px;
 }
 #bg-image{
-   width: 100%
+   width: 100%;
+   margin-top: -125px;
 }
 .parent-container {
     position: relative;
@@ -27,6 +29,14 @@
     margin-left: auto;
 }
 
+@media (min-width: 812px) and (max-width: 1100px) {
+    .key-photo {
+        margin-top: 0px;
+    }
+    #bg-image{
+        margin-top: 0px;
+    }
+}
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -37,7 +47,12 @@
     .couple-container {
         padding-bottom: 30px;
     }
-    
+    .key-photo {
+        margin-top: 0px;
+    }
+    #bg-image{
+        margin-top: 0px;
+    }
 }
 
 /* 
@@ -50,5 +65,10 @@
     .couple-container {
         padding-bottom: 30px;
     }
-  
+    .key-photo {
+        margin-top: 0px;
+    }
+    #bg-image{
+        margin-top: 0px;
+    }
 }
