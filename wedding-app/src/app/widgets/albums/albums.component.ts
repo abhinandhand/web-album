@@ -43,7 +43,7 @@ export class AlbumsComponent implements OnInit {
    // this.route.data.subscribe(v => this.imgUrl = v);
     this.fetchAlbumData();
     // $(window).resize(()=>{
-    //   this.resizeImg();
+    //   this.resizeImg(this.index);
     // });
 }
 
