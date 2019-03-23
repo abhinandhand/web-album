@@ -109,6 +109,7 @@ input {
     line-height: 83px;
     color:#707070;
     padding-left: 20px;
+    text-indent: 8px;
 }
 
 textarea {
@@ -123,6 +124,7 @@ textarea {
     line-height: 83px;
     color:#707070;
     padding-left: 20px;
+    text-indent: 8px;
 }
 #wish-button{
     width: 536px;
@@ -233,6 +235,13 @@ textarea {
         font-size: 36px;
         letter-spacing: 3px;
     }
+    input{
+        font-size: 34px;
+    }
+    textarea{
+        font-size: 34px;
+        line-height: 41px;
+    }
 }
 
 /*Portrait Mobile */
@@ -279,4 +288,12 @@ textarea {
         font-size: 36px;
         letter-spacing: 3px;
     }
+    input{
+        font-size: 34px;
+    }
+    textarea{
+        font-size: 34px;
+        line-height: 41px;
+    }
+    
 }

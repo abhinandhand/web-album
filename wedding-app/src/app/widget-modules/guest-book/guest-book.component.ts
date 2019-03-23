@@ -56,6 +56,7 @@ export class GuestBookComponent implements OnInit {
       $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20, $('#guest-book-cont').height() - 20);
       $('#guest-book-turn').turn('resize');
     });
+    
     defaultInterval = setInterval(() => {
       $('#guest-book-turn').turn('next');
       // if(isPrevious){

@@ -52,29 +52,29 @@
   <div *ngIf="showForm" class="form-width">
     <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
       <div>
-        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name" required/>
+        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name and family?" required/>
       </div>
       <div *ngIf="guestForm.submitted && name.invalid">
         <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>
       </div>
       <div style="margin-top: 75px;">
-        <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Your Location" required/>
+        <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Where are you from?" required/>
       </div>
       <div *ngIf="guestForm.submitted && location.invalid">
           <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
         </div>
       <div style="margin-top: 75px;">
-        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your Email" />
+        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your email address?" />
       </div>
       <div style="margin-top: 75px;">
-        <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Your Message" required></textarea>
+        <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Write your thoughts and wishes for the newly wedded couple." required></textarea>
       </div>
       <div *ngIf="guestForm.submitted && message.invalid">
           <span style="color: #ff000091;" *ngIf="message.errors.required">Message is required</span>
         </div>
 
       <div class="btn-div">
-        <button  type="submit" id="wish-button">Wish the lovely couple</button>
+        <button  type="submit" id="wish-button">Post</button>
       </div>
 
     </form>
