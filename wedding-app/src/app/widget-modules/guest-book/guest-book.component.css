@@ -35,12 +35,11 @@
     color: #707070;
     font-family: Great Vibes, Regular;
     font-size: 44px;
-    line-height: 83px;
+    line-height: 65px;
     text-align: center;
     justify-content: center;
     align-items: center;
     max-height: 100%;
-    position: absolute;
 }
 .loc-date{
     text-align: center;
@@ -109,6 +108,7 @@ input {
     line-height: 83px;
     color:#707070;
     padding-left: 20px;
+    text-indent: 8px;
 }
 
 textarea {
@@ -123,6 +123,7 @@ textarea {
     line-height: 83px;
     color:#707070;
     padding-left: 20px;
+    text-indent: 8px;
 }
 #wish-button{
     width: 536px;
@@ -184,6 +185,13 @@ textarea {
     bottom: 14%;
 }
 
+.tq-wish{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    position: absolute;
+}
+
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -218,7 +226,7 @@ textarea {
         height: 400px;
     }
     .wish-style {
-     font-size: 40px;
+     font-size: 32px;
      line-height: 48px;
     }
     .guest-book-wish-text {
@@ -232,6 +240,18 @@ textarea {
     .hr-text {
         font-size: 36px;
         letter-spacing: 3px;
+    }
+    input{
+        font-size: 34px;
+    }
+    textarea{
+        font-size: 34px;
+        line-height: 41px;
+    }
+    .tq-wish{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 9%;
     }
 }
 
@@ -269,7 +289,7 @@ textarea {
         height: 56%;
     }
     .wish-style {
-        font-size: 40px;
+        font-size: 32px;
         line-height: 48px;
     }
     .guest-wisher-info {
@@ -279,4 +299,17 @@ textarea {
         font-size: 36px;
         letter-spacing: 3px;
     }
+    input{
+        font-size: 34px;
+    }
+    textarea{
+        font-size: 34px;
+        line-height: 41px;
+    }
+    .tq-wish{
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 9%;
+    }
+    
 }

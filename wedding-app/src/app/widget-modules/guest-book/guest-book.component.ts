@@ -56,6 +56,7 @@ export class GuestBookComponent implements OnInit {
       $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20, $('#guest-book-cont').height() - 20);
       $('#guest-book-turn').turn('resize');
     });
+    
     defaultInterval = setInterval(() => {
       $('#guest-book-turn').turn('next');
       // if(isPrevious){
@@ -80,11 +81,11 @@ export class GuestBookComponent implements OnInit {
   }
 
   postWish() {
+    this.iAgree(this.wishes.data.wishList);
     return this.wedOverviewService.sendWishes(this.wishObj).subscribe(
       data => {
         console.log(data);
         setTimeout(() => {
-          this.refreshWishes();
         }, 5000);
       }, error => {
         console.log(error);
@@ -115,7 +116,6 @@ export class GuestBookComponent implements OnInit {
     setTimeout(() => {
       isPrevious = true;
       this.showForm = false;
-      this.showConfirmMsg = false;
       var submitInterval = setInterval(() => {
         if($('#guest-book-turn').turn('page') === 1) {
           clearInterval(submitInterval);

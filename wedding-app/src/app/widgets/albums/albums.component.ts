@@ -98,7 +98,7 @@ intialiseImage() {
       this.index = this.index + 1;
      setTimeout(() => {
       this.resizeImg(this.index);
-     },100);
+     },200);
   }).fadeIn(1000);
    }
   //this.currentImg = this.albumData.data[index].url;
@@ -111,7 +111,7 @@ intialiseImage() {
       this.index = this.index - 1;
      setTimeout(() => {
       this.resizeImg(this.index);
-     },100);
+     },200);
   }).fadeIn(1000);
    }
  

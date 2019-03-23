@@ -30,7 +30,9 @@
       </div>
     </div>
   </div>
-  <div class="modal" id="confirmModal">
+
+
+  <!-- <div class="modal" id="confirmModal">
       <div class="modal-dialog">
         <div class="modal-content" style="justify-content: center;align-items: center;background-color: none">
        
@@ -44,7 +46,7 @@
          
         </div>
       </div>
-    </div>
+    </div> -->
 
   <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
            -->
@@ -52,37 +54,38 @@
   <div *ngIf="showForm" class="form-width">
     <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
       <div>
-        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name" required/>
+        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name and family?" required/>
       </div>
       <div *ngIf="guestForm.submitted && name.invalid">
         <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>
       </div>
       <div style="margin-top: 75px;">
-        <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Your Location" required/>
+        <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Where are you from?" required/>
       </div>
       <div *ngIf="guestForm.submitted && location.invalid">
           <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
         </div>
       <div style="margin-top: 75px;">
-        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your Email" />
+        <input name="email" [(ngModel)]="wishObj.email" placeholder="Your email address?" />
       </div>
       <div style="margin-top: 75px;">
-        <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Your Message" required></textarea>
+        <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Write your thoughts and wishes for the newly wedded couple." required></textarea>
       </div>
       <div *ngIf="guestForm.submitted && message.invalid">
           <span style="color: #ff000091;" *ngIf="message.errors.required">Message is required</span>
         </div>
 
       <div class="btn-div">
-        <button  type="submit" id="wish-button">Wish the lovely couple</button>
+        <button  type="submit" id="wish-button">Post</button>
       </div>
 
     </form>
 
   </div>
-  <!-- <div  *ngIf="!showForm && showConfirmMsg" style="margin-left: 25%; margin-right: 25%;">
-          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a (click)="showForm=true;">Edit</a></h1>
-      </div> -->
+  <div  *ngIf="!showForm && showConfirmMsg" class="tq-wish">
+          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a style="    font-weight: bold;
+            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;">Edit</a></h1>
+      </div>
 </div>
 
 <!--  
