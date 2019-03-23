@@ -12,7 +12,7 @@
                <div class="d-none d-sm-none d-md-block" style="margin: 20px 6vw 0px 0px;" id="social-icons">
                     <span class="share-label">Share Photo:</span>
                     <a href="http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com" target="_blank">
-                        <img style="padding: 0 9px;" src="assets/fb.svg" />
+                        <img style="padding: 0 9px;" src="assets/fb.svg"  />
                     </a>
                     <a href="https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diya-aron.s3-website.ap-south-1.amazonaws.com"
                         target="_blank">
@@ -37,7 +37,8 @@
                                 <!-- <img   class="img1"  src="https://images.pixieset.com/96161171/086a155aa26902daa83cabd32a97ea9b-xlarge.jpg"/>
                      -->
                               <img (swiperight)="nextImage()" (swipeleft)="prevImage()" (click)="nextImage()" style="display: none"
-                              onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
+                              onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[10].url"
+                              onError="this.src='https://images.pixieset.com/96161171/41fd204…-xxlarge.jpg'"/>
                             </div>
                             <div class="d-none d-sm-none d-md-none d-lg-block" *ngIf="albumData.data.length > index+1"  (click)="nextImage()" style="    position: absolute;
                             top: 41%;
