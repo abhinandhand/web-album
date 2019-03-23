@@ -2,15 +2,14 @@
     style="display: block">
     <div style="max-width: 100%;height: 100%;margin: 0;"  role="document">
         <div style="height: 100%;border:0;    border-radius: 0;" class="modal-content">
-            <div class="modal-header" style="border-bottom: none; width: 100%;height: 50px">
-                 <div class="close" data-dismiss="modal" routerLink="/" aria-label="Close" style="margin: 20px 0px 0px 6v0vw;    width: 211px;">
+            <div class="modal-header" style="border-bottom: none; width: 100%;height: 50px;    margin-bottom: 33px;">
+                 <div class="close" id="close-back" data-dismiss="modal" routerLink="/" aria-label="Close" >
                     <img style="width: 40px;" src="assets/left-arrow.svg">
                 </div>
-                <!-- <div class="">
-                    <h2 style="    font-family: Playfair Display, Regular;
-                        font-size: 2.4895vw;">{{eventName}}</h2>
-                </div> -->
-              <!--  <div class="d-none d-sm-none d-md-block" style="margin: 20px 6vw 0px 0px;" id="social-icons">
+                <div class="d-none d-sm-none d-md-block">
+                    <h2 class="event-text">{{eventName}}</h2>
+                </div>
+               <div class="d-none d-sm-none d-md-block" style="margin: 20px 6vw 0px 0px;" id="social-icons">
                     <span class="share-label">Share Photo:</span>
                     <a href="http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com" target="_blank">
                         <img style="padding: 0 9px;" src="assets/fb.svg" />
@@ -20,33 +19,41 @@
                         <img style="padding: 0 9px;" src="assets/twitter.svg" />
                     </a>
                     <img style="padding: 0 9px;" src="assets/insta.svg" />
-                </div> -->
+                </div>
 
             </div> 
-                <div style="justify-content: center;align-items: center;display: flex;height: 100%;position: relative;">
-                    <div class="d-none d-sm-none d-md-none d-lg-block" (click)="prevImage()"><i class="fa fa-chevron-circle-left" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
-                <div class="img-container-album" >
-                        <!-- <img    class="img1"  src="https://images.pixieset.com/96161171/8369170047efc5f7ba20ee9d0231c4cb-xlarge.jpg"/>
-                         -->
-                        <!-- <img  style="height: auto;width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/8f4f58a3c99cb0ec69338b4f6528205e-large.jpg"/>
-                -->
-                        <!-- <img  style="height: auto;max-width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg"/>
-                         -->
-                        <!-- <img   class="img1"  src="https://images.pixieset.com/96161171/086a155aa26902daa83cabd32a97ea9b-xlarge.jpg"/>
-             -->
-                      <img style="display: none"
-                      onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
+            <div class="modal-body" style="padding: 0;">
+                    <div style="justify-content: center;align-items: center;display: flex;height: 77%;position: relative;">
+                            <div class="d-none d-sm-none d-md-none d-lg-block" (click)="prevImage()" style="    position: absolute;
+                            top: 41%;
+                            left: 31px;"><i class="fa fa-chevron-circle-left" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
+                        <div class="img-container-album" >
+                                <!-- <img    class="img1"  src="https://images.pixieset.com/96161171/8369170047efc5f7ba20ee9d0231c4cb-xlarge.jpg"/>
+                                 -->
+                                <!-- <img  style="height: auto;width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/8f4f58a3c99cb0ec69338b4f6528205e-large.jpg"/>
+                        -->
+                                <!-- <img  style="height: auto;max-width: 100%;"  class="img1 img-fluid"  src="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg"/>
+                                 -->
+                                <!-- <img   class="img1"  src="https://images.pixieset.com/96161171/086a155aa26902daa83cabd32a97ea9b-xlarge.jpg"/>
+                     -->
+                              <img style="display: none"
+                              onload="this.style.display = 'block'" [ngClass]="'img1'+index"  [src]="albumData.data[index].url"/>
+                            </div>
+                            <div class="d-none d-sm-none d-md-none d-lg-block" (click)="nextImage()" style="    position: absolute;
+                            top: 41%;
+                            right: 31px;"><i class="fa fa-chevron-circle-right" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
+                                <!-- <div id="flipbook" class="sample-flipbook" style="    border-radius: 17px;" >
+                                    <div class="hard shadow" >
+                                        <img style="width: 100%;height: 100%;" [src]="imgUrl"/>
+                                    </div>
+                                    <div class="own size shadow" style="width: 100%;height: 100%;" *ngFor="let image of albumData?.data?.albumItems">
+                                            <img style="width: 100%;height: 100%;" [src]="image?.albumArt"/>
+                                    </div>
+                                </div> -->
                     </div>
-                    <div class="d-none d-sm-none d-md-none d-lg-block" (click)="nextImage()"><i class="fa fa-chevron-circle-right" style="font-size:48px;color:grey;cursor: pointer;"></i></div>
-                        <!-- <div id="flipbook" class="sample-flipbook" style="    border-radius: 17px;" >
-                            <div class="hard shadow" >
-                                <img style="width: 100%;height: 100%;" [src]="imgUrl"/>
-                            </div>
-                            <div class="own size shadow" style="width: 100%;height: 100%;" *ngFor="let image of albumData?.data?.albumItems">
-                                    <img style="width: 100%;height: 100%;" [src]="image?.albumArt"/>
-                            </div>
-                        </div> -->
+
             </div>
+           
             <!-- <div class="modal-footer">
                 
                

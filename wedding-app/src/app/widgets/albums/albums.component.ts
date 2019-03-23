@@ -82,7 +82,7 @@ intialiseImage() {
   this.currentImg = this.albumData.data[this.index].url;
   setTimeout(() => {
     this.resizeImg(this.index);
-   },200);
+   },50);
 
   //this.resizeImageWithAspectRatio();
   $('.img1'+this.index).load(() => {
