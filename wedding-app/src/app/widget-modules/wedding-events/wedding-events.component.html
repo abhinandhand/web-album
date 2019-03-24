@@ -4,7 +4,7 @@
                
 
          <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
-                                    <div [routerLink]="['/albums',event.title,event.background]"  *ngIf="event.type === 'large'" class="event-large-card">
+                                    <div  [routerLink]="['/albums',event.title,event.background]"  *ngIf="event.type === 'large'" class="event-large-card">
                                                 <a  class="tilter tilter--1">
                                                                 <figure class="tilter__figure">
                                                                         <img class="tilter__image" [src]="event.background" alt="img02" />

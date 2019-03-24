@@ -43,18 +43,18 @@
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
                     <li  class="nav-item">
                         <a href="#home"  [fragment]="'home'"  style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
-                            routerLink="/" routerLinkActive="active">HOME</a>
+                            routerLink="/" (click)="isCollapsed = !isCollapsed" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#album" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/"
+                        <a href="#album" (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" routerLink="/"
                             [routerLinkActiveOptions]="{ exact: true }" [fragment]="'album'" routerLinkActive="active">ALBUMS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#guestbook" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/"
+                        <a href="#guestbook" (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" routerLink="/"
                             [routerLinkActiveOptions]="{ exact: true }" [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#share" (click)="sendGA();"  style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }" [fragment]="'share'" routerLinkActive="active">SHARE</a>
+                        <a href="#share" (click)="sendGA();isCollapsed = !isCollapsed"  style="color: inherit;text-decoration: none">SHARE</a>
                     </li>
                 </ul>
 

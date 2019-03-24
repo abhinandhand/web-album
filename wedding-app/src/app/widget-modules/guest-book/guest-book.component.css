@@ -120,10 +120,11 @@ textarea {
     border-bottom: 2px solid #75726e7a;
     font-size: 44px;
     font-family: Great Vibes, Regular;
-    line-height: 83px;
+    line-height: 64px;
     color:#707070;
     padding-left: 20px;
     text-indent: 8px;
+    height: 200px;
 }
 #wish-button{
     width: 536px;
@@ -222,8 +223,8 @@ textarea {
     line-height: 71px;
     }
     .form-width {
-        margin-left: 12%;
-        margin-right: 12%;
+        margin-left: 8%;
+        margin-right: 8%;
     }
 
     .btn-div{
@@ -257,6 +258,7 @@ textarea {
     textarea{
         font-size: 34px;
         line-height: 41px;
+        height: 126px;
     }
     .tq-wish{
         margin-left: 5%;
@@ -280,8 +282,8 @@ textarea {
     }
 
     .form-width {
-        margin-left: 12%;
-        margin-right: 12%;
+        margin-left: 8%;
+        margin-right: 8%;
     }
     #wish-button {
     width: 100%;
@@ -320,6 +322,7 @@ textarea {
     textarea{
         font-size: 34px;
         line-height: 41px;
+        height: 126px;
     }
     .tq-wish{
         margin-left: 5%;
@@ -330,4 +333,19 @@ textarea {
         font-size: 20px;
     }
     
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
+    @media {
+        input { 
+            height: 80px;
+        }
+    }
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+    @media {
+        input { 
+            height: 80px; 
+        }
+    }
 }
