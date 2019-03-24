@@ -122,7 +122,7 @@ export class GuestBookComponent implements OnInit {
         }
         $('#guest-book-turn').turn('resize');
         $('#guest-book-turn').turn('previous');
-      }, 5000);
+      }, 6000);
     }, 3000);
   }
   /*
