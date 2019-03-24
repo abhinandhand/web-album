@@ -20,6 +20,9 @@ export class NavBarComponent implements OnInit {
         scrollTop: $('#guestbook').offset().top
     }, 1000);
     });
+    $('.navbar-nav>li>a').on('click', function(){
+      $('.navbar-collapse').collapse('hide');
+  });
   }
 
   sendGA() {
@@ -30,5 +33,6 @@ export class NavBarComponent implements OnInit {
   onCollapse() {
     alert('jj');
   }
+
 
 }

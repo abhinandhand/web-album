@@ -19,6 +19,7 @@
     width: 100%;
     position: absolute;
     height: 107%;
+    left: 0;
 }
 #marriage-date {
     text-align: center;
