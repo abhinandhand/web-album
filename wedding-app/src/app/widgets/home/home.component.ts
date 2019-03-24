@@ -18,15 +18,15 @@ export class HomeComponent implements OnInit {
 	ngOnInit() {
 		this.fetchWedOverview();
 		$('#bg-image').on('load', function () {
-			var offset = window.innerWidth > 1100 ? 250 : 0;
+			var offset = window.innerWidth > 1200 ? 250 : 0;
 			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset )});
 		});
 		$(window).on('load', (function () {
-			var offset = window.innerWidth > 1100 ? 250 : 0;
+			var offset = window.innerWidth > 1200 ? 250 : 0;
 			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset)});
 		}));
 		$(window).resize(function () {
-			var offset = window.innerWidth > 1100 ? 250 : 0;
+			var offset = window.innerWidth > 1200 ? 250 : 0;
 			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset)});
 		});
 		// function setContainer () {

@@ -41,51 +41,18 @@ export class AlbumsComponent implements OnInit {
     this.fetchAlbumData();
     $(window).resize(() => {
       this.reSizeImgCont();
-      //this.resizeImg(this.index);
     });
     this.reSizeImgCont();
-   
   }
   reSizeImgCont() {
-    var offset = window.innerWidth > 980 ? 85 : 0;
+    let offset = window.innerWidth > 980 ? 85 : 0;
     $('.content-block').height(window.innerHeight - offset);
   }
-  
-  resizeImg(index) {
-    // let maxWidth = $('.img-container-album').width(); // Max width for the image
-    // let maxHeight = $('.img-container-album').height();    // Max height for the image
-    // let ratio = 0;  // Used for aspect ratio
-    // let width = $('.img1' + index).width();    // Current image width
-    // let height = $('.img1' + index).height();  // Current image height
 
-    // // Check if the current width is larger than the max
-    // if (width >= maxWidth) {
-    //   // if(true){
-    //   ratio = maxWidth / width;   // get ratio for scaling image
-    //   $('.img1' + index).css('width', maxWidth); // Set new width
-    //   $('.img1' + index).css("height", height * ratio);  // Scale height based on ratio
-    //   height = height * ratio;    // Reset height to match scaled image
-    //   width = width * ratio;    // Reset width to match scaled image
-    // }
-
-    // Check if current height is larger than max
-    // if(height >= maxHeight){
-    //   ratio = maxHeight / height; // get ratio for scaling image
-    //   //$('.img1').css("height", );   // Set new height
-    //   $('.img1'+ index).css("width", width * ratio);    // Scale width based on ratio
-    //   width = width * ratio;    // Reset width to match scaled image
-    //  }
-
-  }
   intialiseImage() {
     this.index = 0;
     this.currentImg = this.albumData.data[this.index].url;
-    setTimeout(() => {
-      this.resizeImg(this.index);
-    }, 50);
-    $('.img1' + this.index).load(() => {
-      this.resizeImg(this.index);
-    });
+    $('.preload').attr('src', this.albumData.data[1].url);
   }
 
 
@@ -93,10 +60,8 @@ export class AlbumsComponent implements OnInit {
     if (this.albumData.data.length > this.index + 1) {
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
+        $('.preload').attr('src', this.albumData.data[this.index + 2].url);
         this.index = this.index + 1;
-        //  setTimeout(() => {
-        //   //this.resizeImg(this.index);
-        //  },200);
       }).fadeIn(1000);
     }
   }
@@ -106,9 +71,6 @@ export class AlbumsComponent implements OnInit {
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
         this.index = this.index - 1;
-        //  setTimeout(() => {
-        //   //this.resizeImg(this.index);
-        //  },200);
       }).fadeIn(1000);
     }
   }
