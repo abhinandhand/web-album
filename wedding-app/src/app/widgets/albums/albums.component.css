@@ -199,7 +199,15 @@
 	.land{
 		display: none !important;
 	}
-
+	.img-container{
+		height: inherit;
+	}
+	.page-right{
+		right: 25px;
+}
+.page-left{
+	left: 25px;
+}
 	/* #land-0{
 		display: none !important;
 	} */
