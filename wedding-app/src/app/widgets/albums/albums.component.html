@@ -36,7 +36,7 @@
                                             <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
                                  </div>
                                 <img class="img-fluid" (swiperight)="nextImage()" (swipeleft)="prevImage()" (click)="nextImage()" style="display: block;margin: auto;height: inherit;"
-                                    onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="albumData.data[10].url"
+                                    onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="albumData.data[0].url"
                                     onError="this.src='https://images.pixieset.com/96161171/41fd204…-xxlarge.jpg'" />
                            
                                     <div class="page-right"  id="land-1" *ngIf="albumData.data.length > index+1" (click)="nextImage()">
@@ -47,7 +47,7 @@
         </div>
     </div>
 </div>
-<img class="preload" onload="this.style.display = 'block'"  src="" style="width: 1px;height: 1px;">
+<img class="preload" onload="this.style.display = 'block'"  [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;">
 <!-- <div>
   <div>
         <div id="flipbook" class="sample-flipbook"  >
