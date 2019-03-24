@@ -57,10 +57,9 @@ export class AlbumsComponent implements OnInit {
 
 
   nextImage() {
-    if (this.albumData.data.length > this.index + 1) {
+    if (this.albumData.data.length > (this.index + 1) ) {
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
-        $('.preload').attr('src', this.albumData.data[this.index + 2].url);
         this.index = this.index + 1;
       }).fadeIn(1000);
     }
