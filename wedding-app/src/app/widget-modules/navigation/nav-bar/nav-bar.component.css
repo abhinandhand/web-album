@@ -45,24 +45,39 @@
 
 }
 .nav-height{
-    height: 60px;
+    height: 45px;
     padding-left: 0px;
     padding-right: 0px;
-    background-image: url(https://images.pixieset.com/96161171/41fd204…-xxlarge.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .nav-transcluent{
-    color: #f1f1f1;
-    filter: blur(6px);
-    background-color: #ffff;
-     opacity: 0.6;
+    content: "";
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3000px inset;
+    filter: blur(10px);
+    background: inherit;
+    margin-left: -9px;
+    width: 106%;
 }
+.navbar-toggler {
+    padding: 0.1rem .25rem;
+    font-size: 1.21rem;
+    line-height: 1;
+    background-color: transparent;
+    border:1px solid #80808061;
+    border-radius: .25rem;
+}
+
 /*Landscape Mobile*/
 @media (min-width: 481px) and (max-width: 812px) {
 
     .nav-height{
-       height: unset;
+    background-size: unset;
     }
   
     .nav-items-flex {
@@ -78,8 +93,9 @@
   @media (min-width: 320px) and (max-width: 480px) {
 
     .nav-height{
-       height: unset;
-    }
+        background-size: unset;
+        }
+    
     .nav-items-flex {
         font-size: 0.950rem;
     }
