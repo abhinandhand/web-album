@@ -5,7 +5,7 @@ import { AlbumsComponent } from './widgets/albums/albums.component';
 
 const routes: Routes = [{path: '', component: HomeComponent ,
 children: [
-  {path: 'albums/:name/:url', component: AlbumsComponent, data: {url : ''}},
+  {path: 'albums', component: AlbumsComponent, data: {url : '', name: '', c: '', id: ''}},
 ]}, { path: '', redirectTo: '/', pathMatch: 'full'},
 { path: '**', component: HomeComponent }
 ];

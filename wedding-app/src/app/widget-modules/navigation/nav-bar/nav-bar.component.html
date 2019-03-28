@@ -1,48 +1,44 @@
 <div>
-    <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation">
-        <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'68px'} " class="nav-container nav-transcluent"></div>
-        <!-- <div [ngStyle]="{'background-image':'url(' +imageUrl+ ')'}" class="nav-container"></div> -->
+    <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation"  style="background-image: url('https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg')">
+        <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'45px'}" class="nav-container nav-transcluent"></div> 
+
+       <!-- <div [ngStyle]="{'background-image':'url(' +imageUrl+ ')'}" class="nav-container"></div> -->
         <div class="navbar-light" style="z-index: 3;">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="onCollapse()">
-                        <span class="navbar-toggler-icon"></span>
-                </button> -->
-            <button style="    margin-left: 15px;" class="navbar-toggler" type="button" role="button" data-toggle="collapse" href="#navbarTogglerDemo02"  aria-expanded="false"
+           
+            <button style=" margin-left: 15px;
+            margin-top: -2px;" class="navbar-toggler" type="button" role="button" data-toggle="collapse" href="#navbarTogglerDemo02"  aria-expanded="false"
                 aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"  aria-controls="navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- <button style="    margin-left: 15px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-expanded="false"
-            aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarTogglerDemo02">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
         </div>
 
         <!-- <a class="navbar-item" >SOUND ON</a> -->
         <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed"> -->
-        <div [hidden]="isCollapsed" class="navbar-collapse" id="navbarTogglerDemo02" >
+        <div  class="navbar-collapse collapse" id="navbarTogglerDemo02" >
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
                 <div class="nav-flex">
-                    <div class="nav-items-flex">
+                    <div  class="nav-items-flex">
                         <a href="#home" [fragment]="'home'" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">HOME</a>
                     </div>
                     <div class="nav-items-flex">
                         <a href="#album" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
                             [fragment]="'album'" routerLinkActive="active">ALBUMS</a>
                     </div>
-                    <div class="nav-items-flex">
+                    <div  class="nav-items-flex">
                         <a href="#guestbook" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
                             [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
                     </div>
-                    <div class="nav-items-flex">
-                        <a (click)="sendGA();" style="color: inherit;text-decoration: none">SHARE</a>
+                    <div  class="nav-items-flex">
+                        <a (click)="sendGA();" [fragment]="'share'" routerLinkActive="active" routerLink="/" style="color: inherit;text-decoration: none">SHARE</a>
                     </div>
 
                 </div>
             </div>
             <div class="d-block d-sm-block d-md-none">
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
-                    <li class="nav-item">
-                        <a href="#home" [fragment]="'home'" (click)="isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
-                            routerLink="/" routerLinkActive="active">HOME</a>
+                    <li  class="nav-item">
+                        <a href="#home"  [fragment]="'home'"  style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
+                            routerLink="/" (click)="isCollapsed = !isCollapsed" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a href="#album" (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" routerLink="/"
@@ -53,7 +49,7 @@
                             [routerLinkActiveOptions]="{ exact: true }" [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
                     </li>
                     <li class="nav-item">
-                        <a (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none">SHARE</a>
+                        <a href="#share" (click)="sendGA();isCollapsed = !isCollapsed"  style="color: inherit;text-decoration: none">SHARE</a>
                     </li>
                 </ul>
 

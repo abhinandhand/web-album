@@ -1,8 +1,9 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { timeout } from 'q';
-declare var $:any;
+import { Location } from '@angular/common';
+declare var $: any;
 
 @Component({
   selector: 'app-albums',
@@ -12,104 +13,94 @@ declare var $:any;
 export class AlbumsComponent implements OnInit {
   imgUrl: any;
   eventName: string;
-  albumData : any;
+  albumData: any;
   index: number;
+  click: boolean = false;
+  pageUrl: string;
   albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
   currentImg: string;
-  
-  
-  constructor(private route: ActivatedRoute,private albumService: AlbumOverviewService) {}
-  
+  imgId: string;
+
+
+  constructor(private route: ActivatedRoute, 
+    private albumService: AlbumOverviewService,private routes: Router, private location: Location) { }
+
 
   @HostListener('wheel', ['$event'])
   handleWheelEvent(event) {
     event.preventDefault();
   }
 
-  fetchAlbumData(){
-    this.albumService.getAlbumOverview(this.albumUrl+this.eventName).subscribe(data => {
-      this.albumData = data;
-      this.intialiseImage();
-      //this.intialiseFlip();
-      //console.log(this.al);
-    });
-  }
 
   ngOnInit() {
-    this.route.params.subscribe( params  => {
-      this.imgUrl = params.url;
-      this.eventName = params.name;
-    } );
-   // this.route.data.subscribe(v => this.imgUrl = v);
-    this.fetchAlbumData();
-    // $(window).resize(()=>{
-    //   this.resizeImg();
-    // });
+    this.route.queryParamMap
+       .subscribe(params => {
+        this.currentImg = params.get('url') ? params.get('url') : undefined;
+        this.eventName = params.get('name');
+        this.click = params.get('c') ? true : false;
+        this.imgId = params.get('id') ? params.get('id') : undefined;
+        this.fetchAlbumData();
+      });
+
+    $(window).resize(() => {
+      this.reSizeImgCont();
+    });
+    this.pageUrl = location.href;
+    this.reSizeImgCont();
 }
 
-
-//  $(window).resize(function (){
-//   this.resizeImageWithAspectRatio();
-//  })
-resizeImg(index){
-  let maxWidth = $('.img-container-album').width(); // Max width for the image
-let maxHeight = $('.img-container-album').height() ;    // Max height for the image
-let ratio = 0;  // Used for aspect ratio
-let width =  $('.img1' + index).width();    // Current image width
-let height = $('.img1' + index).height();  // Current image height
-
-// Check if the current width is larger than the max
-// if(width >= maxWidth){
-  if(true){
-  ratio = maxWidth / width;   // get ratio for scaling image
-  $('.img1' + index).css('width', maxWidth); // Set new width
-  $('.img1' + index).css("height", height * ratio);  // Scale height based on ratio
-  height = height * ratio;    // Reset height to match scaled image
-  width = width * ratio;    // Reset width to match scaled image
-}
-
-// Check if current height is larger than max
-if(height >= maxHeight){
-  ratio = maxHeight / height; // get ratio for scaling image
-  //$('.img1').css("height", );   // Set new height
-  $('.img1').css("width", width * ratio);    // Scale width based on ratio
-  width = width * ratio;    // Reset width to match scaled image
- }
-
-}
-intialiseImage() {
-  this.index = 0;
-  this.currentImg = this.albumData.data[this.index].url;
-  setTimeout(() => {
-    this.resizeImg(this.index);
-   },200);
-
-  //this.resizeImageWithAspectRatio();
-  $('.img1'+this.index).load(() => {
-    this.resizeImg(this.index);
+fetchAlbumData() {
+  this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
+    if (this.click){
+      this.index = 0;
+      this.albumData = data;
+     $('.preload').attr('src', this.albumData.data[0].url);
+    } else{
+    this.intialiseImageIndex(data);
+    }
   });
 }
 
+  reSizeImgCont() {
+    let offset = window.innerWidth > 980 ? 85 : 0;
+    $('.content-block').height(window.innerHeight - offset);
+  }
 
- nextImage() {
-   this.index = this.index + 1;
-   setTimeout(() => {
-    this.resizeImg(this.index);
-   },100);
-  //this.currentImg = this.albumData.data[index].url;
- }
-
- prevImage() {
-  this.index = this.index - 1;
-  setTimeout(() => {
-    this.resizeImg(this.index);
-   },100);
-  //this.currentImg = this.albumData.data[index + 1].url;
- }
-
-
+  intialiseImageIndex(data) {
+    for (const index in data.data) {
+       if (data.data[index]._id === this.imgId) {
+        this.albumData = data;
+        console.log(index);
+        this.index = parseInt(index);
+      }
+    }
+    this.albumData = data;
+    $('.preload').attr('src', this.albumData.data[this.index+1].url);
+  }
 
 
+  nextImage() {
+    if (this.albumData.data.length > (this.index + 1) ) {
+      this.imgId = this.albumData.data[this.index + 1]._id;
+      this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index + 1].url+'&id='+this.albumData.data[this.index + 1]._id);
+      this.pageUrl = location.href;
+      $('.img1' + this.index).fadeOut(550, () => {
+        $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
+        this.index = this.index + 1;
+      }).fadeIn(1000);
+    }
+  }
+
+  prevImage() {
+    if (this.index >= 1) {
+      this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index - 1].url+'&id='+this.albumData.data[this.index - 1]._id);
+      this.pageUrl = location.href;
+      $('.img1' + this.index).fadeOut(550, () => {
+        $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
+        this.index = this.index - 1;
+      }).fadeIn(1000);
+    }
+  }
 
 
 
@@ -118,39 +109,43 @@ intialiseImage() {
 
 
 
-// IMAGE MANIPULATION and MAINTAIN ASPECT RATIO
-resizeImageWithAspectRatio() {
-	let maxWidth = $('.img-container-album').width(); // Max width for the image
-	let maxHeight = $('.img-container-album').height() ;    // Max height for the image
-	let ratio = 0;  // Used for aspect ratio
-	let width =  $('.img1').width();    // Current image width
-	let height = $('.img1').height();  // Current image height
- 
-	// Check if the current width is larger than the max
-	if(width >= maxWidth){
-		ratio = maxWidth / width;   // get ratio for scaling image
-		$('.img1').css('width', maxWidth); // Set new width
-		$('.img1').css("height", height * ratio);  // Scale height based on ratio
-		height = height * ratio;    // Reset height to match scaled image
-		width = width * ratio;    // Reset width to match scaled image
-	}
- 
-	// Check if current height is larger than max
-	if(height >= maxHeight){
-		ratio = maxHeight / height; // get ratio for scaling image
-		//$('.img1').css("height", );   // Set new height
-		$('.img1').css("width", width * ratio);    // Scale width based on ratio
-		width = width * ratio;    // Reset width to match scaled image
-   }
-   
-}
 
- // ngAfterViewInit() {
-    // $('#flipbook').turn({
-    //   width: 1400,
-    //   height: 600,
-    //   autoCenter: true
-    // });
+
+
+
+  // IMAGE MANIPULATION and MAINTAIN ASPECT RATIO
+  resizeImageWithAspectRatio() {
+    let maxWidth = $('.img-container-album').width(); // Max width for the image
+    let maxHeight = $('.img-container-album').height();    // Max height for the image
+    let ratio = 0;  // Used for aspect ratio
+    let width = $('.img1').width();    // Current image width
+    let height = $('.img1').height();  // Current image height
+
+    // Check if the current width is larger than the max
+    if (width >= maxWidth) {
+      ratio = maxWidth / width;   // get ratio for scaling image
+      $('.img1').css('width', maxWidth); // Set new width
+      $('.img1').css("height", height * ratio);  // Scale height based on ratio
+      height = height * ratio;    // Reset height to match scaled image
+      width = width * ratio;    // Reset width to match scaled image
+    }
+
+    // Check if current height is larger than max
+    if (height >= maxHeight) {
+      ratio = maxHeight / height; // get ratio for scaling image
+      //$('.img1').css("height", );   // Set new height
+      $('.img1').css("width", width * ratio);    // Scale width based on ratio
+      width = width * ratio;    // Reset width to match scaled image
+    }
+
+  }
+
+  // ngAfterViewInit() {
+  // $('#flipbook').turn({
+  //   width: 1400,
+  //   height: 600,
+  //   autoCenter: true
+  // });
   //}
 
   // intialiseFlip() {

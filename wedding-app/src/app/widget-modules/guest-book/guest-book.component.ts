@@ -34,6 +34,10 @@ export class GuestBookComponent implements OnInit {
   sizeFlipBook(){
 
   }
+
+  clearTimer() {
+    clearInterval(defaultInterval);
+  }
   initialiseGuestBookTurn(wishArray) {
     setTimeout(() => {
       $('#guest-book-turn').turn({
@@ -56,8 +60,9 @@ export class GuestBookComponent implements OnInit {
       $('#guest-book-turn').turn('size', $('#guest-book-cont').width() - 20, $('#guest-book-cont').height() - 20);
       $('#guest-book-turn').turn('resize');
     });
+    
     defaultInterval = setInterval(() => {
-     // $('#guest-book-turn').turn('next');
+      $('#guest-book-turn').turn('next');
       // if(isPrevious){
       //   $('#guest-book-turn').turn('previous');
       // }else {
@@ -80,11 +85,11 @@ export class GuestBookComponent implements OnInit {
   }
 
   postWish() {
+    this.iAgree(this.wishes.data.wishList);
     return this.wedOverviewService.sendWishes(this.wishObj).subscribe(
       data => {
         console.log(data);
         setTimeout(() => {
-          this.refreshWishes();
         }, 5000);
       }, error => {
         console.log(error);
@@ -115,14 +120,13 @@ export class GuestBookComponent implements OnInit {
     setTimeout(() => {
       isPrevious = true;
       this.showForm = false;
-      this.showConfirmMsg = false;
       var submitInterval = setInterval(() => {
         if($('#guest-book-turn').turn('page') === 1) {
           clearInterval(submitInterval);
         }
         $('#guest-book-turn').turn('resize');
         $('#guest-book-turn').turn('previous');
-      }, 5000);
+      }, 6000);
     }, 3000);
   }
   /*
