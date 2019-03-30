@@ -11,18 +11,18 @@
         </div>
         <div  class="navbar-collapse collapse" id="navbarTogglerDemo02" >
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
-                <div class="nav-flex nav-scroll">
-                    <div  class="nav-items-flex">
-                        <a href="#home"  style="color: inherit;text-decoration: none"  >HOME</a>
+                <div class="nav-flex">
+                    <div  class="nav-items-flex nav-scroll">
+                        <a href="#home" i="home" (click)="sendGA('home');" class="nav-active"  style="color: inherit;text-decoration: none"  >HOME</a>
                     </div>
-                    <div class="nav-items-flex">
-                        <a href="#album" (click)="sendGA('#album');" style="color: inherit;text-decoration: none" >ALBUMS</a>
+                    <div class="nav-items-flex nav-scroll">
+                        <a href="#album" i="album" (click)="sendGA('album');" style="color: inherit;text-decoration: none" >ALBUMS</a>
                     </div>
-                    <div  class="nav-items-flex">
-                        <a href="#guestbook" (click)="sendGA('#guestbook');" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
+                    <div  class="nav-items-flex nav-scroll">
+                        <a href="#guestbook" (click)="sendGA('guestbook');" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
                     </div>
-                    <div  class="nav-items-flex">
-                        <a (click)="sendGA('#share');" href="#share"  style="color: inherit;text-decoration: none">SHARE</a>
+                    <div  class="nav-items-flex nav-scroll">
+                        <a (click)="sendGA('share');" href="#share"  style="color: inherit;text-decoration: none">SHARE</a>
                     </div>
 
                 </div>
@@ -31,17 +31,17 @@
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
                     <li  class="nav-item nav-scroll">
                         <a href="#home"    style="color: inherit;text-decoration: none" 
-                             (click)="onChange()" routerLinkActive="active">HOME</a>
+                             (click)="onChange();sendGA('home')" class="nav-active" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item nav-scroll">
-                        <a href="#album" (click)="sendGA('#album');onChange()" style="color: inherit;text-decoration: none" 
+                        <a href="#album" (click)="sendGA('album');onChange()" style="color: inherit;text-decoration: none" 
                             >ALBUMS</a>
                     </li>
                     <li class="nav-item nav-scroll">
-                        <a href="#guestbook" (click)="sendGA('#guestbook');onChange()" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
+                        <a href="#guestbook" (click)="sendGA('guestbook');onChange()" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
                     </li>
                     <li class="nav-item nav-scroll">
-                        <a href="#share" (click)="sendGA('#share');onChange()"  style="color: inherit;text-decoration: none">SHARE</a>
+                        <a href="#share" (click)="sendGA('share');onChange()"  style="color: inherit;text-decoration: none">SHARE</a>
                     </li>
                 </ul>
 

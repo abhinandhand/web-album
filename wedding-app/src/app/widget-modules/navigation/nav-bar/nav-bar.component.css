@@ -41,6 +41,10 @@
     cursor: pointer;
     z-index: 1000;
 }
+.nav-active{
+    font-weight: bold;
+    /* letter-spacing: 0.2px; */
+}
 .nav-items-flex-active {
     font-family: Playfair Display, Bold;
     font-weight: bold;

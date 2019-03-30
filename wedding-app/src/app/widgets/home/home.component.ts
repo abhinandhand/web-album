@@ -28,6 +28,19 @@ export class HomeComponent implements OnInit {
 			} else {
 				$('.header-cont').removeClass('solid-nav');
 			}
+			setTimeout(() => {
+				$('.target').each(function() {
+					if($(window).scrollTop() >= $(this).offset().top) {
+						var id = $(this).attr('id');
+						var currentId= $('.nav-active').attr('i');
+						if(id !== currentId){
+							$('.nav-scroll a').removeClass('nav-active');
+						}
+						$('.nav-scroll a[href=#'+ id +']').addClass('nav-active');
+					}
+				});
+			},900);
+			
 	
 		});
 		

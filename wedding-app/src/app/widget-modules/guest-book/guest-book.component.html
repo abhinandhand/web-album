@@ -1,6 +1,6 @@
-<div id="guestbook">
-  <div class="guest-book-label">
-      <hr id="album" class="hr-text" data-content="GUEST BOOK">
+<div class="guest-book-sec-padding" >
+  <div  class="guest-book-label">
+      <hr    class="hr-text " data-content="GUEST BOOK">
     <!-- <img class="con-album-label-hr" src="assets/rectangle.svg" />
     <span id="album" style="padding-left: 20px;padding-right: 17px;">Guest Book</span>
     <img class="con-album-label-hr" style="transform: scale(-1);" src="assets/rectangle.svg" /> -->
@@ -57,7 +57,7 @@
   <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
            -->
   <!-- <h1 class="wish-style" id="word"></h1> -->
-  <div *ngIf="showForm" class="form-width">
+  <div  [hidden]="!showForm" class="form-width">
     <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
       <div>
         <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name and family?" required/>
@@ -65,23 +65,23 @@
       <div *ngIf="guestForm.submitted && name.invalid">
         <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>
       </div>
-      <div style="margin-top: 75px;">
+      <div   style="margin-top: 75px;">
         <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Where are you from?" required/>
       </div>
       <div *ngIf="guestForm.submitted && location.invalid">
           <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
         </div>
-      <div style="margin-top: 75px;">
+      <div  style="margin-top: 75px;">
         <input name="email" [(ngModel)]="wishObj.email" placeholder="Your email address?" />
       </div>
-      <div style="margin-top: 75px;">
+      <div   style="margin-top: 75px;">
         <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Write your thoughts and wishes for the newly wedded couple." required></textarea>
       </div>
       <div *ngIf="guestForm.submitted && message.invalid">
           <span style="color: #ff000091;" *ngIf="message.errors.required">Message is required</span>
         </div>
 
-      <div class="btn-div">
+      <div  class="btn-div">
         <button  type="submit" id="wish-button">Post</button>
       </div>
 
