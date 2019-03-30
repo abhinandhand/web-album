@@ -13,6 +13,9 @@
     margin-right: 7%;
 
 }
+#guest-book-turn .page {
+    background-color:#e6e6e6;
+}
 .guest-book-wish-text {
     position: absolute;
     left: 27%;
