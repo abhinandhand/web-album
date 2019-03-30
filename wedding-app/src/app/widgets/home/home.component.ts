@@ -19,7 +19,20 @@ export class HomeComponent implements OnInit {
 	ngOnInit() {
 		this.isCollapsed = true;
 		this.fetchWedOverview();
+		$(window).scroll(function() {
+			var height = $('.key-bg').height();
+			console.log( $('.key-bg').height())
+			var scrollTop = $(window).scrollTop();
+			if (scrollTop >= height-210) {
+				$('.header-cont').addClass('solid-nav');
+			} else {
+				$('.header-cont').removeClass('solid-nav');
+			}
+	
+		});
+		
 	}
+
 
 
 

@@ -2,3 +2,9 @@
 *:focus {
     outline: none;
 }
+body.modal-open {
+    overflow: hidden;
+}
+* {
+    -webkit-overflow-scrolling: touch;
+}
