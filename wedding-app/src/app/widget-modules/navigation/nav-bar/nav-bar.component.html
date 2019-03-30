@@ -1,19 +1,14 @@
-<div>
-    <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation"  style="background-image: url('https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg')">
-        <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'45px'}" class="nav-container nav-transcluent"></div> 
-
-       <!-- <div [ngStyle]="{'background-image':'url(' +imageUrl+ ')'}" class="nav-container"></div> -->
+<div class="header-cont">
+    <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation">
+        <!-- <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'45px'}" class="nav-container nav-transcluent"></div>  -->
         <div class="navbar-light" style="z-index: 3;">
            
             <button style=" margin-left: 15px;
             margin-top: -2px;" class="navbar-toggler" type="button" role="button" data-toggle="collapse" href="#navbarTogglerDemo02"  aria-expanded="false"
-                aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"  aria-controls="navbarTogglerDemo02">
+                aria-label="Toggle navigation" (click)="onChange()"  aria-controls="navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
-
-        <!-- <a class="navbar-item" >SOUND ON</a> -->
-        <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02" [ngbCollapse]="isCollapsed"> -->
         <div  class="navbar-collapse collapse" id="navbarTogglerDemo02" >
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
                 <div class="nav-flex">
@@ -38,18 +33,18 @@
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
                     <li  class="nav-item">
                         <a href="#home"  [fragment]="'home'"  style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
-                            routerLink="/" (click)="isCollapsed = !isCollapsed" routerLinkActive="active">HOME</a>
+                            routerLink="/" (click)="onChange()" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#album" (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" routerLink="/"
+                        <a href="#album" (click)="sendGA();onChange()" style="color: inherit;text-decoration: none" routerLink="/"
                             [routerLinkActiveOptions]="{ exact: true }" [fragment]="'album'" routerLinkActive="active">ALBUMS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#guestbook" (click)="sendGA();isCollapsed = !isCollapsed" style="color: inherit;text-decoration: none" routerLink="/"
+                        <a href="#guestbook" (click)="sendGA();onChange()" style="color: inherit;text-decoration: none" routerLink="/"
                             [routerLinkActiveOptions]="{ exact: true }" [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#share" (click)="sendGA();isCollapsed = !isCollapsed"  style="color: inherit;text-decoration: none">SHARE</a>
+                        <a href="#share" (click)="sendGA();onChange()"  style="color: inherit;text-decoration: none">SHARE</a>
                     </li>
                 </ul>
 
@@ -57,26 +52,5 @@
 
 
         </div>
-
-
-        <!-- <ul class="navbar-nav">
-            <li class="nav-item">
-                <a routerLink="/home" routerLinkActive="active" class="nav-item ">HOME</a>
-            </li>
-            <!-- <li class="nav-item">
-                    <a routerLink="/home"  [fragment]="'guestbook'" routerLinkActive="active"  class="nav-item ">Guest book</a>
-            </li> -->
-        <!-- <li routerLink="/guest-book" class="nav-item">
-                <a class="nav-item ">DIGITAL GUEST BOOK</a>
-            </li> -->
-        <!-- <li class="nav-item">
-                <a class="nav-item ">PHOTOS</a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-item ">CONTACT US</a>
-          </li> 
-        </ul> -->
     </nav>
-
-
 </div>

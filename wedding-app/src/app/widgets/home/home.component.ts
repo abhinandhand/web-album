@@ -14,28 +14,11 @@ export class HomeComponent implements OnInit {
 	@Input() weddingObj: any;
 	constructor(public wedOverviewService: WeddingOverviewService) { }
 	wedddingOverviewData: any;
+	isCollapsed: boolean;
 	isSetBoolean = true;
 	ngOnInit() {
+		this.isCollapsed = true;
 		this.fetchWedOverview();
-		$('#bg-image').on('load', function () {
-			var offset = window.innerWidth > 1200 ? 250 : 0;
-			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset )});
-		});
-		$(window).on('load', (function () {
-			var offset = window.innerWidth > 1200 ? 250 : 0;
-			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset)});
-		}));
-		$(window).resize(function () {
-			var offset = window.innerWidth > 1200 ? 250 : 0;
-			$('.parent-container').css({ 'top': ($('#bg-image').height() - offset)});
-		});
-		// function setContainer () {
-		//   /*parent container deciding top position*/
-		//   $('.parent-container').css({'top' : $('#bg-image').height()});
-		//   /*couple container deciding height*/
-		//   $('.couple-container').height($('.con-event-container').height() +
-		//   $('.duration-summary').height() + $('#con-album-label').height() -95);
-		// }
 	}
 
 

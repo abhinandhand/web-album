@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input, EventEmitter, Output } from '@angular/core';
+import { isBoolean } from 'util';
 
 
 
@@ -10,10 +11,10 @@ declare var $:any;
 })
 export class NavBarComponent implements OnInit {
   @Input() imageUrl: string;
-  isCollapsed:boolean;
+  @Input() isCollapsed: boolean;
+  @Output() isCollapsedChange: EventEmitter<boolean> = new EventEmitter();
   constructor() { }
   ngOnInit() {
-    this.isCollapsed = true;
     $('guestlink').click(function() {
       // $( '#guestbook' ).scroll();
       $('html, body').animate({
@@ -30,9 +31,11 @@ export class NavBarComponent implements OnInit {
       (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + location.hash});
      }, 500);
   }
-  onCollapse() {
-    alert('jj');
+  onChange (){
+    this.isCollapsed = !this.isCollapsed;
+    this.isCollapsedChange.emit(this.isCollapsed);
   }
+
 
 
 }

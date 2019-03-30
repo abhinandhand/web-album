@@ -1,20 +1,19 @@
 <div>
     <router-outlet></router-outlet>
-  <div class="key-photo" >
-    <img
-      style="display: none;"
-      onload="this.style.display = 'block'"
-      id="bg-image"
-      class="img-fluid"
-      [src]="wedddingOverviewData?.data?.welcome"
-    />
-  </div>
-  <div class="row">
-      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-        <app-nav-bar
-          [imageUrl]="wedddingOverviewData?.data?.welcome"
-        ></app-nav-bar>
-      </div>
+  <div class="key-bg col-md-12 col-sm-12 col-xs-12" [ngStyle]="{'background-image':'url(' +wedddingOverviewData?.data?.welcome+ ')'}">
+    <div class="header-cont  d-none d-sm-none d-md-block">
+            <app-nav-bar style="height: inherit;"
+              [imageUrl]="wedddingOverviewData?.data?.welcome" [(isCollapsed)]="isCollapsed"
+            ></app-nav-bar>
+
+          </div>
+          <div class="header-cont d-block d-sm-block d-md-none" [ngStyle]="!isCollapsed ? {'height':'300px','transition': 'height 0.35s ease'}:{'height':'45px', 'transition': 'height 0.35s ease'}">
+              <app-nav-bar style="height: inherit;"
+                [imageUrl]="wedddingOverviewData?.data?.welcome" [(isCollapsed)]="isCollapsed"
+              ></app-nav-bar>
+  
+            </div>
+            <img  class="img-fluid hidden-img" [src]="wedddingOverviewData?.data?.welcome" style="visibility: hidden;" /> 
     </div>
   <div class="container-fluid-nomax">
         <div class="parent-container">
@@ -36,7 +35,6 @@
           </div>
           </div>
         </div>
-
     </div>
 
     
