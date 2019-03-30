@@ -6,6 +6,7 @@ declare var $: any;
 declare var turn: any;
 var isPrevious: boolean = false;
 var defaultInterval;
+var submitInterval ;
 
 @Component({
   selector: 'app-guest-book',
@@ -37,6 +38,7 @@ export class GuestBookComponent implements OnInit {
 
   clearTimer() {
     clearInterval(defaultInterval);
+    clearInterval(submitInterval);
   }
   initialiseGuestBookTurn(wishArray) {
     setTimeout(() => {
@@ -120,7 +122,7 @@ export class GuestBookComponent implements OnInit {
     setTimeout(() => {
       isPrevious = true;
       this.showForm = false;
-      var submitInterval = setInterval(() => {
+      submitInterval = setInterval(() => {
         if($('#guest-book-turn').turn('page') === 1) {
           clearInterval(submitInterval);
         }
