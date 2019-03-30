@@ -12,13 +12,12 @@
 
 }
 .cp-bg{
-    color: #f1f1f1;
-    filter: blur(6px);
-    background-color: #ffff;
-    opacity: 0.6;
+    /* color: #f1f1f1; */
+    filter: blur(9px);
+    /* opacity: 0.6; */
     width: 100%;
     position: absolute;
-    height: 107%;
+    height: 103%;
     left: 0;
 }
 #marriage-date {
