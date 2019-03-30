@@ -1,8 +1,10 @@
 .guest-view {
     color: #707070;
 }
-.guest-book-label {
+.guest-book-sec-padding{
     padding-top: 93px;
+}
+.guest-book-label {
     color: #1D1D1D;
     font-family: Playfair Display, Regular;
     font-size: 50px;
@@ -229,6 +231,8 @@ textarea {
     .guest-book-label{
         margin-left: 0%;
     margin-right: 0%;
+    }
+    .guest-book-sec-padding{
         padding-top: 55px;
     }
     #wish-button {
@@ -298,9 +302,11 @@ textarea {
         width: 0%;
     }
     .guest-book-label{
-        padding-top: 55px;
         margin-left: 0%;
     margin-right: 0%;
+    }
+    .guest-book-sec-padding{
+        padding-top: 55px;
     }
 
     .form-width {

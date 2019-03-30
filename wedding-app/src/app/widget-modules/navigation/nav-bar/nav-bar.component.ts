@@ -20,15 +20,17 @@ export class NavBarComponent implements OnInit {
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 60
+        scrollTop: ($(hash).offset().top + 50)
       }, 800, function() {
       });
-    } 
+    }
   });
   }
 
   sendGA(position) {
     (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + position});
+    $('.nav-scroll a').removeClass('nav-active');
+		$('.nav-scroll a[href=#'+ position +']').addClass('nav-active');
   }
   onChange (){
     this.isCollapsed = !this.isCollapsed;
