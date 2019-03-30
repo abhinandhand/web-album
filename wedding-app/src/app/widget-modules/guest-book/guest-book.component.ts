@@ -34,6 +34,10 @@ export class GuestBookComponent implements OnInit {
   sizeFlipBook(){
 
   }
+
+  clearTimer() {
+    clearInterval(defaultInterval);
+  }
   initialiseGuestBookTurn(wishArray) {
     setTimeout(() => {
       $('#guest-book-turn').turn({

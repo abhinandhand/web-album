@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { timeout } from 'q';
+import { Location } from '@angular/common';
 declare var $: any;
 
 @Component({
@@ -14,11 +15,15 @@ export class AlbumsComponent implements OnInit {
   eventName: string;
   albumData: any;
   index: number;
+  click: boolean = false;
+  pageUrl: string;
   albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
   currentImg: string;
+  imgId: string;
 
 
-  constructor(private route: ActivatedRoute, private albumService: AlbumOverviewService) { }
+  constructor(private route: ActivatedRoute, 
+    private albumService: AlbumOverviewService,private routes: Router, private location: Location) { }
 
 
   @HostListener('wheel', ['$event'])
@@ -26,38 +31,59 @@ export class AlbumsComponent implements OnInit {
     event.preventDefault();
   }
 
-  fetchAlbumData() {
-    this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
-      this.albumData = data;
-      this.intialiseImage();
-    });
-  }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.imgUrl = params.url;
-      this.eventName = params.name;
-    });
-    this.fetchAlbumData();
+    this.route.queryParamMap
+       .subscribe(params => {
+        this.currentImg = params.get('url') ? params.get('url') : undefined;
+        this.eventName = params.get('name');
+        this.click = params.get('c') ? true : false;
+        this.imgId = params.get('id') ? params.get('id') : undefined;
+        this.fetchAlbumData();
+      });
+
     $(window).resize(() => {
       this.reSizeImgCont();
     });
+    this.pageUrl = location.href;
     this.reSizeImgCont();
-  }
+}
+
+fetchAlbumData() {
+  this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
+    if (this.click){
+      this.index = 0;
+      this.albumData = data;
+     $('.preload').attr('src', this.albumData.data[0].url);
+    } else{
+    this.intialiseImageIndex(data);
+    }
+  });
+}
+
   reSizeImgCont() {
     let offset = window.innerWidth > 980 ? 85 : 0;
     $('.content-block').height(window.innerHeight - offset);
   }
 
-  intialiseImage() {
-    this.index = 0;
-    this.currentImg = this.albumData.data[this.index].url;
-    $('.preload').attr('src', this.albumData.data[1].url);
+  intialiseImageIndex(data) {
+    for (const index in data.data) {
+       if (data.data[index]._id === this.imgId) {
+        this.albumData = data;
+        console.log(index);
+        this.index = parseInt(index);
+      }
+    }
+    this.albumData = data;
+    $('.preload').attr('src', this.albumData.data[this.index+1].url);
   }
 
 
   nextImage() {
     if (this.albumData.data.length > (this.index + 1) ) {
+      this.imgId = this.albumData.data[this.index + 1]._id;
+      this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index + 1].url+'&id='+this.albumData.data[this.index + 1]._id);
+      this.pageUrl = location.href;
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
         this.index = this.index + 1;
@@ -67,6 +93,8 @@ export class AlbumsComponent implements OnInit {
 
   prevImage() {
     if (this.index >= 1) {
+      this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index - 1].url+'&id='+this.albumData.data[this.index - 1]._id);
+      this.pageUrl = location.href;
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
         this.index = this.index - 1;

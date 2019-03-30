@@ -13,6 +13,9 @@
     margin-right: 7%;
 
 }
+#guest-book-turn .page {
+    background-color:#e6e6e6;
+}
 .guest-book-wish-text {
     position: absolute;
     left: 27%;
@@ -201,7 +204,20 @@ textarea {
     margin-bottom: 0px;
 }
 
-
+.left-arrow{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    font-size: 35px;
+    color: #9e9e9ea3;
+}
+.right-arrow {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    font-size: 35px;
+    color: #2e2d2c5e;
+}
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
