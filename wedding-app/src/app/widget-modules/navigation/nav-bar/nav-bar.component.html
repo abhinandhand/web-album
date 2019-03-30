@@ -11,40 +11,37 @@
         </div>
         <div  class="navbar-collapse collapse" id="navbarTogglerDemo02" >
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
-                <div class="nav-flex">
+                <div class="nav-flex nav-scroll">
                     <div  class="nav-items-flex">
-                        <a href="#home" [fragment]="'home'" style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }" routerLink="/" routerLinkActive="active">HOME</a>
+                        <a href="#home"  style="color: inherit;text-decoration: none"  >HOME</a>
                     </div>
                     <div class="nav-items-flex">
-                        <a href="#album" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-                            [fragment]="'album'" routerLinkActive="active">ALBUMS</a>
+                        <a href="#album" (click)="sendGA('#album');" style="color: inherit;text-decoration: none" >ALBUMS</a>
                     </div>
                     <div  class="nav-items-flex">
-                        <a href="#guestbook" (click)="sendGA();" style="color: inherit;text-decoration: none" routerLink="/" [routerLinkActiveOptions]="{ exact: true }"
-                            [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
+                        <a href="#guestbook" (click)="sendGA('#guestbook');" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
                     </div>
                     <div  class="nav-items-flex">
-                        <a (click)="sendGA();" [fragment]="'share'" routerLinkActive="active" routerLink="/" style="color: inherit;text-decoration: none">SHARE</a>
+                        <a (click)="sendGA('#share');" href="#share"  style="color: inherit;text-decoration: none">SHARE</a>
                     </div>
 
                 </div>
             </div>
             <div class="d-block d-sm-block d-md-none">
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
-                    <li  class="nav-item">
-                        <a href="#home"  [fragment]="'home'"  style="color: inherit;text-decoration: none" [routerLinkActiveOptions]="{ exact: true }"
-                            routerLink="/" (click)="onChange()" routerLinkActive="active">HOME</a>
+                    <li  class="nav-item nav-scroll">
+                        <a href="#home"    style="color: inherit;text-decoration: none" 
+                             (click)="onChange()" routerLinkActive="active">HOME</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#album" (click)="sendGA();onChange()" style="color: inherit;text-decoration: none" routerLink="/"
-                            [routerLinkActiveOptions]="{ exact: true }" [fragment]="'album'" routerLinkActive="active">ALBUMS</a>
+                    <li class="nav-item nav-scroll">
+                        <a href="#album" (click)="sendGA('#album');onChange()" style="color: inherit;text-decoration: none" 
+                            >ALBUMS</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#guestbook" (click)="sendGA();onChange()" style="color: inherit;text-decoration: none" routerLink="/"
-                            [routerLinkActiveOptions]="{ exact: true }" [fragment]="'guestbook'" routerLinkActive="active">GUEST BOOK</a>
+                    <li class="nav-item nav-scroll">
+                        <a href="#guestbook" (click)="sendGA('#guestbook');onChange()" style="color: inherit;text-decoration: none" >GUEST BOOK</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#share" (click)="sendGA();onChange()"  style="color: inherit;text-decoration: none">SHARE</a>
+                    <li class="nav-item nav-scroll">
+                        <a href="#share" (click)="sendGA('#share');onChange()"  style="color: inherit;text-decoration: none">SHARE</a>
                     </li>
                 </ul>
 

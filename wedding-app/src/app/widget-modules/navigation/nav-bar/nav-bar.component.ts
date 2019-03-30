@@ -15,29 +15,26 @@ export class NavBarComponent implements OnInit {
   @Output() isCollapsedChange: EventEmitter<boolean> = new EventEmitter();
   constructor() { }
   ngOnInit() {
-    $('guestlink').click(function() {
-      // $( '#guestbook' ).scroll();
+  $(".nav-scroll a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
       $('html, body').animate({
-        scrollTop: $('#guestbook').offset().top
-    }, 1000);
-    });
-    $('.navbar-nav>li>a').on('click', function(){
-      $('.navbar-collapse').collapse('hide');
+        scrollTop: $(hash).offset().top - 60
+      }, 800, function() {
+      });
+    } 
   });
   }
 
-  sendGA() {
-    setTimeout(() => {
-      (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + location.hash});
-     }, 500);
+  sendGA(position) {
+    (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + position});
   }
   onChange (){
     this.isCollapsed = !this.isCollapsed;
     this.isCollapsedChange.emit(this.isCollapsed);
+    $('.navbar-collapse').collapse('hide');
   }
-
-  
-
 
 
 }
