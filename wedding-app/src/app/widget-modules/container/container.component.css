@@ -16,12 +16,36 @@
     transform: scaleX(-1);
 }
 .middle-left-mandala {
-    top: 50%;
+    top: 15%;
     position: absolute;
     left: 0;
 }
 .middle-right-mandala {
-    top: 50%;
+    top: 15%;
+    position: absolute;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.middle-left2-mandala {
+    top: 30%;
+    position: absolute;
+    left: 0;
+}
+.middle-right2-mandala {
+    top: 30%;
+    position: absolute;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.middle-left3-mandala {
+    top: 45%;
+    position: absolute;
+    left: 0;
+}
+.middle-right3-mandala {
+    top: 45%;
     position: absolute;
     right: 0px;
     -webkit-transform: scaleX(-1);

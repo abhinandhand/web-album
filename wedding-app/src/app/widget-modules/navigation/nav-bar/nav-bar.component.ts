@@ -36,6 +36,8 @@ export class NavBarComponent implements OnInit {
     this.isCollapsedChange.emit(this.isCollapsed);
   }
 
+  
+
 
 
 }

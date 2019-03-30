@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { timeout } from 'q';
@@ -10,7 +10,7 @@ declare var $: any;
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
-export class AlbumsComponent implements OnInit {
+export class AlbumsComponent implements OnInit, OnDestroy {
   imgUrl: any;
   eventName: string;
   albumData: any;
@@ -33,6 +33,7 @@ export class AlbumsComponent implements OnInit {
 
 
   ngOnInit() {
+    $('body').addClass('modal-open');
     this.route.queryParamMap
        .subscribe(params => {
         this.currentImg = params.get('url') ? params.get('url') : undefined;
@@ -101,6 +102,13 @@ fetchAlbumData() {
       }).fadeIn(1000);
     }
   }
+
+  ngOnDestroy(){
+    $('body').removeClass('modal-open');
+  }
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeddingOverviewService } from './data-access/wedding-overview/wedding-overview.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { WeddingOverviewService } from './data-access/wedding-overview/wedding-o
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
-  constructor() {}
+  currentRoute:string;
+  constructor(private router: Router) {}
   ngOnInit(): void {
 
 
