@@ -60,7 +60,7 @@
   <div   class="form-width">
     <form [hidden]="!showForm" (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
       <div>
-        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name and family?" required/>
+        <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your name and family?" required/>
       </div>
       <div *ngIf="guestForm.submitted && name.invalid">
         <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>

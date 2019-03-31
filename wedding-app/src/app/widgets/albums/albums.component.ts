@@ -36,7 +36,7 @@ export class AlbumsComponent implements OnInit, OnDestroy {
     $('body').addClass('modal-open');
     this.route.queryParamMap
        .subscribe(params => {
-        this.currentImg = params.get('url') ? params.get('url') : undefined;
+       // this.currentImg = params.get('url') ? params.get('url') : undefined;
         this.eventName = params.get('name');
         this.click = params.get('c') ? true : false;
         this.imgId = params.get('id') ? params.get('id') : undefined;
@@ -52,11 +52,15 @@ export class AlbumsComponent implements OnInit, OnDestroy {
 
 fetchAlbumData() {
   this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
-    if (this.click){
-      this.index = 0;
+    if (this.click) {
       this.albumData = data;
-     $('.preload').attr('src', this.albumData.data[0].url);
-    } else{
+      this.currentImg = this.albumData.data[0].url;
+      this.index = 0;
+      this.imgId = this.albumData.data[this.index]._id;
+      this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index].url+'&id='+this.albumData.data[this.index]._id);
+      this.pageUrl = location.href;
+     $('.preload').attr('src', this.albumData.data[1].url);
+    } else {
     this.intialiseImageIndex(data);
     }
   });
@@ -76,6 +80,7 @@ fetchAlbumData() {
       }
     }
     this.albumData = data;
+    this.currentImg = this.albumData.data[this.index].url;
     $('.preload').attr('src', this.albumData.data[this.index+1].url);
   }
 

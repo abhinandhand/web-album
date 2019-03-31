@@ -20,6 +20,6 @@ export class WeddingEventsComponent  {
     );
   }
   goToPage(event,url) {
-    this.route.navigate(['/albums'], { queryParams: { name: event, url: url, c: true } });
+    this.route.navigate(['/albums'], { queryParams: { name: event,  c: true } });
 }
 }
