@@ -9,11 +9,11 @@
   <div id="guest-book-cont">
     <div class="guest-view" style="position: relative;width: 100%">
       <div  id="guest-book-turn">
-        <div (swipe)="clearTimer()" (tap)="clearTimer()" (press)="clearTimer()"  *ngFor="let wish of wishes.data.wishList;index as i">
+        <div  (swipe)="clearTimer()" (tap)="clearTimer()" (press)="clearTimer()"  *ngFor="let wish of wishes.data.wishList;index as i">
           <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/dtop.png">
           <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
           <div style="height: 100%;padding: 0px 98px;">
-              <div  (mouseover)="clearTimer()" class="left-arrow" *ngIf="i!=0" (click)="clearTimer()" >
+              <div  (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goPrevious()" class="left-arrow" *ngIf="i!=0" (click)="clearTimer()" >
                   <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
               </div>
             <div  class="guest-book-wish-text">
@@ -24,7 +24,7 @@
               <p class="loc-date">{{wish.location}}</p>
               <p class="loc-date">{{wish.modifiedDate | date }}</p>
             </div>
-            <div (mouseover)="clearTimer()" class="right-arrow" *ngIf="i != wishes.data.wishList.length-1" (click)="clearTimer()">
+            <div (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goNext()" class="right-arrow" *ngIf="i != wishes.data.wishList.length-1" (click)="clearTimer()">
                 <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>
         </div>
           </div>
@@ -57,8 +57,8 @@
   <!-- <div ng-repeat="item in wishes.data.wishList" style="background: url('assets/page.png')">Hello</div>
            -->
   <!-- <h1 class="wish-style" id="word"></h1> -->
-  <div  [hidden]="!showForm" class="form-width">
-    <form (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
+  <div   class="form-width">
+    <form [hidden]="!showForm" (ngSubmit)="guestForm.form.valid && onSubmit()" #guestForm="ngForm" novalidate>
       <div>
         <input name="name" [(ngModel)]="wishObj.name" #name="ngModel" placeholder="Your Name and family?" required/>
       </div>
@@ -86,12 +86,18 @@
       </div>
 
     </form>
+    <div  *ngIf="!showForm && showConfirmMsg" class="tq-wish">
+      <div class="wish-style" id="word">
+          <h1 >Thank you for writing in Aaron and Diya's wedding guest book!</h1>
+          <h1> If you would like to make some changes, tap on <a style="    font-weight: bold;
+            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;" >Edit</a></h1>
+
+      </div>
+        
+    </div>
 
   </div>
-  <div  *ngIf="!showForm && showConfirmMsg" class="tq-wish">
-          <h1 class="wish-style" id="word">Thank you for writing in Aaron and Diya's wedding guest book! If you would like to make some changes, tap on <a style="    font-weight: bold;
-            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;" >Edit</a></h1>
-      </div>
+  
 </div>
 
 <!--  

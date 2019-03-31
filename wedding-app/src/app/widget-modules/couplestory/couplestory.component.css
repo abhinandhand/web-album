@@ -4,7 +4,7 @@
     /* font-size: 142px; */
     font-size: 8.395vw;
     line-height: 178px;
-    color: #9d45278a;
+    color: #9d4527c4;
     /* color: #D0CECA; */
     margin-top: 32px;
     z-index: 200;
@@ -12,13 +12,22 @@
 
 }
 .cp-bg{
-    /* color: #f1f1f1; */
-    filter: blur(9px);
-    /* opacity: 0.6; */
     width: 100%;
     position: absolute;
     height: 103%;
     left: 0;
+}
+.cp-bg::before{
+    content: "";
+	position: absolute;
+	background: inherit;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+	filter: blur(8px);
 }
 #marriage-date {
     text-align: center;
@@ -29,9 +38,9 @@
 }
 #marriage-date-summary{
     text-align: center;
-    font-family: Playfair Display, Regular;
-    font-size: 30px;
-    line-height: 40px;
+    font-family: Great Vibes;
+    font-size: 52px;
+    line-height: 52px;
     word-spacing: 10;
     color: #303B44;
 
@@ -59,7 +68,7 @@
     /* filter: blur(26px); */
 }
 .duration{
-    font-size: 34px;
+    font-size: inherit;
 }
 .couple-name-bg:before{
     
@@ -91,12 +100,10 @@
     
 
        #marriage-date-summary{
-        font-size: 4vw;
+        font-size: 7vw;
         line-height: 30px;
        }
-       .duration{
-        font-size: 4vw;
-      }
+       
       #marriage-date {
         font-size: 6.5vw;
         line-height: 35px;
@@ -131,12 +138,10 @@
   
 
    #marriage-date-summary{
-           font-size: 4vw;
+           font-size: 7vw;
            line-height: 30px;
        }
-    .duration{
-        font-size: 4vw;
-      }
+    
     #marriage-date {
         font-size: 6vw;
         line-height: 28px;

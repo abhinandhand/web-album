@@ -143,9 +143,10 @@ textarea {
 
 }
 .form-width {
-    margin-left: 22%;
-    margin-right: 22%;
-    margin-top: 8%
+    margin-left: 21%;
+    margin-right: 21%;
+    margin-top: 8%;
+    min-height: 600px;
 }
 .btn-div{
     margin-top: 75px; 
@@ -192,9 +193,9 @@ textarea {
 }
 
 .tq-wish{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-right: inherit;
     position: absolute;
+    margin-top: 10%;
 }
 
 .guest-info{
@@ -206,17 +207,17 @@ textarea {
 }
 
 .left-arrow{
-    bottom: 0;
+    bottom: 46%;
     left: 0;
     position: absolute;
-    font-size: 35px;
+    font-size: 30px;
     color: #9e9e9ea3;
 }
 .right-arrow {
-    bottom: 0;
+    bottom: 46%;
     right: 0;
     position: absolute;
-    font-size: 35px;
+    font-size: 30px;
     color: #2e2d2c5e;
 }
 /* 
@@ -280,8 +281,6 @@ textarea {
         height: 126px;
     }
     .tq-wish{
-        margin-left: 5%;
-        margin-right: 5%;
         margin-top: 9%;
     }
     .guest-info{
@@ -353,8 +352,6 @@ textarea {
         height: 126px;
     }
     .tq-wish{
-        margin-left: 5%;
-        margin-right: 5%;
         margin-top: 9%;
     }
     .guest-info{

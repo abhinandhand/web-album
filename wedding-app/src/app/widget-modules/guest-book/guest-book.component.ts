@@ -73,6 +73,17 @@ export class GuestBookComponent implements OnInit {
     }, 5000);
   };
 
+
+  goNext() {
+    $('#guest-book-turn').turn('next');
+    this.clearTimer();
+  }
+
+  goPrevious(){
+    $('#guest-book-turn').turn('previous');
+    this.clearTimer();
+  }
+
   refreshWishes() {
     this.sendWishEvent.emit('true');
   }
