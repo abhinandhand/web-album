@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div data-dismiss="modal" routerLink="/" aria-label="Close">
-                            <img class="back-icon" src="assets/back-arrow.svg">
+                            <img class="back-icon" src="assets/left-arrow.svg">
                         </div>
                     </div>
                     <div class="col-4">
@@ -32,9 +32,7 @@
             <div class="content-block">
                            
                             <div class="img-container">
-                                <div id="land-0" class="page-left" *ngIf="index >= 1" (click)="prevImage()" >
-                                            <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
-                                 </div>
+                               
                                 <img class="img-fluid" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="display: block;margin: auto;height: inherit;"
                                     onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                     onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
@@ -42,6 +40,9 @@
                                     <div class="page-right"  id="land-1" *ngIf="albumData.data.length > index+1" (click)="nextImage()">
                                             <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>
                                     </div>
+                                    <div id="land-0" class="page-left" *ngIf="index >= 1" (click)="prevImage()" >
+                                            <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
+                                 </div>
                                 </div>
             </div>
         </div>

@@ -93,7 +93,7 @@ fetchAlbumData() {
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
         this.index = this.index + 1;
-      }).fadeIn(1000);
+      }).fadeIn(800);
     }
   }
 
