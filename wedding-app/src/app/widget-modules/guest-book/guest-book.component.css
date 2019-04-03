@@ -220,6 +220,11 @@ textarea {
     font-size: 30px;
     color: #2e2d2c5e;
 }
+.book-depth {
+    border-right: 15px solid rgba(117, 117, 117, 0.46);
+    border-bottom: 9px solid rgba(117, 117, 117, 0.51);
+    border-radius: 7px;
+}
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
