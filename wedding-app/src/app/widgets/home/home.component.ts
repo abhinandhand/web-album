@@ -17,9 +17,11 @@ export class HomeComponent implements OnInit {
 	isCollapsed: boolean;
 	isSetBoolean = true;
 	ngOnInit() {
+		
 		this.isCollapsed = true;
 		this.fetchWedOverview();
 		$(window).scroll(function() {
+		
 			var height = $('.key-bg').height();
 			console.log( $('.key-bg').height())
 			var scrollTop = $(window).scrollTop();
@@ -53,8 +55,11 @@ export class HomeComponent implements OnInit {
 		this.wedOverviewService.getWeddingOverview().subscribe(data => {
 			this.wedddingOverviewData = data;
 			setTimeout(() => {
+				$('#player').get(0).play().catch(function() {  });
+				// $('#player').get(0).play().catch(function() {
+				// });
 				this.initialiseAnime();
-			}, 5000)
+			}, 5000);
 
 		});
 	};

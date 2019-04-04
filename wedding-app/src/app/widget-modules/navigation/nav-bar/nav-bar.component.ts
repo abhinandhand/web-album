@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input, EventEmitter, Output, AfterContentInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
 import { isBoolean } from 'util';
 
 
@@ -9,7 +9,9 @@ declare var $:any;
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit{
+  playMusic = true;
+  @Input() audioUrl:string;
   @Input() imageUrl: string;
   @Input() isCollapsed: boolean;
   @Output() isCollapsedChange: EventEmitter<boolean> = new EventEmitter();
@@ -25,7 +27,9 @@ export class NavBarComponent implements OnInit {
       });
     }
   });
+
   }
+
 
   sendGA(position) {
     (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + position});
@@ -36,6 +40,15 @@ export class NavBarComponent implements OnInit {
     this.isCollapsed = !this.isCollapsed;
     this.isCollapsedChange.emit(this.isCollapsed);
     $('.navbar-collapse').collapse('hide');
+  }
+
+  toggleMusic(){
+    this.playMusic = !this.playMusic;
+    if(this.playMusic) {
+    $('#player').get(0).play();
+    } else{
+    $('#player').get(0).pause();
+    }
   }
 
 

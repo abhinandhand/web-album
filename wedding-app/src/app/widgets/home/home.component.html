@@ -2,13 +2,14 @@
     <router-outlet></router-outlet>
   <div class="key-bg col-md-12 col-sm-12 col-xs-12" [ngStyle]="{'background-image':'url(' +wedddingOverviewData?.data?.welcome+ ')'}">
     <div class="header-cont  d-none d-sm-none d-md-block">
-            <app-nav-bar style="height: inherit;"
+            <app-nav-bar  [audioUrl]="wedddingOverviewData?.data?.bg_music" style="height: inherit;"
               [imageUrl]="wedddingOverviewData?.data?.welcome" [(isCollapsed)]="isCollapsed"
             ></app-nav-bar>
+            <audio id="player"[src]="wedddingOverviewData?.data?.bg_music"  loop preload="none"></audio>
 
           </div>
           <div class="header-cont d-block d-sm-block d-md-none" [ngStyle]="!isCollapsed ? {'height':'300px','transition': 'height 0.35s ease'}:{'height':'45px', 'transition': 'height 0.35s ease'}">
-              <app-nav-bar style="height: inherit;"
+              <app-nav-bar [audioUrl]="wedddingOverviewData?.data?.bg_music" style="height: inherit;"
                 [imageUrl]="wedddingOverviewData?.data?.welcome" [(isCollapsed)]="isCollapsed"
               ></app-nav-bar>
   
