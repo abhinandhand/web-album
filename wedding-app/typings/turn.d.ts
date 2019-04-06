@@ -6,3 +6,4 @@ declare var onebook: any;
 interface JQuery {
     turn(options?: any, callback?: Function) : any;
  }
+

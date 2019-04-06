@@ -22,6 +22,17 @@ module.exports = [[module.i, ".tilter {\n\tdisplay: block;\n\tposition: relative
 
 /***/ }),
 
+/***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/assets/css/imageViewer.css":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/assets/css/imageViewer.css ***!
+  \*********************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = [[module.i, "/* Layout *********************************************************************/\n/******************************************************************************/\n#container{ height: 100%; margin: 0 auto 0 auto; max-width: 100%; width: 100%; }\n.zoom{  height: 100%; margin: auto; overflow: hidden; width: 100%; }\n.zoom .media{  display: block; left: 0; margin: auto; max-height: 100%; max-width: 100%; position: absolute; right: 0; top: 0;\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d; \n}\n.transition{\n  transition: -webkit-transform ease 200ms;\n  transition: transform ease 200ms;\n  transition: transform ease 200ms, -webkit-transform ease 200ms;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hc3NldHMvY3NzL2ltYWdlVmlld2VyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnRkFBZ0Y7QUFDaEYsZ0ZBQWdGO0FBQ2hGLFlBQVksYUFBYSxDQUFDLHNCQUFzQixDQUFDLGdCQUFnQixDQUFDLFlBQVksRUFBRTtBQUNoRixRQUFRLGFBQWEsQ0FBQyxhQUFhLENBQUMsaUJBQWlCLENBQUMsWUFBWSxFQUFFO0FBQ3BFLGVBQWUsZUFBZSxDQUFDLFFBQVEsQ0FBQyxhQUFhLENBQUMsaUJBQWlCLENBQUMsZ0JBQWdCLENBQUMsbUJBQW1CLENBQUMsU0FBUyxDQUFDLE9BQU87RUFJNUgscUNBQXFDO0VBQ3JDLDZCQUE2QjtDQUM5QjtBQUNEO0VBSUUseUNBQXlDO0VBQ3pDLGlDQUFpQztFQUFqQywrREFBaUM7Q0FDbEMiLCJmaWxlIjoic3JjL2Fzc2V0cy9jc3MvaW1hZ2VWaWV3ZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogTGF5b3V0ICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi9cbi8qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovXG4jY29udGFpbmVyeyBoZWlnaHQ6IDEwMCU7IG1hcmdpbjogMCBhdXRvIDAgYXV0bzsgbWF4LXdpZHRoOiAxMDAlOyB3aWR0aDogMTAwJTsgfVxuLnpvb217ICBoZWlnaHQ6IDEwMCU7IG1hcmdpbjogYXV0bzsgb3ZlcmZsb3c6IGhpZGRlbjsgd2lkdGg6IDEwMCU7IH1cbi56b29tIC5tZWRpYXsgIGRpc3BsYXk6IGJsb2NrOyBsZWZ0OiAwOyBtYXJnaW46IGF1dG87IG1heC1oZWlnaHQ6IDEwMCU7IG1heC13aWR0aDogMTAwJTsgcG9zaXRpb246IGFic29sdXRlOyByaWdodDogMDsgdG9wOiAwOyBcbiAgLW1vei10cmFuc2Zvcm0tc3R5bGU6IHByZXNlcnZlLTNkO1xuICAtbXMtdHJhbnNmb3JtLXN0eWxlOiBwcmVzZXJ2ZS0zZDtcbiAgLW8tdHJhbnNmb3JtLXN0eWxlOiBwcmVzZXJ2ZS0zZDtcbiAgLXdlYmtpdC10cmFuc2Zvcm0tc3R5bGU6IHByZXNlcnZlLTNkO1xuICB0cmFuc2Zvcm0tc3R5bGU6IHByZXNlcnZlLTNkOyBcbn1cbi50cmFuc2l0aW9ue1xuICB0cmFuc2l0aW9uOiAtbW96LXRyYW5zZm9ybSBlYXNlIDIwMG1zO1xuICB0cmFuc2l0aW9uOiAtbXMtdHJhbnNmb3JtIGVhc2UgMjAwbXM7XG4gIHRyYW5zaXRpb246IC1vLXRyYW5zZm9ybSBlYXNlIDIwMG1zO1xuICB0cmFuc2l0aW9uOiAtd2Via2l0LXRyYW5zZm9ybSBlYXNlIDIwMG1zO1xuICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gZWFzZSAyMDBtcztcbn0iXX0= */", '', '']]
+
+/***/ }),
+
 /***/ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/styles.css":
 /*!*****************************************************************************************************************************************************************!*\
   !*** ./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src??embedded!./src/styles.css ***!
@@ -29,7 +40,7 @@ module.exports = [[module.i, ".tilter {\n\tdisplay: block;\n\tposition: relative
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n*:focus {\n    outline: none;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLCtFQUErRTtBQUMvRTtJQUNJLGNBQWM7Q0FDakIiLCJmaWxlIjoic3JjL3N0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG4qOmZvY3VzIHtcbiAgICBvdXRsaW5lOiBub25lO1xufSJdfQ== */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n*:focus {\n    outline: none;\n}\nbody.modal-open {\n    overflow: hidden;\n}\n* {\n    -webkit-overflow-scrolling: touch;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLCtFQUErRTtBQUMvRTtJQUNJLGNBQWM7Q0FDakI7QUFDRDtJQUNJLGlCQUFpQjtDQUNwQjtBQUNEO0lBQ0ksa0NBQWtDO0NBQ3JDIiwiZmlsZSI6InNyYy9zdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuKjpmb2N1cyB7XG4gICAgb3V0bGluZTogbm9uZTtcbn1cbmJvZHkubW9kYWwtb3BlbiB7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcbn1cbioge1xuICAgIC13ZWJraXQtb3ZlcmZsb3ctc2Nyb2xsaW5nOiB0b3VjaDtcbn0iXX0= */", '', '']]
 
 /***/ }),
 
@@ -602,6 +613,36 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./src/assets/css/imageViewer.css":
+/*!****************************************!*\
+  !*** ./src/assets/css/imageViewer.css ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!../../../node_modules/postcss-loader/src??embedded!./imageViewer.css */ "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/plugins/raw-css-loader.js!./node_modules/postcss-loader/src/index.js?!./src/assets/css/imageViewer.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./src/styles.css":
 /*!************************!*\
   !*** ./src/styles.css ***!
@@ -633,15 +674,16 @@ if(false) {}
 /***/ }),
 
 /***/ 2:
-/*!*************************************************************************************************************!*\
-  !*** multi ./node_modules/bootstrap/dist/css/bootstrap.min.css ./src/assets/css/anime.css ./src/styles.css ***!
-  \*************************************************************************************************************/
+/*!**********************************************************************************************************************************************!*\
+  !*** multi ./node_modules/bootstrap/dist/css/bootstrap.min.css ./src/assets/css/anime.css ./src/assets/css/imageViewer.css ./src/styles.css ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/DA/DA-F/wedding-app/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
-__webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/DA/DA-F/wedding-app/src/assets/css/anime.css */"./src/assets/css/anime.css");
-module.exports = __webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/DA/DA-F/wedding-app/src/styles.css */"./src/styles.css");
+__webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/development/DA-F/wedding-app/node_modules/bootstrap/dist/css/bootstrap.min.css */"./node_modules/bootstrap/dist/css/bootstrap.min.css");
+__webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/development/DA-F/wedding-app/src/assets/css/anime.css */"./src/assets/css/anime.css");
+__webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/development/DA-F/wedding-app/src/assets/css/imageViewer.css */"./src/assets/css/imageViewer.css");
+module.exports = __webpack_require__(/*! /Users/abhi/Documents/Workspace/Project/development/DA-F/wedding-app/src/styles.css */"./src/styles.css");
 
 
 /***/ })
