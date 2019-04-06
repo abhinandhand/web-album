@@ -49,6 +49,16 @@
 	font-size: 35px;
     color: #80808091;
 }
+#zHolder{
+	height: inherit;
+}
+.zoomHolder
+{
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden
+}
  /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
