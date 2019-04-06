@@ -49,13 +49,11 @@
 	font-size: 35px;
     color: #80808091;
 }
-#zHolder{
-	height: inherit;
-}
-.zoomHolder
+
+#zoomHolders
 {
 	width: 100%;
-	height: auto;
+	height: inherit;
 	position: relative;
 	overflow: hidden
 }

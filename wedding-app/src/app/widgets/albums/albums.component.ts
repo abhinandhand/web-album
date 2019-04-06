@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, HostListener, OnDestroy, AfterViewInit, AfterViewChecked } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { timeout } from 'q';
@@ -11,7 +11,7 @@ declare var pinchzoomer:any;
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.css']
 })
-export class AlbumsComponent implements OnInit, OnDestroy {
+export class AlbumsComponent implements OnInit, OnDestroy,AfterViewChecked {
   imgUrl: any;
   eventName: string;
   albumData: any;
@@ -30,6 +30,10 @@ export class AlbumsComponent implements OnInit, OnDestroy {
   @HostListener('wheel', ['$event'])
   handleWheelEvent(event) {
     event.preventDefault();
+  }
+
+  ngAfterViewChecked(){
+  //  $('.in').pinchzoomer();
   }
 
 
@@ -52,6 +56,8 @@ export class AlbumsComponent implements OnInit, OnDestroy {
 }
 
 fetchAlbumData() {
+
+  
   this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
     if (this.click) {
       this.albumData = data;
@@ -63,8 +69,13 @@ fetchAlbumData() {
      $('.preload').attr('src', this.albumData.data[1].url);
     } else {
     this.intialiseImageIndex(data);
-
-  }});
+  }
+  
+ setTimeout(()=>{
+$('.in').pinchzoomer();
+ },5);
+  
+});
 }
 
   reSizeImgCont() {
@@ -82,12 +93,8 @@ fetchAlbumData() {
     }
     this.albumData = data;
     this.currentImg = this.albumData.data[this.index].url;
-    if(window.innerWidth < 980){
-      $('#zHolder').addClass('zoomHolder');
-      $('.in').pinchzoomer();
-    }
-  
     $('.preload').attr('src', this.albumData.data[this.index+1].url);
+    
   }
 
 
@@ -108,6 +115,7 @@ fetchAlbumData() {
       this.location.replaceState('/albums?name='+this.eventName+'&url='+this.albumData.data[this.index - 1].url+'&id='+this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;
       $('.img1' + this.index).fadeOut(550, () => {
+       // $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
         $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
         this.index = this.index - 1;
       }).fadeIn(1000);
