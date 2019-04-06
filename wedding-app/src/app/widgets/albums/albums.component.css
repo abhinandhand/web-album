@@ -49,6 +49,9 @@
 	font-size: 35px;
     color: #80808091;
 }
+#zHolder{
+	height: inherit;
+}
 .zoomHolder
 {
 	width: 100%;

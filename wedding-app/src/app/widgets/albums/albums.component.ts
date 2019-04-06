@@ -63,15 +63,8 @@ fetchAlbumData() {
      $('.preload').attr('src', this.albumData.data[1].url);
     } else {
     this.intialiseImageIndex(data);
-    }
-    setTimeout(() => {
-      if(window.innerWidth < 980){
-        $('#zHolder').addClass('zoomHolder');
-        $('.in').pinchzoomer();
-      }
-    },500);
-    
-  });
+
+  }});
 }
 
   reSizeImgCont() {
@@ -89,6 +82,11 @@ fetchAlbumData() {
     }
     this.albumData = data;
     this.currentImg = this.albumData.data[this.index].url;
+    if(window.innerWidth < 980){
+      $('#zHolder').addClass('zoomHolder');
+      $('.in').pinchzoomer();
+    }
+  
     $('.preload').attr('src', this.albumData.data[this.index+1].url);
   }
 
