@@ -11,11 +11,13 @@ declare var TiltFx: any;
 	styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-	@Input() weddingObj: any;
-	constructor(public wedOverviewService: WeddingOverviewService) { }
 	wedddingOverviewData: any;
 	isCollapsed: boolean;
+	isMusicOn: true;
 	isSetBoolean = true;
+	@Input() weddingObj: any;
+	constructor(public wedOverviewService: WeddingOverviewService) { }
+	
 	ngOnInit() {
 		
 		this.isCollapsed = true;
@@ -55,11 +57,10 @@ export class HomeComponent implements OnInit {
 		this.wedOverviewService.getWeddingOverview().subscribe(data => {
 			this.wedddingOverviewData = data;
 			setTimeout(() => {
-				$('#player').get(0).play().catch(function() {  });
 				// $('#player').get(0).play().catch(function() {
 				// });
 				this.initialiseAnime();
-			}, 5000);
+			}, 3000);
 
 		});
 	};

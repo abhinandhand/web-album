@@ -1,20 +1,22 @@
 import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input, EventEmitter, Output, AfterContentInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
 import { isBoolean } from 'util';
-
-
-
 declare var $:any;
+declare var window:any;
+var AudioContext = window.AudioContext || false; 
+
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit{
-  playMusic = true;
+  playMusic= true;
   @Input() audioUrl:string;
   @Input() imageUrl: string;
   @Input() isCollapsed: boolean;
   @Output() isCollapsedChange: EventEmitter<boolean> = new EventEmitter();
+  
   constructor() { }
   ngOnInit() {
   $(".nav-scroll a").on('click', function(event) {
@@ -27,6 +29,22 @@ export class NavBarComponent implements OnInit{
       });
     }
   });
+  setTimeout(() => {
+    if (AudioContext) {
+      var context = new AudioContext();
+      if(context.state === 'running'){
+        $('#player').get(0).play();
+      } else {
+        this.playMusic = !this.playMusic;
+      }
+      // context.resume().then(() => {
+      //   $('#player').get(0).play().then(()=>{
+      //    // this.playMusic = !this.playMusic;
+      //   })});
+      } else {
+    $('#player').get(0).play();
+  }}, 3000);
+ 
 
   }
 
@@ -45,7 +63,9 @@ export class NavBarComponent implements OnInit{
   toggleMusic(){
     this.playMusic = !this.playMusic;
     if(this.playMusic) {
-    $('#player').get(0).play();
+      $('#player').get(0).play().catch(() => {
+        this.playMusic = !this.playMusic;
+        });
     } else{
     $('#player').get(0).pause();
     }

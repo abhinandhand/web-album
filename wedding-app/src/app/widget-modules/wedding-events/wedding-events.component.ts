@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { ActivatedRoute, Router } from '@angular/router';
+declare var $:any;
 
 @Component({
   selector: 'app-wedding-events',
@@ -21,5 +22,11 @@ export class WeddingEventsComponent  {
   }
   goToPage(event,url) {
     this.route.navigate(['/albums'], { queryParams: { name: event,  c: true } });
+}
+
+
+playAudio(){
+  var context = new AudioContext();
+  $('#player').get(0).play();
 }
 }
