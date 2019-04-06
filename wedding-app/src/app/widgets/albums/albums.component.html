@@ -32,20 +32,23 @@
             <div class="content-block">
                            
                             <div  class="img-container">
-                               <div class="d-none d-sm-none d-md-none d-lg-block" >
+                               <!-- <div class="dispaly-img-cont" style="height:inherit">
                                     <img  class="img-fluid" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="display: block;margin: auto;height: inherit;"
                                     onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                     onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
-                               </div>
-                               <div class="d-block d-sm-block d-md-block d-lg-none">
-                                   <div id="zoomHolders">
+                               </div> -->
+                                   <div *ngIf="lgScreen " id="zoomHolders" style="height:inherit">
+                                        <img  class="img-fluid" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="margin: auto;height: inherit;"
+                                        onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
+                                        onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
+                                
+                                   </div>
+                                   <div *ngIf="!lgScreen " id="zoomHolders" style="height:inherit">
                                         <img  class="img-fluid in" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="margin: auto;height: inherit;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 
                                    </div>
-
-                               </div>
                                    
                                     <div class="page-right"  id="land-1" *ngIf="albumData.data.length > index+1" (click)="nextImage()">
                                             <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>

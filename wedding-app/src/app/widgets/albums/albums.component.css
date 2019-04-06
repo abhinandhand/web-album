@@ -57,6 +57,12 @@
 	position: relative;
 	overflow: hidden
 }
+.dispaly-img-cont{
+	display: block;
+}
+.dispaly-sm-img-cont{
+	display: none;
+}
  /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -89,6 +95,12 @@
 		color: #8080805c;
 		font-size: 26px;
 	}
+	.dispaly-img-cont{
+		display: none;
+	}
+	.dispaly-sm-img-cont{
+		display: block;
+	}
 }
 
 /*Portrait Mobile */
@@ -118,6 +130,12 @@
 			right: 12px;
 			color: #8080805c;
 			font-size: 26px;
+	}
+	.dispaly-img-cont{
+		display: none;
+	}
+	.dispaly-sm-img-cont{
+		display: block;
 	}
 }
 
