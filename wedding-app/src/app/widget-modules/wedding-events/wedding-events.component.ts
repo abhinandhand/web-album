@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import { AlbumOverviewService } from '../../data-access/album-overview/album-overview.service';
 import { ActivatedRoute, Router } from '@angular/router';
 declare var $:any;
@@ -9,7 +9,8 @@ declare var $:any;
   styleUrls: ['./wedding-events.component.css']
 })
 export class WeddingEventsComponent  {
-
+  @Input() playMusic: boolean;
+  @Output() isMusicOnChange: EventEmitter<boolean> = new EventEmitter();
   @Input() weddingEventList: {title: string, background:  string, action: string, type: string}[];
   albumOverviewData: any;
   constructor(private albumOverviewService: AlbumOverviewService, private route: Router) { }
@@ -25,8 +26,5 @@ export class WeddingEventsComponent  {
 }
 
 
-playAudio(){
-  var context = new AudioContext();
-  $('#player').get(0).play();
-}
+
 }

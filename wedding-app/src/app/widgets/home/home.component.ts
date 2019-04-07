@@ -13,19 +13,19 @@ declare var TiltFx: any;
 export class HomeComponent implements OnInit {
 	wedddingOverviewData: any;
 	isCollapsed: boolean;
-	isMusicOn: true;
+	playMusic: boolean;
 	isSetBoolean = true;
 	@Input() weddingObj: any;
 	constructor(public wedOverviewService: WeddingOverviewService) { }
 	
 	ngOnInit() {
-		
+		this.playMusic = true;
 		this.isCollapsed = true;
+		localStorage.setItem('isPausedByUser', 'false');
 		this.fetchWedOverview();
 		$(window).scroll(function() {
 		
 			var height = $('.key-bg').height();
-			console.log( $('.key-bg').height())
 			var scrollTop = $(window).scrollTop();
 			if (scrollTop >= height-210) {
 				$('.header-cont').addClass('solid-nav');
@@ -50,11 +50,15 @@ export class HomeComponent implements OnInit {
 		
 	}
 
+	onMusicChange(value) {
+		this.playMusic = value;
+	}
+
 
 
 
 	fetchWedOverview() {
-		this.wedOverviewService.getWeddingOverview().subscribe(data => {
+		this.wedOverviewService.getWeddingOverview().subscribe((data: any) => {
 			this.wedddingOverviewData = data;
 			setTimeout(() => {
 				// $('#player').get(0).play().catch(function() {

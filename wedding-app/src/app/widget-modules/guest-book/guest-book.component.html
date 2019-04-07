@@ -1,4 +1,4 @@
-<div class="guest-book-sec-padding" >
+<div (click)="playAudio()" class="guest-book-sec-padding" >
   <div  class="guest-book-label">
       <hr    class="hr-text " data-content="GUEST BOOK">
     <!-- <img class="con-album-label-hr" src="assets/rectangle.svg" />
@@ -88,9 +88,9 @@
     </form>
     <div  *ngIf="!showForm && showConfirmMsg" class="tq-wish">
       <div class="wish-style" id="word">
-          <h1 >Thank you for writing in Aaron and Diya's wedding guest book!</h1>
-          <h1> If you would like to make some changes, tap on <a style="    font-weight: bold;
-            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;" >Edit</a></h1>
+          <p>Thank you for writing in Aaron and Diya's wedding guest book!</p>
+          <p> If you would like to make some changes, tap on <a style="    font-weight: bold;
+            color: #ff5722a3;cursor: pointer;" (click)="showForm=true;" >Edit</a></p>
 
       </div>
         

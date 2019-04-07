@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef,AfterViewInit, HostListener, Input, EventEmitter, Output, AfterContentInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener, Input, EventEmitter, Output} from '@angular/core';
 import { isBoolean } from 'util';
 declare var $:any;
 declare var window:any;
@@ -11,11 +11,12 @@ var AudioContext = window.AudioContext || false;
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit{
-  playMusic= true;
+  @Input() playMusic: boolean;
   @Input() audioUrl:string;
   @Input() imageUrl: string;
   @Input() isCollapsed: boolean;
   @Output() isCollapsedChange: EventEmitter<boolean> = new EventEmitter();
+  @Output() isMusicOnChange: EventEmitter<boolean> = new EventEmitter();
   
   constructor() { }
   ngOnInit() {
@@ -42,8 +43,10 @@ export class NavBarComponent implements OnInit{
       //    // this.playMusic = !this.playMusic;
       //   })});
       } else {
-    $('#player').get(0).play();
-  }}, 3000);
+      $('#player').get(0).play();
+     }
+     this.isMusicOnChange.emit(this.playMusic);
+}, 3000);
  
 
   }
@@ -69,6 +72,10 @@ export class NavBarComponent implements OnInit{
     } else{
     $('#player').get(0).pause();
     }
+    if(!this.playMusic){
+      localStorage.setItem('isPausedByUser', 'true');
+    }
+    this.isMusicOnChange.emit(this.playMusic);
   }
 
 

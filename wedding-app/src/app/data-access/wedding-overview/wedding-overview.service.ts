@@ -11,7 +11,6 @@ export class WeddingOverviewService {
   constructor(private http: HttpClient) { }
 
   getWeddingOverview() {
-    console.log(this.http.get(this.endpoint));
     return this.http.get(this.endpoint);
   }
 
@@ -21,7 +20,6 @@ export class WeddingOverviewService {
 
   getWishes() {
    return this.http.get(this.endpoint + 'guestbook');
-   // return this.http.get(this.endpoint);
   }
 
 }

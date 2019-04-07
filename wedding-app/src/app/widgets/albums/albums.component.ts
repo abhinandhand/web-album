@@ -22,6 +22,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
   currentImg: string;
   imgId: string;
+  pinchZommerInitalised = false;
 
 
   constructor(private route: ActivatedRoute,
@@ -59,7 +60,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   fetchAlbumData() {
 
 
-    this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe(data => {
+    this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe((data:any) => {
       if (this.click) {
         this.albumData = data;
         this.currentImg = this.albumData.data[0].url;
@@ -72,9 +73,16 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
         this.intialiseImageIndex(data);
       }
 
-      setTimeout(() => {
-        $('.in').pinchzoomer();
-      }, 5);
+      // setTimeout(() => {
+      //   $('.in').pinchzoomer();
+      // }, 0.3);
+
+      $('.in').on('load', () => {
+        if(!this.pinchZommerInitalised){
+          $('.in').pinchzoomer();
+          this.pinchZommerInitalised = true;
+        }
+      });
 
     });
   }
@@ -106,6 +114,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.pageUrl = location.href;
       $('.img1' + this.index).fadeOut(550, () => {
         $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
+        $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
         this.index = this.index + 1;
       }).fadeIn(800);
     }
@@ -116,8 +125,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index - 1].url + '&id=' + this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;
       $('.img1' + this.index).fadeOut(550, () => {
-        // $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
         $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
+        $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
         this.index = this.index - 1;
       }).fadeIn(1000);
     }

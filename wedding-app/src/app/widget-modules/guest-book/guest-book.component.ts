@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewEncapsulation, Input } from '@angular/core';
 import { WishForm } from './wish-form';
 import { WeddingOverviewService } from '../../data-access/wedding-overview/wedding-overview.service';
 import { element } from 'protractor';
@@ -16,6 +16,8 @@ var submitInterval ;
 })
 export class GuestBookComponent implements OnInit {
 
+  @Input() playMusic: boolean;
+  @Output() isMusicOnChange: EventEmitter<boolean> = new EventEmitter();
   @Output() sendWishEvent = new EventEmitter<string>();
   wishes: any = [{}];
   showForm: boolean = true;
@@ -27,7 +29,7 @@ export class GuestBookComponent implements OnInit {
   }
 
   setGuestBookWishes() {
-    this.wedOverviewService.getWishes().subscribe(data => {
+    this.wedOverviewService.getWishes().subscribe((data: any) => {
       this.wishes = data;
       this.initialiseGuestBookTurn(data);
     });
@@ -65,11 +67,6 @@ export class GuestBookComponent implements OnInit {
     
     defaultInterval = setInterval(() => {
       $('#guest-book-turn').turn('next');
-      // if(isPrevious){
-      //   $('#guest-book-turn').turn('previous');
-      // }else {
-      //   $('#guest-book-turn').turn('next');
-      // }
     }, 5000);
   };
 
@@ -100,7 +97,7 @@ export class GuestBookComponent implements OnInit {
   postWish() {
     this.iAgree(this.wishes.data.wishList);
     return this.wedOverviewService.sendWishes(this.wishObj).subscribe(
-      data => {
+      (data: any) => {
         console.log(data);
         setTimeout(() => {
         }, 5000);
@@ -142,20 +139,15 @@ export class GuestBookComponent implements OnInit {
       }, 6000);
     }, 3000);
   }
-  /*
-  // console.log('called');
-  //   var wishData : any = {};
-  //   let count = 0;
-  // if(this.isSetBoolean) {
-  //   $('#word').text(wishData.data.wishList[0].message);
-  //   this.isSetBoolean = false;
-  //   setInterval(function() {
-  //     count++;
-  //     $('#word').fadeOut(400, function() {
-  //       $(this).text(wishData.data.wishList[count % wishData.data.wishList.length].message).fadeIn(400);
-  //     });
-  //   }, 5000);
-  // }*/
+  playAudio(){
+    if(localStorage.getItem('isPausedByUser') !== 'true') {
+    let context = new AudioContext();
+    $('#player').get(0).play();
+    this.playMusic = true;
+    this.isMusicOnChange.emit(this.playMusic);
+    }
+  }
+
 
 
 }

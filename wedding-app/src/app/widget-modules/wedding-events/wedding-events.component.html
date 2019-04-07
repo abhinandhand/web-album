@@ -4,7 +4,7 @@
                 <!-- [routerLink]="['/albums',event.title,event.background,true]" -->
 
          <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
-                                    <div  (click)="goToPage(event.title,event.background);playAudio();"  *ngIf="event.type === 'large'" class="event-large-card">
+                                    <div  (click)="goToPage(event.title,event.background);"  *ngIf="event.type === 'large'" class="event-large-card">
                                                 <a  class="tilter tilter--1">
                                                                 <figure class="tilter__figure">
                                                                         <img class="tilter__image" [src]="event.background" alt="img02" />
@@ -16,7 +16,7 @@
                                             <div class="event-label">{{event.title}}</div> -->
                                               
                                     </div>
-                                    <div (click)="goToPage(event.title,event.background);playAudio();"  *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
+                                    <div (click)="goToPage(event.title,event.background);"  *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
                                                 <a  class="tilter tilter--1">
                                                                 <figure class="tilter__figure">
                                                                         <img class="tilter__image" [src]="event.background" alt="img02" />

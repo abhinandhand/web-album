@@ -27,7 +27,6 @@ export class CouplestoryComponent implements OnInit {
     months = Math.floor((timeDiff) / (1000 * 60 * 60 * 24 * 30));
     timeDiff = Math.floor((timeDiff) % (1000 * 60 * 60 * 24 * 30));
     let days = Math.floor((timeDiff) / (1000 * 60 * 60 * 24));
-    console.log(days)
     // months = (d2.getFullYear() - d1.getFullYear()) * 12;
     // months -= d1.getMonth() + 1;
     // months += d2.getMonth();

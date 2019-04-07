@@ -1,4 +1,4 @@
-<div>
+<div (click)="playAudio()">
   <div style="padding-left: 0%;padding-right: 0%;" class="middle-container">
     <div id="con-marriage-info">
       <app-couplestory [imageUrl]="weddingData?.data?.welcome"></app-couplestory>
@@ -15,7 +15,7 @@
           src="assets/rectangle.svg" /> -->
       </div>
     <div class="con-event-container">
-        <app-wedding-events
+        <app-wedding-events [(playMusic)]="playMusic"
           [weddingEventList]="weddingData?.data?.album"
         ></app-wedding-events>
       </div>
