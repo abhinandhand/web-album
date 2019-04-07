@@ -47,7 +47,7 @@ export class NavBarComponent implements OnInit{
      }
      this.isMusicOnChange.emit(this.playMusic);
 }, 3000);
- 
+
 
   }
 

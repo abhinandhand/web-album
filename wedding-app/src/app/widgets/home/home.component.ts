@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 	isCollapsed: boolean;
 	playMusic: boolean;
 	isSetBoolean = true;
+	lgScreen:boolean;
 	@Input() weddingObj: any;
 	constructor(public wedOverviewService: WeddingOverviewService) { }
 	
@@ -47,9 +48,19 @@ export class HomeComponent implements OnInit {
 			
 	
 		});
+		$(window).resize(() => {
+			this.reSizeImgCont();
+		  });
+		  this.reSizeImgCont();
+		   
 		
 	}
 
+
+	reSizeImgCont() {
+		this.lgScreen = window.innerWidth > 980 ? true : false;
+	  }
+	
 	onMusicChange(value) {
 		this.playMusic = value;
 	}
