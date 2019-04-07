@@ -21,7 +21,6 @@ export class ContainerComponent implements OnInit {
     $('#player').get(0).play();
     this.playMusic = true;
     this.isMusicOnChange.emit(this.playMusic);
-
     }
   }
  

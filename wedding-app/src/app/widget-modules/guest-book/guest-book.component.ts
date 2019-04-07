@@ -18,7 +18,7 @@ export class GuestBookComponent implements OnInit {
 
   @Input() playMusic: boolean;
   @Output() isMusicOnChange: EventEmitter<boolean> = new EventEmitter();
-  @Output() sendWishEvent = new EventEmitter<string>();
+  
   wishes: any = [{}];
   showForm: boolean = true;
   showConfirmMsg = false;
@@ -81,9 +81,6 @@ export class GuestBookComponent implements OnInit {
     this.clearTimer();
   }
 
-  refreshWishes() {
-    this.sendWishEvent.emit('true');
-  }
 
   onSubmit() {
     this.showForm = false;

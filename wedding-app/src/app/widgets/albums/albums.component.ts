@@ -60,7 +60,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   fetchAlbumData() {
 
 
-    this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe((data:any) => {
+    this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe((data: any) => {
       if (this.click) {
         this.albumData = data;
         this.currentImg = this.albumData.data[0].url;
@@ -90,6 +90,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   reSizeImgCont() {
     this.lgScreen = window.innerWidth > 980 ? 85 : 0;
     $('.content-block').height(window.innerHeight - this.lgScreen );
+    //$(window).PinchZoomer.init();
   }
 
   intialiseImageIndex(data) {
