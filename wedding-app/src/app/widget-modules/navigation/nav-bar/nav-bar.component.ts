@@ -31,20 +31,17 @@ export class NavBarComponent implements OnInit{
     }
   });
   setTimeout(() => {
-    if (AudioContext) {
+    var AudioContext = window.AudioContext  || false;  
       var context = new AudioContext();
       if(context.state === 'running'){
         $('#player').get(0).play();
-      } else {
-        this.playMusic = !this.playMusic;
+      } else if (context) {
+         this.playMusic = false;
       }
       // context.resume().then(() => {
       //   $('#player').get(0).play().then(()=>{
       //    // this.playMusic = !this.playMusic;
       //   })});
-      } else {
-      $('#player').get(0).play();
-     }
      this.isMusicOnChange.emit(this.playMusic);
 }, 3000);
 

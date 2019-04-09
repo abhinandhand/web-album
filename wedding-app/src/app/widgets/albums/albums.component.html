@@ -38,13 +38,13 @@
                                     onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                </div> -->
                                    <div *ngIf="lgScreen"  style="height:inherit">
-                                        <img  class="img-fluid" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="margin: auto;height: inherit;"
+                                        <img  class="img-fluid"  (click)="nextImage()" style="margin: auto;height: inherit;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 
                                    </div>
                                    <div *ngIf="!lgScreen " id="zoomHolders">
-                                        <img    class="img-fluid in smallscreen" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="margin: auto;height: inherit;"
+                                        <img    class="img-fluid smallscreen" (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;height: inherit;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 

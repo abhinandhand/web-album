@@ -17,7 +17,7 @@ export class ContainerComponent implements OnInit {
   }
   playAudio(){
     if(localStorage.getItem('isPausedByUser') !== 'true') {
-    let context = new AudioContext();
+   // let context = new AudioContext();
     $('#player').get(0).play();
     this.playMusic = true;
     this.isMusicOnChange.emit(this.playMusic);
