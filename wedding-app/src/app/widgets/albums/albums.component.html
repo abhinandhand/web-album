@@ -44,10 +44,13 @@
                                 
                                    </div>
                                    <div *ngIf="!lgScreen " id="zoomHolders">
-                                        <img    class="img-fluid smallscreen" (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;height: inherit;"
+                                        <pinch-zoom  height="inherit" auto-zoom-out="true" zoom-button="false">
+                                                <img    class="img-fluid smallscreen" (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;height: inherit;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 
+                                            </pinch-zoom>
+                                        
                                    </div>
                                    
                                     <div class="page-right"  id="land-1" *ngIf="albumData.data.length > index+1" (click)="nextImage()">

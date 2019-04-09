@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { PinchZoomModule } from 'ngx-pinch-zoom';
 
 
 
@@ -39,7 +40,8 @@ const appRoutes: Routes   = [ ];
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    PinchZoomModule
   ],
   providers: [],
   bootstrap: [AppComponent]
