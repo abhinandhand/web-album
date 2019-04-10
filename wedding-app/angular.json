@@ -34,10 +34,7 @@
               "src/assets/js/anime.min.js",
               "src/assets/js/main.js",
               "src/assets/js/perspective.js",
-              "src/assets/js/turn.min.js",
-              "src/assets/js/jquery.mousewheel.min.js",
-              "src/assets/js/tweenpower.js",
-              "src/assets/js/imageViewer.js"
+              "src/assets/js/turn.min.js"
             ]
           },
           "configurations": {
