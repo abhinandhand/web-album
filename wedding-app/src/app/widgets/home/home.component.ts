@@ -57,8 +57,12 @@ export class HomeComponent implements OnInit {
 	}
 
 	checkBgLoaded() {
-		   document.getElementById('splash').style.display = 'none';
 		   document.getElementById('window-app').style.visibility = 'visible';
+		   document.getElementById('window-app').classList.add('window-load');
+		   setTimeout(()=>{
+
+			document.getElementById('splash').style.display = 'none';
+		   },1000);
 	  }
 
 

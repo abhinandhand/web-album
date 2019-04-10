@@ -1,3 +1,7 @@
+.window-load{
+    visibility: visible;
+    -webkit-animation:fadeIn ease-in 1; 
+}
 .header-cont{
     height: 60px;
     width: 100%;
