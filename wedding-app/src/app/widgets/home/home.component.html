@@ -15,7 +15,7 @@
   
             </div>
             <audio id="player"[src]="wedddingOverviewData?.data?.bg_music"  loop preload="none"></audio>
-            <img  class="img-fluid hidden-img" [src]="wedddingOverviewData?.data?.welcome" style="visibility: hidden;" /> 
+            <img (load)="checkBgLoaded()"  class="img-fluid hidden-img" [src]="wedddingOverviewData?.data?.welcome" style="visibility: hidden;" /> 
     </div>
   <div class="container-fluid-nomax">
         <div class="parent-container">

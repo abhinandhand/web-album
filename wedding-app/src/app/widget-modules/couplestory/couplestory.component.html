@@ -9,7 +9,15 @@
     <div class="duration-summary">
          <div  class="nav-container"></div>
             <div id="marriage-date-summary">
-                    <span style="padding-left: 20px;padding-right: 17px;">celebrating <span *ngIf="togetherMonth>=0" class="duration">{{togetherMonth}} month</span> <span *ngIf="togetherYear>=0" class="duration">{{togetherYear}} year</span> of togetherness
+                    <span style="padding-left: 20px;padding-right: 17px;">celebrating 
+                        <span *ngIf="togetherMonth>=0" class="duration">{{togetherMonth}} 
+                            <span *ngIf="togetherMonth<=1">month</span>
+                            <span *ngIf="togetherMonth>1">months</span>
+                        </span>
+                         <span *ngIf="togetherYear>=0" class="duration">{{togetherYear}} 
+                                <span *ngIf="togetherYear<=1">year</span>
+                                <span *ngIf="togetherYear>1">years</span>
+                        </span> of togetherness
                     </span>
                  <div>since</div>
             </div>

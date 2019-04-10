@@ -56,6 +56,11 @@ export class HomeComponent implements OnInit {
 		
 	}
 
+	checkBgLoaded() {
+		   document.getElementById('splash').style.display = 'none';
+		   document.getElementById('window-app').style.visibility = 'visible';
+	  }
+
 
 	reSizeImgCont() {
 		this.lgScreen = window.innerWidth > 980 ? true : false;
