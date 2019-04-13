@@ -1,3 +1,29 @@
+.modal-trans{
+transform: scale(0);
+-webkit-transition: transform 1s ease-in-out;
+-moz-transition: transform 1s ease-in-out;
+-o-transition: transform 1s ease-in-out;
+transition: transform 1s ease-in-out;
+}
+.modal-trans-opacity{
+	/* transform-origin: 711px 103px; */
+	transform: scale(1);
+}
+.modal-trans:target {
+	opacity: 1;
+	top: 0;
+	bottom: 0;
+}
+.trans{
+height: inherit;
+-webkit-transition: height 1.5s ease-in-out 0s;
+-moz-transition: height 1.5s ease-in-out 0s;
+-o-transition: height 1.5s ease-in-out 0s;
+transition: height 1.5s ease-in-out 0s;
+}
+.trans-height{
+	height: inherit;
+}
 .header{
 	position: absolute;
 	height: 85px;

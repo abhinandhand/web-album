@@ -21,8 +21,8 @@ export class WeddingEventsComponent  {
     }
     );
   }
-  goToPage(event,url) {
-    this.route.navigate(['/albums'], { queryParams: { name: event,  c: true } });
+  goToPage(event,url,$event) {
+    this.route.navigate(['/albums'], { queryParams: { name: event,  c: true, x:$event.x, y: $event.y } });
 }
 
 

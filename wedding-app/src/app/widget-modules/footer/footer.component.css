@@ -20,7 +20,7 @@
 #social-icons {
     position: absolute;
     right: 8%;
-    bottom: 19px;
+    bottom: 22px;
 }
 .share-label{
     font-family: Playfair Display, Regular;
@@ -33,6 +33,9 @@
        font-size: 24px;
        letter-spacing: 0.5px;
     }
+    .footer {
+        height: 100px;
+    }
 }
 
 /*Portrait Mobile */
@@ -41,4 +44,7 @@
         font-size: 24px;
         letter-spacing: 0.5px;
      }
+     .footer {
+        height: 100px;
+    }
 }

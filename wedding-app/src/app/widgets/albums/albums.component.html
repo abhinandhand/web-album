@@ -1,11 +1,11 @@
-<div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false"
+<div class="modal fade show modal-trans" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false"
     style="display: block;overflow:hidden;">
     <div style="max-width: 100%;height: 100%;margin: 0;" role="document">
         <div style="height: 100%;border:0;border-radius: 0;display: block;position: relative;" class="modal-content">
             <div class="land header">
                 <div class="row">
                     <div class="col-4">
-                        <div data-dismiss="modal" routerLink="/" aria-label="Close">
+                        <div  (click)="goToPage();" >
                             <img class="back-icon" src="assets/left-arrow.svg">
                         </div>
                     </div>
@@ -32,20 +32,20 @@
             <div class="content-block">
                            
                             <div  class="img-container">
-                               <!-- <div class="dispaly-img-cont" style="height:inherit">
-                                    <img  class="img-fluid" (swiperight)="prevImage()" (swipeleft)="nextImage()" (click)="nextImage()" style="display: block;margin: auto;height: inherit;"
-                                    onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
-                                    onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
-                               </div> -->
-                                   <div *ngIf="lgScreen"  style="height:inherit">
-                                        <img  class="img-fluid"  (click)="nextImage()" style="margin: auto;height: inherit;"
+                              
+                                   <div *ngIf="lgScreen" class="img-div-trans"  style="height:inherit">
+                                       <img *ngIf class="img-fluid trans"  (click)="nextImage()" style="margin: auto;"
+                                        onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
+                                        onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
+                                        <img  class="img-fluid trans"  (click)="nextImage()" style="margin: auto;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 
+        
                                    </div>
-                                   <div *ngIf="!lgScreen " id="zoomHolders">
+                                   <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans">
                                         <pinch-zoom  height="inherit" auto-zoom-out="true" zoom-button="false">
-                                                <img    class="img-fluid smallscreen" (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;height: inherit;"
+                                                <img  class="img-fluid smallscreen trans" (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;"
                                         onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
                                         onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
                                 
@@ -53,7 +53,7 @@
                                         
                                    </div>
                                    
-                                    <div class="page-right"  id="land-1" *ngIf="albumData.data.length > index+1" (click)="nextImage()">
+                                    <div class="page-right"  id="land-1" [hidden]="!(albumData.data.length > index+1)" (click)="nextImage()">
                                             <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>
                                     </div>
                                     <div id="land-0" class="page-left" *ngIf="index >= 1" (click)="prevImage()" >
@@ -63,6 +63,7 @@
             </div>
         </div>
     </div>
+    <img class="preload" onload="this.style.display = 'block'"   [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;">
+
 </div>
-<img class="preload" onload="this.style.display = 'block'"  [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;">
 

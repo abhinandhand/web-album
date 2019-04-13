@@ -1,7 +1,10 @@
 <div id="share" class="target">
     <div class="footer with-love">
         <span>handcrafted with 
-            <img src="assets/heart.svg" /> by <a style="text-decoration: none;    color: #5b93c2;" href="http://www.foreverCelebrations.com" target="_blank">foreverCelebrations.com</a></span>
+            <img src="assets/heart.svg" /> by 
+            <a *ngIf="lgScreen" style="text-decoration: none;    color: #5b93c2;" href="http://www.foreverCelebrations.com" target="_blank">foreverCelebrations.com</a>
+            <p *ngIf="!lgScreen" style=" margin: 0;">  <a  style="text-decoration: none;    color: #5b93c2;" href="http://www.foreverCelebrations.com" target="_blank">foreverCelebrations.com</a></p>
+        </span>
     </div>
 
     <div class="d-none d-sm-none d-md-none d-lg-block">
