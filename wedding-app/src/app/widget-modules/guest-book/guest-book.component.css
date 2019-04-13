@@ -208,14 +208,14 @@ textarea {
 
 .left-arrow{
     bottom: 46%;
-    left: 0;
+    left: 8px;
     position: absolute;
     font-size: 30px;
     color: #9e9e9ea3;
 }
 .right-arrow {
     bottom: 46%;
-    right: 0;
+    right: 8px;
     position: absolute;
     font-size: 30px;
     color: #2e2d2c5e;
@@ -287,11 +287,11 @@ textarea {
         font-size: 20px;
     }
     .right-arrow {
-        font-size: 20px;
+        font-size: 30px;
         right: 3px;
     }
     .left-arrow {
-        font-size: 20px;;
+        font-size: 30px;;
     }
 }
 
@@ -358,11 +358,11 @@ textarea {
         font-size: 20px;
     }
     .right-arrow {
-        font-size: 20px;
+        font-size: 30px;
         right: 3px;
     }
     .left-arrow {
-        font-size: 20px;;
+        font-size: 30px;;
     }
     
 }

@@ -66,7 +66,7 @@ export class GuestBookComponent implements OnInit {
     });
     
     defaultInterval = setInterval(() => {
-      $('#guest-book-turn').turn('next');
+     $('#guest-book-turn').turn('next');
     }, 5000);
   };
 
@@ -107,7 +107,7 @@ export class GuestBookComponent implements OnInit {
   iAgree(wishes) {
     clearInterval(defaultInterval);
     let element = $( `<div>
-    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/book.jpg">
+    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/dtop.png">
     <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
     <div style="height: 100%;padding: 0px 98px;">
       <div class="guest-book-wish-text">

@@ -34,7 +34,8 @@
        letter-spacing: 0.5px;
     }
     .footer {
-        height: 100px;
+        height: max-content;
+        padding: 4px 0px;
     }
 }
 
@@ -45,6 +46,7 @@
         letter-spacing: 0.5px;
      }
      .footer {
-        height: 100px;
+        height: max-content;
+        padding: 4px 0px;
     }
 }
