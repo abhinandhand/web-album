@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
 		localStorage.setItem('isPausedByUser', 'false');
 		this.fetchWedOverview();
 		$(window).scroll(function() {
-		
 			var height = $('.key-bg').height();
 			var scrollTop = $(window).scrollTop();
 			if (scrollTop >= height-210) {
@@ -62,11 +61,19 @@ export class HomeComponent implements OnInit {
 			document.getElementById('window-app').style.visibility = 'visible';
 			document.getElementById('window-app').classList.add('window-load');
 		   },1000);
+		   this.reSizeImgCont();
+		   //console.log($('.hidden-img').height())
 	  }
 
 
 	reSizeImgCont() {
 		this.lgScreen = window.innerWidth > 980 ? true : false;
+		if(window.innerWidth<480){
+			$('.key-bg').css('height',$('.hidden-img').height());
+		}else{
+			$('.key-bg').css('height','unset');
+			$('.hidden-img').css('position','relative');
+		}
 	  }
 	
 	onMusicChange(value) {
