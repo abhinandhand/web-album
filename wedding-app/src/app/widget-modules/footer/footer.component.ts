@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.reSizeImgCont();
     $(window).resize(() => {
       this.reSizeImgCont();
       });
