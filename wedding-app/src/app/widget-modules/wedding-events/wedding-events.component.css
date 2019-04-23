@@ -35,8 +35,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Playfair Display, Regular;
-    font-size: 1.7vw;
-    line-height: 40px;
+    font-size: 25px;
+    line-height: 27px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -72,7 +72,7 @@
         padding-left: 0px;
     }
     .event-label{
-        font-size: 5.2vw;
+        font-size: 22px;
     }
     .event-big-card-conatiner {
         margin-bottom: 4px;
@@ -108,7 +108,7 @@
     padding-left: 0px;
 }
 .event-label{
-    font-size: 5vw;
+    font-size: 22px;
 }
     
   }
