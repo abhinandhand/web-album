@@ -30,23 +30,7 @@ export class NavBarComponent implements OnInit{
       });
     }
   });
-  setTimeout(() => {
-    var AudioContext = window.AudioContext  || false;  
-      var context = new AudioContext();
-      if(context.state === 'running'){
-        $('#player').get(0).play();
-      } else if (context) {
-         this.playMusic = false;
-      }
-      // context.resume().then(() => {
-      //   $('#player').get(0).play().then(()=>{
-      //    // this.playMusic = !this.playMusic;
-      //   })});
-     this.isMusicOnChange.emit(this.playMusic);
-}, 3000);
-
-
-  }
+}
 
 
   sendGA(position) {

@@ -14,7 +14,7 @@
               ></app-nav-bar>
   
             </div>
-            <audio id="player"[src]="wedddingOverviewData?.data?.bg_music"  loop preload="none"></audio>
+            <audio id="player"[src]="wedddingOverviewData?.data?.bg_music"  loop preload></audio>
             <img (load)="checkBgLoaded()"  class="img-fluid hidden-img" [src]="wedddingOverviewData?.data?.welcome" style="visibility: hidden;" /> 
     </div>
   <div class="container-fluid-nomax">

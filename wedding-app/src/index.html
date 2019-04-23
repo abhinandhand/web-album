@@ -1,51 +1,183 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display+Italic" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <title>Aaron & Diya’s Wedding Website</title>
-  <meta property='og:title' content='Aaron & Diya’s Wedding Website' />
-  <meta property="og:description" content='Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book.' />
-  <meta property="og:image" content="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-large.jpg" />
-  <meta property="og:url" content="diya-aron.s3-website.ap-south-1.amazonaws.com".>
-  <meta name="twitter:title" content='Aaron & Diya’s Wedding Website'/>
-  <meta name="twitter:description" content="Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book." />
-  <meta property="twitter:image" content="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-large.jpg" />
-  <meta name="twitter:domain" content="diya-aron.s3-website.ap-south-1.amazonaws.com">
-  
-  
-  <base href="/">
-  <script>
-    (function(i, s, o, g, r, a, m) {
-              i['GoogleAnalyticsObject'] = r;
-              i[r] = i[r] || function() {
-                  (i[r].q = i[r].q || []).push(arguments)
-              }, i[r].l = 1 * new Date();
-              a = s.createElement(o),
-                  m = s.getElementsByTagName(o)[0];
-              a.async = 1;
-              a.src = g;
-              m.parentNode.insertBefore(a, m)
-          })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-135010960-1', 'auto');// add your tracking ID here.
-  ga('send', 'pageview',{'page': location.pathname + location.search + location.hash});
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Playfair+Display+Italic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Aaron & Diya’s Wedding Website</title>
+    <meta property='og:title' content='Aaron & Diya’s Wedding Website' />
+    <meta property="og:description" content='Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book.'
+    />
+    <meta property="og:image" content="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-large.jpg" />
+    <meta property="og:url" content="diya-aron.s3-website.ap-south-1.amazonaws.com" .>
+    <meta name="twitter:title" content='Aaron & Diya’s Wedding Website' />
+    <meta name="twitter:description" content="Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book."
+    />
+    <meta property="twitter:image" content="https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-large.jpg"
+    />
+    <meta name="twitter:domain" content="diya-aron.s3-website.ap-south-1.amazonaws.com">
+
+
+    <base href="/">
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-135010960-1', 'auto');// add your tracking ID here.
+        ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
-<body style="overflow-x: hidden;">
-        <div id="splash" style="display: grid;
-        place-items: center;
-        height: 100vh;"><h4>Loading...</h1>
+
+<body id="body-tag" style="overflow-x: hidden;overflow-y: hidden">
+    <style>
+        .splash-div {
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .splash-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #welcome-screen {
+            background-color: #e4e0dd;
+            height: 100vh;
+            position: relative;
+            display: flex;
+        }
+
+        .welcome-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .top-left-wel-mandala {
+            position: absolute;
+            top: 0;
+            left: 0px;
+        }
+
+        .img-wel-mandala {
+            width: 22vh;
+        }
+
+        .top-right-wel-mandala {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        .bottom-right-wel-mandala {
+            position: absolute;
+            bottom: 0;
+            right: 0px;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        .bottom-left-wel-mandala {
+            position: absolute;
+            bottom: 0;
+            left: 0px;
+        }
+
+        .btn-div {
+            margin-top: 75px;
+            text-align: center;
+            padding-bottom: 25%;
+        }
+
+        #wish-wel-button {
+            width: 345px;
+            height: 98px;
+            font-size: 30px;
+            line-height: 30px;
+            font-family: Playfair Display;
+            background-color: #445563;
+            color: #FFFFFF;
+            border-radius: 8px;
+        }
+
+        /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+        @media (min-width: 481px) and (max-width: 812px) {
+            .img-wel-mandala {
+                width: 150px;
+            }
+            #wish-wel-button {
+                width: 72%;
+                height: 69px;
+                font-size: 22px;
+                line-height: 69px;
+            }
+        }
+
+        /*Portrait Mobile */
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            .img-wel-mandala {
+                width: 150px;
+            }
+            #wish-wel-button {
+                width: 72%;
+                height: 69px;
+                font-size: 22px;
+                line-height: 69px;
+            }
+        }
+    </style>
+    <div id="splash" class="splash-div">
+        <div>
+          <h4>Loading...</h1>
+        </div>
+    </div>
+    <div id="welcome-screen" style="visibility: hidden;">
+        <div class="welcome-content">
+            <button  type="submit" id="wish-wel-button">CONTINUE</button>
+        </div>
+        <div class="top-left-wel-mandala">
+            <img class="img-wel-mandala" src="assets/illustrators/mandala.png" />
+        </div>
+        <div class="top-right-wel-mandala">
+            <img class="img-wel-mandala" src="assets/illustrators/mandala.png" />
+        </div>
+        <div class="bottom-left-wel-mandala">
+            <img class="img-wel-mandala" src="assets/illustrators/mandala.png" />
+        </div>
+        <div class="bottom-right-wel-mandala">
+            <img class="img-wel-mandala" src="assets/illustrators/mandala.png" />
+        </div>
     </div>
     <div style="visibility: hidden;" id="window-app">
-    <app-root>
-    </app-root>
+        <app-root>
+        </app-root>
     </div>
-    
-    
 </body>
 
 </html>

@@ -61,6 +61,13 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     });
     this.pageUrl = location.href;
     this.reSizeImgCont();
+    $('#wish-wel-button').on('click',()=>{
+			document.getElementById('welcome-screen').style.display = 'none';
+			$('#player').get(0).play();
+			$('#body-tag').css('overflow-y', 'scroll');
+			document.getElementById('window-app').classList.add('window-load');
+			document.getElementById('window-app').style.visibility = 'visible';
+		});
   }
 
   fetchAlbumData() {
@@ -147,4 +154,13 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.routes.navigate(['/']);
     }, 1000);
   }
+
+  checkBgLoaded() {
+		setTimeout(() => {
+			document.getElementById('splash').style.display = 'none';
+			document.getElementById('welcome-screen').style.visibility = 'visible';
+		}, 3000);
+		this.reSizeImgCont();
+		//console.log($('.hidden-img').height())
+	}
 }

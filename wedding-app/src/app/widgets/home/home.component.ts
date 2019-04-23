@@ -15,67 +15,76 @@ export class HomeComponent implements OnInit {
 	isCollapsed: boolean;
 	playMusic: boolean;
 	isSetBoolean = true;
-	lgScreen:boolean;
+	lgScreen: boolean;
 	@Input() weddingObj: any;
 	constructor(public wedOverviewService: WeddingOverviewService) { }
-	
+
 	ngOnInit() {
 		this.playMusic = true;
 		this.isCollapsed = true;
 		localStorage.setItem('isPausedByUser', 'false');
 		this.fetchWedOverview();
-		$(window).scroll(function() {
+		$(window).scroll(function () {
 			var height = $('.key-bg').height();
 			var scrollTop = $(window).scrollTop();
-			if (scrollTop >= height-210) {
+			if (scrollTop >= height - 210) {
 				$('.header-cont').addClass('solid-nav');
 			} else {
 				$('.header-cont').removeClass('solid-nav');
 			}
 			setTimeout(() => {
-				$('.target').each(function() {
-					if($(window).scrollTop() >= $(this).offset().top) {
+				$('.target').each(function () {
+					if ($(window).scrollTop() >= $(this).offset().top) {
 						var id = $(this).attr('id');
-						var currentId= $('.nav-active').attr('i');
-						if(id !== currentId){
+						var currentId = $('.nav-active').attr('i');
+						if (id !== currentId) {
 							$('.nav-scroll a').removeClass('nav-active');
 						}
-						$('.nav-scroll a[href=#'+ id +']').addClass('nav-active');
+						$('.nav-scroll a[href=#' + id + ']').addClass('nav-active');
 					}
 				});
-			},900);
-			
-	
+			}, 900);
+
+
 		});
 		$(window).resize(() => {
 			this.reSizeImgCont();
-		  });
-		  this.reSizeImgCont();
-		   
-		
+		});
+
+		this.reSizeImgCont();
+		$('#wish-wel-button').on('click',()=>{
+			document.getElementById('welcome-screen').style.display = 'none';
+			$('#player').get(0).play();
+			$('#body-tag').css('overflow-y', 'scroll');
+			document.getElementById('window-app').classList.add('window-load');
+			document.getElementById('window-app').style.visibility = 'visible';
+		});
+
+
 	}
 
 	checkBgLoaded() {
-		   setTimeout(()=>{
+		setTimeout(() => {
 			document.getElementById('splash').style.display = 'none';
-			document.getElementById('window-app').style.visibility = 'visible';
-			document.getElementById('window-app').classList.add('window-load');
-		   },1000);
-		   this.reSizeImgCont();
-		   //console.log($('.hidden-img').height())
-	  }
+			document.getElementById('welcome-screen').style.visibility = 'visible';
+		}, 3000);
+		this.reSizeImgCont();
+		//console.log($('.hidden-img').height())
+	}
+
+	
 
 
 	reSizeImgCont() {
 		this.lgScreen = window.innerWidth > 980 ? true : false;
-		if(window.innerWidth<480){
-			$('.key-bg').css('height',$('.hidden-img').height());
-		}else{
-			$('.key-bg').css('height','unset');
-			$('.hidden-img').css('position','relative');
+		if (window.innerWidth < 480) {
+			$('.key-bg').css('height', $('.hidden-img').height());
+		} else {
+			$('.key-bg').css('height', 'unset');
+			$('.hidden-img').css('position', 'relative');
 		}
-	  }
-	
+	}
+
 	onMusicChange(value) {
 		this.playMusic = value;
 	}
