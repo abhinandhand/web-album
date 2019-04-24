@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
 
 		this.reSizeImgCont();
 		$('#wish-wel-button').on('click',()=>{
-			document.getElementById('welcome-screen').style.display = 'none';
+			document.getElementById('splash').style.display = 'none';
 			$('#player').get(0).play();
 			$('body').removeClass('modal-open');
 			document.getElementById('window-app').classList.add('window-load');
@@ -75,8 +75,8 @@ export class HomeComponent implements OnInit {
 
 	checkBgLoaded() {
 		setTimeout(() => {
-			document.getElementById('welcome-screen').style.visibility = 'visible';
-			document.getElementById('splash').style.display = 'none';
+			document.getElementById('splash-loading').style.display = 'none';
+			document.getElementById('splash-continue').style.display = 'block';
 		}, 2000);
 		//console.log($('.hidden-img').height())
 	}
