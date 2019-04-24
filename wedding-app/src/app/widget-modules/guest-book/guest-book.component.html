@@ -65,16 +65,16 @@
       <div *ngIf="guestForm.submitted && name.invalid">
         <span style="color: #ff000091;" *ngIf="name.errors.required">Name is required</span>
       </div>
-      <div   style="margin-top: 75px;">
+      <div class="form-input-spacing">
         <input name="location" [(ngModel)]="wishObj.location" #location="ngModel" placeholder="Where are you from?" required/>
       </div>
       <div *ngIf="guestForm.submitted && location.invalid">
           <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
         </div>
-      <div  style="margin-top: 75px;">
+      <div  class="form-input-spacing">
         <input name="email" [(ngModel)]="wishObj.email" placeholder="Your email address?" />
       </div>
-      <div   style="margin-top: 75px;">
+      <div  class="form-input-spacing">
         <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Write your thoughts and wishes for the newly wedded couple." required></textarea>
       </div>
       <div *ngIf="guestForm.submitted && message.invalid">

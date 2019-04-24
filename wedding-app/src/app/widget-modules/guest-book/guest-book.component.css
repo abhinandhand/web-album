@@ -54,6 +54,10 @@
     color: #707070;
     margin: -5px 0px;
     margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 .hr-text {
     line-height: 1em;
@@ -130,7 +134,7 @@ textarea {
     color:#707070;
     padding-left: 20px;
     text-indent: 8px;
-    height: 200px;
+    height: 130px;
 }
 #wish-button{
     width: 536px;
@@ -186,7 +190,7 @@ textarea {
 }
 
 .guest-wisher-info {
-    width: max-content;
+    width: 60%;;
     position: absolute;
     right: 13%;
     position: absolute; 
@@ -205,6 +209,10 @@ textarea {
     text-align: right;
     color: #707070;
     margin-bottom: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
 .left-arrow{
@@ -220,6 +228,9 @@ textarea {
     position: absolute;
     font-size: 30px;
     color: #2e2d2c5e;
+}
+.form-input-spacing{
+    margin-top: 50px;
 }
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
@@ -249,7 +260,7 @@ textarea {
     }
 
     .btn-div{
-        margin-top: 61px;
+        margin-top: 55px;
     }
     #guest-book-cont {
         width: 100%;
@@ -268,6 +279,7 @@ textarea {
     .guest-wisher-info {
         bottom: 5%;
         right: 16%;
+        width: 65%;
     }
     .hr-text {
         font-size: 36px;
@@ -279,7 +291,7 @@ textarea {
     textarea{
         font-size: 28px;
         line-height: 41px;
-        height: 126px;
+        height: 83px;
     }
     .tq-wish{
         margin-top: 9%;
@@ -293,6 +305,9 @@ textarea {
     }
     .left-arrow {
         font-size: 30px;;
+    }
+    .form-input-spacing{
+        margin-top: 20px;
     }
 }
 
@@ -320,7 +335,7 @@ textarea {
     line-height: 71px;
     }
     .btn-div{
-        margin-top: 61px;
+        margin-top: 55px;
     }
     #guest-book-cont {
         width: 100%;
@@ -339,6 +354,7 @@ textarea {
     .guest-wisher-info {
         bottom: 5%;
         right: 16%;
+        width: 65%;
     }
     .hr-text {
         font-size: 36px;
@@ -350,7 +366,7 @@ textarea {
     textarea{
         font-size: 28px;
         line-height: 41px;
-        height: 126px;
+        height: 83px;
     }
     .tq-wish{
         margin-top: 9%;
@@ -364,6 +380,9 @@ textarea {
     }
     .left-arrow {
         font-size: 30px;;
+    }
+    .form-input-spacing{
+        margin-top: 20px;
     }
     
 }

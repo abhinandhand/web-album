@@ -154,13 +154,4 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.routes.navigate(['/']);
     }, 1000);
   }
-
-  checkBgLoaded() {
-		setTimeout(() => {
-			document.getElementById('splash').style.display = 'none';
-			document.getElementById('welcome-screen').style.visibility = 'visible';
-		}, 3000);
-		this.reSizeImgCont();
-		//console.log($('.hidden-img').height())
-	}
 }
