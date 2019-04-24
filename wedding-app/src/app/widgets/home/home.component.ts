@@ -60,17 +60,27 @@ export class HomeComponent implements OnInit {
 			document.getElementById('window-app').style.visibility = 'visible';
 		});
 
+		$('.hidden-img').load(function(){
+			//Do Something...
+		  }).each(function(){
+			if(this.complete) {
+			  $(this).trigger('load');
+			}
+		  });
+
 
 	}
 
 	checkBgLoaded() {
 		setTimeout(() => {
-			document.getElementById('splash').style.display = 'none';
 			document.getElementById('welcome-screen').style.visibility = 'visible';
+			document.getElementById('splash').style.display = 'none';
 		}, 3000);
 		this.reSizeImgCont();
 		//console.log($('.hidden-img').height())
 	}
+
+	
 
 	
 

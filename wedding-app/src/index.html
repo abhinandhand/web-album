@@ -38,126 +38,129 @@
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+            .splash-div {
+                height: 100vh;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .splash-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+    
+            #welcome-screen {
+                background-color: #e4e0dd;
+                height: 100vh;
+                position: relative;
+                display: flex;
+            }
+    
+            .welcome-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+    
+            .top-left-wel-mandala {
+                position: absolute;
+                top: 0;
+                left: 0px;
+            }
+    
+            .img-wel-mandala {
+                width: 22vh;
+            }
+    
+            .top-right-wel-mandala {
+                position: absolute;
+                top: 0;
+                right: 0px;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+    
+            .bottom-right-wel-mandala {
+                position: absolute;
+                bottom: 0;
+                right: 0px;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+    
+            .bottom-left-wel-mandala {
+                position: absolute;
+                bottom: 0;
+                left: 0px;
+            }
+    
+            .btn-div {
+                margin-top: 75px;
+                text-align: center;
+                padding-bottom: 25%;
+            }
+    
+            #wish-wel-button {
+                width: 345px;
+                height: 98px;
+                font-size: 30px;
+                line-height: 30px;
+                font-family: Playfair Display;
+                background-color: #445563;
+                color: #FFFFFF;
+                border-radius: 8px;
+            }
+    
+            /* 
+      ##Device = Low Resolution Tablets, Mobiles (Landscape)
+      ##Screen = B/w 481px to 767px
+    */
+    
+            @media (min-width: 481px) and (max-width: 812px) {
+                .img-wel-mandala {
+                    width: 150px;
+                }
+                #wish-wel-button {
+                    width: 72%;
+                    height: 69px;
+                    font-size: 22px;
+                    line-height: 69px;
+                }
+            }
+    
+            /*Portrait Mobile */
+    
+            @media (min-width: 320px) and (max-width: 480px) {
+                .img-wel-mandala {
+                    width: 150px;
+                }
+                #wish-wel-button {
+                    width: 72%;
+                    height: 69px;
+                    font-size: 22px;
+                    line-height: 69px;
+                }
+            }
+        </style>
 </head>
 
 <body id="body-tag" style="overflow-x: hidden;overflow-y: hidden">
-    <style>
-        .splash-div {
-            height: 100vh;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    
 
-        .splash-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        #welcome-screen {
-            background-color: #e4e0dd;
-            height: 100vh;
-            position: relative;
-            display: flex;
-        }
-
-        .welcome-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-        }
-
-        .top-left-wel-mandala {
-            position: absolute;
-            top: 0;
-            left: 0px;
-        }
-
-        .img-wel-mandala {
-            width: 22vh;
-        }
-
-        .top-right-wel-mandala {
-            position: absolute;
-            top: 0;
-            right: 0px;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-        }
-
-        .bottom-right-wel-mandala {
-            position: absolute;
-            bottom: 0;
-            right: 0px;
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-        }
-
-        .bottom-left-wel-mandala {
-            position: absolute;
-            bottom: 0;
-            left: 0px;
-        }
-
-        .btn-div {
-            margin-top: 75px;
-            text-align: center;
-            padding-bottom: 25%;
-        }
-
-        #wish-wel-button {
-            width: 345px;
-            height: 98px;
-            font-size: 30px;
-            line-height: 30px;
-            font-family: Playfair Display;
-            background-color: #445563;
-            color: #FFFFFF;
-            border-radius: 8px;
-        }
-
-        /* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-        @media (min-width: 481px) and (max-width: 812px) {
-            .img-wel-mandala {
-                width: 150px;
-            }
-            #wish-wel-button {
-                width: 72%;
-                height: 69px;
-                font-size: 22px;
-                line-height: 69px;
-            }
-        }
-
-        /*Portrait Mobile */
-
-        @media (min-width: 320px) and (max-width: 480px) {
-            .img-wel-mandala {
-                width: 150px;
-            }
-            #wish-wel-button {
-                width: 72%;
-                height: 69px;
-                font-size: 22px;
-                line-height: 69px;
-            }
-        }
-    </style>
     <div id="splash" class="splash-div">
-        <div>
-          <h4>Loading...</h1>
-        </div>
+            <div>
+              <h4>Loading...</h1>
+            </div>
     </div>
-    <div style="visibility: hidden;" id="welcome-screen" >
+    
+    <div style="visibility: visible;" id="welcome-screen" >
         <div class="welcome-content">
             <button  type="submit" id="wish-wel-button">CONTINUE</button>
         </div>
@@ -174,10 +177,13 @@
             <img class="img-wel-mandala" src="assets/illustrators/mandala.png" />
         </div>
     </div>
-    <div style="visibility: hidden;" id="window-app">
-        <app-root>
-        </app-root>
+    <div>
+        
     </div>
+   
+        <app-root id="window-app" style="visibility: hidden;">
+                
+        </app-root>
 </body>
 
 </html>
