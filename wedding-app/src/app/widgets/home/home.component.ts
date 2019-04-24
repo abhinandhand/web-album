@@ -55,9 +55,11 @@ export class HomeComponent implements OnInit {
 		$('#wish-wel-button').on('click',()=>{
 			document.getElementById('welcome-screen').style.display = 'none';
 			$('#player').get(0).play();
-			$('#body-tag').css('overflow-y', 'scroll');
+			$('body').removeClass('modal-open');
 			document.getElementById('window-app').classList.add('window-load');
 			document.getElementById('window-app').style.visibility = 'visible';
+
+		this.reSizeImgCont();
 		});
 
 		// $('.hidden-img').load(function(){
@@ -75,8 +77,7 @@ export class HomeComponent implements OnInit {
 		setTimeout(() => {
 			document.getElementById('welcome-screen').style.visibility = 'visible';
 			document.getElementById('splash').style.display = 'none';
-		}, 3000);
-		this.reSizeImgCont();
+		}, 2000);
 		//console.log($('.hidden-img').height())
 	}
 

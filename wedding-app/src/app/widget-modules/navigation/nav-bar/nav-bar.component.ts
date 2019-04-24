@@ -40,6 +40,11 @@ export class NavBarComponent implements OnInit{
   }
   onChange (){
     this.isCollapsed = !this.isCollapsed;
+    if(!this.isCollapsed){
+      $('body').addClass('modal-open');
+    } else{
+      $('body').removeClass('modal-open');
+    }
     this.isCollapsedChange.emit(this.isCollapsed);
     $('.navbar-collapse').collapse('hide');
   }

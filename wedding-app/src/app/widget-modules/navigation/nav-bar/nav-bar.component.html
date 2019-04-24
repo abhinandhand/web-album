@@ -1,4 +1,13 @@
 <div class="header-cont">
+        <div (click)="toggleMusic()" class="music-bg">
+                <div class="mg-txt-con">
+                    <div class="mg-txt-ico">
+                        <img [src]="!playMusic ? 'assets/play-button.svg':'assets/pause-button.svg'" class="mg-img" />
+                        <span *ngIf="playMusic" class="music-txt">Pause Music</span>
+                        <span *ngIf="!playMusic" class="music-txt">Play Music</span>
+                    </div>
+                </div>
+            </div>
     <nav class="navbar navbar-expand-md fixed-top nav-height" role="navigation">
         <!-- <div [ngStyle]="!isCollapsed ? {'height':'300px'}:{'height':'45px'}" class="nav-container nav-transcluent"></div>  -->
         <div class="navbar-light" style="z-index: 3;">
@@ -8,15 +17,6 @@
                 aria-label="Toggle navigation" (click)="onChange()"  aria-controls="navbarTogglerDemo02">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
-        <div (click)="toggleMusic()" class="music-bg">
-            <div class="mg-txt-con">
-                <div class="mg-txt-ico">
-                    <img [src]="!playMusic ? 'assets/play-button.svg':'assets/pause-button.svg'" class="mg-img" />
-                    <span *ngIf="playMusic" class="music-txt">Pause Music</span>
-                    <span *ngIf="!playMusic" class="music-txt">Play Music</span>
-                </div>
-            </div>
         </div>
         <div  class="navbar-collapse collapse" id="navbarTogglerDemo02" >
             <div class="d-none d-sm-none d-md-block d-lg-block" style="width: 100%">
