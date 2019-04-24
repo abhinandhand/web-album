@@ -66,7 +66,7 @@ export class GuestBookComponent implements OnInit {
     });
     
     defaultInterval = setInterval(() => {
-     //$('#guest-book-turn').turn('next');
+     $('#guest-book-turn').turn('next');
     }, 5000);
   };
 
