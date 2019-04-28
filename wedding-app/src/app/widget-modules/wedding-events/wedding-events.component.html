@@ -12,8 +12,6 @@
                                                                         <div class="event-label">{{event.title}}</div>
                                                                 </figure>
                                                         </a>
-                                            <!-- <img style="max-height: inherit;width: 100%" [src]="event.background"/>
-                                            <div class="event-label">{{event.title}}</div> -->
                                               
                                     </div>
                                     <div (click)="goToPage(event.title,event.background,$event);"  *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
@@ -24,8 +22,6 @@
                                                                         <div class="event-label">{{event.title}}</div>
                                                                 </figure>
                                                         </a>   
-                                        <!-- <img style="max-height: inherit;width: 100%" [src]="event.background"/>
-                                                    <div class="event-label">{{event.title}}</div> -->
                                      </div>
         </div>
 

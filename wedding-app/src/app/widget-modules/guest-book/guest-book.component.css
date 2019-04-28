@@ -20,11 +20,11 @@
 }
 .guest-book-wish-text {
     position: absolute;
-    left: 27%;
+    left: 32%;
     width: 61%;
     top: 5%;
     overflow-y: scroll;
-    height: 66%;
+    height: 74%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -190,11 +190,10 @@ textarea {
 }
 
 .guest-wisher-info {
-    width: 60%;;
+    width: 60%;
     position: absolute;
-    right: 13%;
-    position: absolute; 
-    bottom: 14%;
+    right: 5%;
+    bottom: 7%;
 }
 
 .tq-wish{
@@ -224,7 +223,7 @@ textarea {
 }
 .right-arrow {
     bottom: 46%;
-    right: 8px;
+    right: 28px;
     position: absolute;
     font-size: 30px;
     color: #2e2d2c5e;
@@ -271,18 +270,19 @@ textarea {
      line-height: 45px;
     }
     .guest-book-wish-text {
-        height: 65%;
-       text-indent: 3px;
+        height: 69%;
+        text-indent: 3px;
         left: 18%;
-        width: 66%;
+        width: 74%;
+    
     }
     .guest-wisher-info {
         bottom: 5%;
-        right: 16%;
+        right: 7%;
         width: 65%;
     }
     .hr-text {
-        font-size: 36px;
+        font-size: 5.895vw;
         letter-spacing: 3px;
     }
     input{
@@ -301,7 +301,7 @@ textarea {
     }
     .right-arrow {
         font-size: 30px;
-        right: 3px;
+        right: 24px;
     }
     .left-arrow {
         font-size: 30px;;
@@ -343,8 +343,8 @@ textarea {
     }
     .guest-book-wish-text {
         left: 18%;
-        width: 66%;
-        height: 65%;
+    width: 71%;
+    height: 69%;
     text-indent: 3px;
     }
     .wish-style {
@@ -353,12 +353,12 @@ textarea {
     }
     .guest-wisher-info {
         bottom: 5%;
-        right: 16%;
+        right: 8%;
         width: 65%;
     }
     .hr-text {
-        font-size: 36px;
-        letter-spacing: 3px;
+        font-size: 5.895vw;
+    letter-spacing: 3px;
     }
     input{
         font-size: 28px;
@@ -376,7 +376,7 @@ textarea {
     }
     .right-arrow {
         font-size: 30px;
-        right: 3px;
+        right: 16px;
     }
     .left-arrow {
         font-size: 30px;;

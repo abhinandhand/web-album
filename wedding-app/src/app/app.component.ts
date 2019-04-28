@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeddingOverviewService } from './data-access/wedding-overview/wedding-overview.service';
 import { Router } from '@angular/router';
+declare var $: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

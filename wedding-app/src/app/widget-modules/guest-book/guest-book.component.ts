@@ -136,7 +136,7 @@ export class GuestBookComponent implements OnInit {
         }
         $('#guest-book-turn').turn('resize');
         $('#guest-book-turn').turn('previous');
-      }, 6000);
+      }, 100000);
     }, 3000);
   }
   playAudio(){
