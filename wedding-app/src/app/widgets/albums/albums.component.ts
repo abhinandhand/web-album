@@ -106,7 +106,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   checkBgLoaded(){
     setTimeout(()=>{
       $('.placeholder-img').addClass('non-opaque');
-    },2000);
+    },100);
   }
 
   reSizeImgCont() {
@@ -140,14 +140,10 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   prevImage() {
     if (this.index >= 1) {
+      this.imgId = this.albumData.data[this.index - 1]._id;
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index - 1].url + '&id=' + this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;
       this.index = this.index - 1;
-      // $('.img1' + this.index).fadeOut(550, () => {
-      //   $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
-      //   $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-      //   this.index = this.index - 1;
-      // }).fadeIn(1000);
     }
   }
 

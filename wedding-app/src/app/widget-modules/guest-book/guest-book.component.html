@@ -13,7 +13,7 @@
           <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/guest-book.png">
           <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/guest-mobile.png">
           <div style="height: 100%;padding: 0px 98px;">
-              <div  (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goPrevious()" class="left-arrow" *ngIf="i!=0" (click)="clearTimer()" >
+              <div  (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goPrevious();clearTimer()" class="left-arrow" *ngIf="i!=0">
                   <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
               </div>
             <div  class="guest-book-wish-text">

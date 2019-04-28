@@ -249,6 +249,13 @@ width: 90%;
 	   }
 	   .trans-placeholder{
 		height: unset;
+		height: unset;
+		left: unset;
+		right: unset;
+		top: 25%;
+		bottom: 25%;
+		margin: unset;
+		display: unset;
 		}
 		.header{
 			z-index: 1030;

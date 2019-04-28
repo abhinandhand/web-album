@@ -26,16 +26,18 @@ export class GuestBookComponent implements OnInit {
   constructor(public wedOverviewService: WeddingOverviewService) { }
   ngOnInit() {
     this.setGuestBookWishes();
+    $('#new-wish-btn').click(() => {
+      alert();
+      this.goPrevious();
+    });
   }
+
 
   setGuestBookWishes() {
     this.wedOverviewService.getWishes().subscribe((data: any) => {
       this.wishes = data;
       this.initialiseGuestBookTurn(data);
     });
-  }
-  sizeFlipBook(){
-
   }
 
   clearTimer() {
@@ -66,7 +68,7 @@ export class GuestBookComponent implements OnInit {
     });
     
     defaultInterval = setInterval(() => {
-     $('#guest-book-turn').turn('next');
+    // $('#guest-book-turn').turn('next');
     }, 100000);
   };
 
@@ -107,18 +109,18 @@ export class GuestBookComponent implements OnInit {
   iAgree(wishes) {
     clearInterval(defaultInterval);
     let element = $( `<div>
-    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/dtop.png">
-    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
+    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-none d-md-block" src="assets/guest-book.png">
+    <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/guest-mobile.png">
     <div style="height: 100%;padding: 0px 98px;">
-    <div  (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goPrevious()" class="left-arrow" *ngIf="i!=0" (click)="clearTimer()" >
+    <div  id="new-wish-btn" class="left-arrow" onclick="$('#guest-book-turn').turn('previous');"  >
                   <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
               </div>
       <div class="guest-book-wish-text">
         <h1 class="wish-style">` + this.wishObj.message + `</h1></div>
-        <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">
-          <p style="font-family: Playfair Display, Bold;font-size: 25px;text-align: center;color: #707070;margin-bottom: 2px;">` +
+        <div class="guest-wisher-info">
+          <p class="guest-info">` +
           this.wishObj.name +`</p>
-          <p style="text-align: center; font-family: Playfair Display;font-style: italic;font-size: 18px;: #707070;margin-bottom: 2px;">`
+          <p class="loc-date">`
           + this.wishObj.location + `</p>
           </div>
         </div>
