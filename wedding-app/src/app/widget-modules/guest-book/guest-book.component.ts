@@ -67,7 +67,7 @@ export class GuestBookComponent implements OnInit {
     
     defaultInterval = setInterval(() => {
      $('#guest-book-turn').turn('next');
-    }, 5000);
+    }, 100000);
   };
 
 
@@ -110,6 +110,9 @@ export class GuestBookComponent implements OnInit {
     <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-none d-sm-one d-md-block" src="assets/dtop.png">
     <img style="position: absolute;height: 100%;width: 100%" class="img-fluid gb-img d-block d-sm-block d-md-none" src="assets/mobile.png">
     <div style="height: 100%;padding: 0px 98px;">
+    <div  (mouseover)="clearTimer()" (tap)="clearTimer()"  (click)="goPrevious()" class="left-arrow" *ngIf="i!=0" (click)="clearTimer()" >
+                  <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
+              </div>
       <div class="guest-book-wish-text">
         <h1 class="wish-style">` + this.wishObj.message + `</h1></div>
         <div style="width: max-content;position: absolute;right: 13%;position: absolute; bottom: 14%;">

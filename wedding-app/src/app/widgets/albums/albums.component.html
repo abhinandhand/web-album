@@ -1,11 +1,11 @@
-<div class="modal fade show modal-trans modal-landscape" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false"
-    style="display: block;overflow:hidden;">
+<div class="modal fade show modal-trans modal-landscape" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="false" style="display: block;overflow:hidden;">
     <div style="max-width: 100%;height: 100%;margin: 0;" role="document">
         <div style="height: 100%;border:0;border-radius: 0;display: block;position: relative;" class="modal-content">
             <div class="land header">
                 <div class="row">
                     <div class="col-4 back-col">
-                        <div  (click)="goToPage();" >
+                        <div (click)="goToPage();">
                             <img class="back-icon" src="assets/left-arrow.svg">
                         </div>
                     </div>
@@ -14,15 +14,14 @@
                             <h2 style="margin: 0;" class="event-text">{{eventName}}</h2>
                         </div>
                     </div>
-                    <div class="col-4"> 
+                    <div class="col-4">
                         <div id="social-icons">
                             <span class="share-label d-none d-sm-none d-md-block">Share Photo:</span>
                             <a class="share-link" href="http://www.facebook.com/sharer/sharer.php?u={{pageUrl}}" target="_blank">
                                 <img class="share-img" src="assets/fb.svg" />
                             </a>
-                            <a class="share-link" [href]="encoderTwitterURL()"
-                                target="_blank">
-                                <img  class="share-img"  src="assets/twitter.svg" />
+                            <a class="share-link" [href]="encoderTwitterURL()" target="_blank">
+                                <img class="share-img" src="assets/twitter.svg" />
                             </a>
                             <!-- <img style="padding: 0 9px;" src="assets/insta.svg" /> -->
                         </div>
@@ -30,40 +29,38 @@
                 </div>
             </div>
             <div class="content-block">
-                           
-                            <div  class="img-container">
-                              
-                                   <div *ngIf="lgScreen" class="img-div-trans"  style="height:inherit">
-                                       <img *ngIf class="img-fluid trans" (load)="checkBgLoaded()"  (click)="nextImage()" style="margin: auto;"
-                                        onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
-                                        onError="this.src='https://images.pixieset.com/96161171/314b55aa49b513a8398b824eaaf0b44f-xxlarge.jpg'" />
-                                        <img  class="img-fluid trans"  (click)="nextImage()" style="margin: auto;"
-                                        onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
-                                        onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'" />
-                                
-        
-                                   </div>
-                                   <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans">
-                                        <pinch-zoom  height="inherit" auto-zoom-out="true" zoom-button="false">
-                                                <img  class="img-fluid smallscreen trans"  (swiperight)="prevImage()" (swipeleft)="nextImage()"  style="margin: auto;"
-                                        onload="this.style.display = 'block'" [ngClass]="'img1'+index" [src]="currentImg"
-                                        onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'" />
-                                
-                                            </pinch-zoom>
-                                        
-                                   </div>
-                                   
-                                    <div class="page-right"  id="land-1" [hidden]="!(albumData.data.length > index+1)" (click)="nextImage()">
-                                            <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>
-                                    </div>
-                                    <div id="land-0" class="page-left" *ngIf="index >= 1" (click)="prevImage()" >
-                                            <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
-                                 </div>
-                                </div>
+
+                <div class="img-container">
+
+                    <div *ngIf="lgScreen" id="img-bucket" class="img-div-trans" style="height:inherit">
+                        <div  style="height: inherit;" (click)="nextImage()">
+                            <img *ngFor="let img of this.albumData.data;index as i" [ngClass]="i === index ? 'opaque':'non-opaque'" class="img-fluid trans {{'img1'+i}}"
+                                (load)="checkBgLoaded()" style="margin: auto;" [src]="img.url" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
+                            />
+                            <img class="placeholder-img img-fluid trans-placeholder" src="https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png">
+                        </div>
+                    </div>
+                    <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans">
+                                          <pinch-zoom style="display: unset" height="inherit" auto-zoom-out="true" zoom-button="false">
+                                <img *ngFor="let img of this.albumData.data;index as i" class="img-fluid smallscreen trans {{'img1'+i}}" (swiperight)="prevImage()"
+                                    (swipeleft)="nextImage()"  (load)="checkBgLoaded()" [ngClass]="i === index ? 'opaque':'non-opaque'"
+                                    [src]="img.url" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
+                                />
+                                <img class="placeholder-img img-fluid trans-placeholder" src="https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png">
+
+                            </pinch-zoom>
+                                   </div> 
+
+                    <div class="page-right" id="land-1" [hidden]="!(albumData.data.length > index+1)" (click)="nextImage()">
+                        <i class="fa fa-chevron-circle-right" style="cursor: pointer;"></i>
+                    </div>
+                    <div id="land-0" class="page-left" *ngIf="index >= 1" (click)="prevImage()">
+                        <i class="fa fa-chevron-circle-left" style="cursor: pointer;"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <img class="preload" onload="this.style.display = 'block'"   [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;">
+    <img class="preload" onload="this.style.display = 'block'" [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;">
 
 </div>
-

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeddingOverviewService } from './data-access/wedding-overview/wedding-overview.service';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,8 +10,12 @@ export class AppComponent implements OnInit {
   currentRoute:string;
   constructor(private router: Router) {}
   ngOnInit(): void {
-
-
+    $(document).bind('keydown', function(e) {
+      if (e.keyCode === 83 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
+        e.preventDefault();
+        return false;
+      }
+    });
   }
 
   sendEvent = () => {
@@ -31,6 +34,8 @@ export class AppComponent implements OnInit {
       eventValue: 8
     });
   }
+
+ 
 
 
 }

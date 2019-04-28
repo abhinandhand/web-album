@@ -53,7 +53,7 @@ export class NavBarComponent implements OnInit{
     this.playMusic = !this.playMusic;
     if(this.playMusic) {
       $('#player').get(0).play().catch(() => {
-        this.playMusic = !this.playMusic;
+       
         });
     } else{
     $('#player').get(0).pause();

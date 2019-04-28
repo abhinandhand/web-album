@@ -62,14 +62,6 @@ export class HomeComponent implements OnInit {
 		this.reSizeImgCont();
 		});
 
-		// $('.hidden-img').load(function(){
-		// 	//Do Something...
-		//   }).each(function(){
-		// 	if(this.complete) {
-		// 	  $(this).trigger('load');
-		// 	}
-		//   });
-
 
 	}
 

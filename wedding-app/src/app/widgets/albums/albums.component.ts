@@ -40,7 +40,9 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
 
 
   ngOnInit() {
+    $('#exampleModal').ontouchmove = (e) => { e.preventDefault(); return false; };
     $('body').addClass('modal-open');
+    $('.placeholder-img').removeClass('non-opaque');
     this.route.queryParamMap
       .subscribe(params => {
         // this.currentImg = params.get('url') ? params.get('url') : undefined;
@@ -76,8 +78,6 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   }
 
   fetchAlbumData() {
-
-
     this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe((data: any) => {
       if (this.click) {
         this.albumData = data;
@@ -87,10 +87,11 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
         this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index].url + '&id=' + this.albumData.data[this.index]._id);
         this.pageUrl = location.href;
         $('.preload').attr('src', this.albumData.data[1].url);
-        
       } else {
         this.intialiseImageIndex(data);
       }
+      console.log($('.img1' + this.index));
+      $('.img1' + this.index.toString()).addClass('opaque');
       $('.trans').addClass('trans-height');
 
 
@@ -101,6 +102,11 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
         }
       });
     });
+  }
+  checkBgLoaded(){
+    setTimeout(()=>{
+      $('.placeholder-img').addClass('non-opaque');
+    },2000);
   }
 
   reSizeImgCont() {
@@ -128,12 +134,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.imgId = this.albumData.data[this.index + 1]._id;
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index + 1].url + '&id=' + this.albumData.data[this.index + 1]._id);
       this.pageUrl = location.href;
-      $('.img1' + this.index).fadeOut(1100, () => {
-        $('.img1' + this.index).attr('src', this.albumData.data[this.index + 1].url);
-        $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-        this.index = this.index + 1;
-      }).fadeIn(1200);
-
+      this.index = this.index + 1;
     }
   }
 
@@ -141,11 +142,12 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     if (this.index >= 1) {
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index - 1].url + '&id=' + this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;
-      $('.img1' + this.index).fadeOut(550, () => {
-        $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
-        $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-        this.index = this.index - 1;
-      }).fadeIn(1000);
+      this.index = this.index - 1;
+      // $('.img1' + this.index).fadeOut(550, () => {
+      //   $('.img1' + this.index).attr('src', this.albumData.data[this.index - 1].url);
+      //   $('.in').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+      //   this.index = this.index - 1;
+      // }).fadeIn(1000);
     }
   }
 
