@@ -45,7 +45,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     $('.placeholder-img').removeClass('non-opaque');
     this.route.queryParamMap
       .subscribe(params => {
-        // this.currentImg = params.get('url') ? params.get('url') : undefined;
+        this.currentImg = params.get('url') ? params.get('url') : undefined;
         this.eventName = params.get('name');
         this.click = params.get('c') ? true : false;
         this.imgId = params.get('id') ? params.get('id') : undefined;
@@ -81,7 +81,6 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     this.albumService.getAlbumOverview(this.albumUrl + this.eventName).subscribe((data: any) => {
       if (this.click) {
         this.albumData = data;
-        this.currentImg = this.albumData.data[0].url;
         this.index = 0;
         this.imgId = this.albumData.data[this.index]._id;
         this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index].url + '&id=' + this.albumData.data[this.index]._id);
@@ -104,9 +103,9 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     });
   }
   checkBgLoaded(){
-    setTimeout(()=>{
-      $('.placeholder-img').addClass('non-opaque');
-    },100);
+    // setTimeout(()=>{
+    //   $('.placeholder-img').addClass('non-opaque');
+    // },100);
   }
 
   reSizeImgCont() {
@@ -124,13 +123,13 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       }
     }
     this.albumData = data;
-    this.currentImg = this.albumData.data[this.index].url;
     $('.preload').attr('src', this.albumData.data[this.index + 1].url);
   }
 
 
   nextImage() {
     if (this.albumData.data.length > (this.index + 1)) {
+      $('.placeholder-img').addClass('non-opaque');
       this.imgId = this.albumData.data[this.index + 1]._id;
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index + 1].url + '&id=' + this.albumData.data[this.index + 1]._id);
       this.pageUrl = location.href;
@@ -140,6 +139,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   prevImage() {
     if (this.index >= 1) {
+      $('.placeholder-img').addClass('non-opaque');
       this.imgId = this.albumData.data[this.index - 1]._id;
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index - 1].url + '&id=' + this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;

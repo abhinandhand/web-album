@@ -22,7 +22,7 @@ export class WeddingEventsComponent  {
     );
   }
   goToPage(event,url,$event) {
-    this.route.navigate(['/albums'], { queryParams: { name: event,  c: true, x:$event.x, y: $event.y } });
+    this.route.navigate(['/albums'], { queryParams: { name: event,  c: true, x:$event.x, y: $event.y, url: url } });
 }
 
 

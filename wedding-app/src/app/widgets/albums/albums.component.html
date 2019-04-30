@@ -37,7 +37,7 @@
                             <img *ngFor="let img of this.albumData.data;index as i" [ngClass]="i === index ? 'opaque':'non-opaque'" class="img-fluid trans {{'img1'+i}}"
                                 (load)="checkBgLoaded()" style="margin: auto;" [src]="img.url" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
                             />
-                            <img class="placeholder-img img-fluid trans-placeholder" src="https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png">
+                            <img class="placeholder-img img-fluid trans" [src]="currentImg">
                         </div>
                     </div>
                     <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans" (swiperight)="prevImage()"
@@ -46,7 +46,7 @@
                                 <img *ngFor="let img of this.albumData.data;index as i" class="img-fluid smallscreen trans {{'img1'+i}}"  (load)="checkBgLoaded()" [ngClass]="i === index ? 'opaque':'non-opaque'"
                                     [src]="img.url" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
                                 />
-                                <img class="placeholder-img img-fluid trans-placeholder" src="https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png">
+                                <img class="placeholder-img img-fluid trans" [src]="currentImg">
 
                             </pinch-zoom>
                                    </div> 
