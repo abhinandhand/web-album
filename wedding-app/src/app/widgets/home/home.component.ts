@@ -98,11 +98,11 @@ export class HomeComponent implements OnInit {
 	fetchWedOverview() {
 		this.wedOverviewService.getWeddingOverview().subscribe((data: any) => {
 			this.wedddingOverviewData = data;
-			setTimeout(() => {
-				// $('#player').get(0).play().catch(function() {
-				// });
-				this.initialiseAnime();
-			}, 3000);
+			if(this.lgScreen){
+				setTimeout(() => {
+					this.initialiseAnime();
+				}, 3000);
+			}
 
 		});
 	};

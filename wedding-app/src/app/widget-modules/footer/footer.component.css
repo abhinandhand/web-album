@@ -10,6 +10,7 @@
     font-size: 30px;
     align-items: center;
     justify-content: center;
+    color: #445563;
 }
 #share {
     display: flex;
@@ -27,6 +28,12 @@
     font-size: 15px;
     color: #445563;
     padding: 0px 9px;
+}
+.highlight-blue {
+    color: #209cff;
+}
+.highlight-black{
+    color: #111111;
 }
 @media (min-width: 481px) and (max-width: 812px) {
     .with-love {

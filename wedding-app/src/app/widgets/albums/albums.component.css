@@ -1,14 +1,16 @@
 .modal-trans{
-transform: scale(0);
--webkit-transition: transform 1s ease-in-out;
--moz-transition: transform 1s ease-in-out;
--o-transition: transform 1s ease-in-out;
-transition: transform 1s ease-in-out;
+	left: 100%;
+/* transform: scale(0); */
+-webkit-transition: all 0.75s ease-in-out;
+-moz-transition: all 0.75s ease-in-out;
+-o-transition: all 0.7s ease-in-out;
+transition: all 0.75s ease-in-out;
 position: fixed;
 }
 .modal-trans-opacity{
 	/* transform-origin: 711px 103px; */
-	transform: scale(1);
+	/* transform: scale(1); */
+	left: 0%;
 }
 .modal-trans:target {
 	opacity: 1;
@@ -160,13 +162,13 @@ width: 90%;
 	.page-left{
 	top: 45%;
     left: 1px;
-    color: #8080805c;
+    color: #808080a6;
 	font-size: 26px;
 	}
 	.page-right{
 		top: 45%;
 		right: 1px;
-		color: #8080805c;
+		color: #808080a6;
 		font-size: 26px;
 	}
 	.dispaly-img-cont{
@@ -192,6 +194,12 @@ width: 90%;
 		width: 100%;
 		z-index: unset;
 		}
+	.modal-trans {
+		-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+	}
 }
 
 /*Portrait Mobile */
@@ -221,15 +229,15 @@ width: 90%;
 		height: inherit;
 	}
 	.page-left{
-		top: 48%;
+		top: 43%;
 		left: 1px;
-		color: #8080805c;
+		color: #808080a6;
 		font-size: 26px;
 		}
 		.page-right{
-			top: 48%;
+			top: 43%;
 			right: 1px;
-			color: #8080805c;
+			color: #808080a6;
 			font-size: 26px;
 	}
 	.dispaly-img-cont{
@@ -237,6 +245,12 @@ width: 90%;
 	}
 	.dispaly-sm-img-cont{
 		display: block;
+	}
+	.modal-trans {
+		-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
 	}
 	.trans{
 		height: unset;
