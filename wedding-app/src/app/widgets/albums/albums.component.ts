@@ -152,7 +152,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   }
 
   goToPage() {
-    $('.modal-trans').removeClass('modal-trans-opacity');
+    $('.modal-trans').addClass('modal-trans-opacity-leave');
     setTimeout(() => {
       this.routes.navigate(['/']);
     }, 1000);

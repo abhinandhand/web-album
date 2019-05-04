@@ -8,9 +8,10 @@ transition: all 0.75s ease-in-out;
 position: fixed;
 }
 .modal-trans-opacity{
-	/* transform-origin: 711px 103px; */
-	/* transform: scale(1); */
 	left: 0%;
+}
+.modal-trans-opacity-leave{
+	left: -100%;
 }
 .modal-trans:target {
 	opacity: 1;
