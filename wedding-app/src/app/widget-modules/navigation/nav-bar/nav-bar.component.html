@@ -39,11 +39,11 @@
             <div class="d-block d-sm-block d-md-none">
                 <ul class="navbar-nav mr-auto" style="padding-top: 13px;font-size: 1.25rem;">
                     <li  class="nav-item nav-scroll">
-                        <a href="#home"    style="color: inherit;text-decoration: none" 
+                        <a href="#home"    style="color: inherit;text-decoration: none" onclick="window.scrollTo(0.0)"
                              (click)="onChange();sendGA('home')" class="nav-active" routerLinkActive="active">HOME</a>
                     </li>
                     <li class="nav-item nav-scroll">
-                        <a href="#album" (click)="sendGA('album');onChange()" style="color: inherit;text-decoration: none" 
+                        <a href="#marriage-date-summary" (click)="sendGA('album');onChange()" style="color: inherit;text-decoration: none" 
                             >ALBUMS</a>
                     </li>
                     <li class="nav-item nav-scroll">

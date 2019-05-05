@@ -16,6 +16,7 @@
     position: absolute;
     height: 101%;
     left: 0;
+    zoom: 2;
 }
 .cp-bg::before{
     content: "";
@@ -27,7 +28,7 @@
 	right: 0;
 	bottom: 0;
 	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-	filter: blur(27px);
+	filter: blur(8px);
 }
 #marriage-date {
     text-align: center;

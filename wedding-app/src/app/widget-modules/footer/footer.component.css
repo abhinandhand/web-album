@@ -6,8 +6,8 @@
 .with-love {
     display: flex;
     justify-content: center;
-    font-family: Great Vibes, Regular;
-    font-size: 30px;
+    font-family: Space Grotesk;
+    font-size: 24px;
     align-items: center;
     justify-content: center;
     color: #445563;
@@ -37,7 +37,7 @@
 }
 @media (min-width: 481px) and (max-width: 812px) {
     .with-love {
-       font-size: 24px;
+       font-size: 20px;
        letter-spacing: 0.5px;
     }
     .footer {
@@ -49,7 +49,7 @@
 /*Portrait Mobile */
 @media (min-width: 320px) and (max-width: 480px) {
     .with-love {
-        font-size: 24px;
+        font-size: 19px;
         letter-spacing: 0.5px;
      }
      .footer {
