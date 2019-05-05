@@ -74,11 +74,13 @@ export class GuestBookComponent implements OnInit {
 
 
   goNext() {
+    this.sendGuestBookViewEvent('next');
     $('#guest-book-turn').turn('next');
     this.clearTimer();
   }
 
   goPrevious(){
+    this.sendGuestBookViewEvent('previous');
     $('#guest-book-turn').turn('previous');
     this.clearTimer();
   }
@@ -97,7 +99,7 @@ export class GuestBookComponent implements OnInit {
     this.iAgree(this.wishes.data.wishList);
     return this.wedOverviewService.sendWishes(this.wishObj).subscribe(
       (data: any) => {
-        console.log(data);
+        this.sendPostWishEvent(this.wishObj.name,this.wishObj.message);
         setTimeout(() => {
         }, 5000);
       }, error => {
@@ -149,6 +151,35 @@ export class GuestBookComponent implements OnInit {
     this.isMusicOnChange.emit(this.playMusic);
     }
   }
+
+  sendGuestBookViewEvent = (clickType: string) => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Guestbook clicks',
+      eventAction: 'Viewed ' + clickType + 'wish',
+      eventLabel: 'Guestbook clicks',
+      eventValue: 0
+    });
+  }
+
+  sendPostWishEvent = (wisherName: string, msg:string) => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Wished Diya & Aron',
+      eventAction: 'Wish by ' + wisherName,
+      eventLabel: 'Wish Msg: ' + msg ,
+      eventValue: 0
+    });
+  }
+
+  sendPostWishEditEvent = (wisherName: string, msg:string) => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Wishes Edited',
+      eventAction: 'Wish Edited by ' + wisherName,
+      eventLabel: 'Wish Edited: ' + msg ,
+      eventValue: 0
+    });
+  }
+
+
 
 
 

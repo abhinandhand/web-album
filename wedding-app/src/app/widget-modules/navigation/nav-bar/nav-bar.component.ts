@@ -51,6 +51,7 @@ export class NavBarComponent implements OnInit{
 
   toggleMusic(){
     this.playMusic = !this.playMusic;
+    this.sendMusicEvent();
     if(this.playMusic) {
       $('#player').get(0).play().catch(() => {
        
@@ -62,6 +63,15 @@ export class NavBarComponent implements OnInit{
       localStorage.setItem('isPausedByUser', 'true');
     }
     this.isMusicOnChange.emit(this.playMusic);
+  }
+
+  sendMusicEvent = () => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Background Music',
+      eventAction: this.playMusic ? 'Music Resumed' : 'Music Paused',
+      eventLabel: 'Music',
+      eventValue: 0
+    });
   }
 
 

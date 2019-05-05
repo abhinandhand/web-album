@@ -22,6 +22,24 @@ export class FooterComponent implements OnInit {
   reSizeImgCont() {
       this.lgScreen = window.innerWidth > 980 ? true : false;
     }
+  
+    sendFCVisitEvent = () => {
+      (<any>window).ga('send', 'event', {
+        eventCategory: 'Forever Celebration Visits',
+        eventAction: 'FC Visits',
+        eventLabel: 'FC visits',
+        eventValue: 0
+      });
+    }
+
+    sendShareEvent = (name: string) => {
+      (<any>window).ga('send', 'event', {
+        eventCategory: 'Shares',
+        eventAction: 'Share on ' + name,
+        eventLabel: 'Shares',
+        eventValue: 0
+      });
+    }
 
   // fbShare(){
   //   FB.ui({
