@@ -6,11 +6,16 @@
 .with-love {
     display: flex;
     justify-content: center;
-    font-family: Space Grotesk;
-    font-size: 24px;
+    font-family: Great Vibes, Regular;
+    font-size: 30px;
     align-items: center;
     justify-content: center;
     color: #445563;
+}
+.brand{
+    font-family: Zilla slab;
+    font-weight: bold;
+    font-size: 24px;
 }
 #share {
     display: flex;
@@ -44,6 +49,11 @@
         height: max-content;
         padding: 4px 0px;
     }
+    .brand{
+        font-family: Zilla slab;
+        font-weight: bold;
+        font-size: 17px;
+    }
 }
 
 /*Portrait Mobile */
@@ -55,5 +65,8 @@
      .footer {
         height: max-content;
         padding: 4px 0px;
+    }
+    .brand{
+        font-size: 17px;
     }
 }

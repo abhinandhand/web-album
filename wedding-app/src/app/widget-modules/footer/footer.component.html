@@ -2,18 +2,18 @@
     <div class="footer with-love">
         <span>handcrafted with 
             <img src="assets/heart.svg" /> by 
-            <a *ngIf="lgScreen" style="text-decoration: none;" (click)="sendFCVisitEvent()" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
-            <p *ngIf="!lgScreen" style="text-align: center;margin: 0 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
+            <a class="brand" *ngIf="lgScreen" style="text-decoration: none;" (click)="sendFCVisitEvent()" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
+            <p class="brand" *ngIf="!lgScreen" style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
         </span>
     </div>
 
     <div class="d-none d-sm-none d-md-none d-lg-block">
         <div id="social-icons">
             <span class="share-label">Share this wedding website on:</span>
-            <a (click)="sendShareEvent('Facebook')" href="http://www.facebook.com/sharer/sharer.php?u=diya-aron.s3-website.ap-south-1.amazonaws.com" target="_blank">
+            <a (click)="sendShareEvent('Facebook')" href="http://www.facebook.com/sharer/sharer.php?u=diyaaron.s3-website.ap-south-1.amazonaws.com?utm_source=webshare%26utm_medium=fb" target="_blank">
                 <img style="padding: 0 9px;" src="assets/fb.svg" />
             </a>
-            <a (click)="sendShareEvent('Twitter')" href="https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diya-aron.s3-website.ap-south-1.amazonaws.com"
+            <a (click)="sendShareEvent('Twitter')" href="https://twitter.com/intent/tweet?text=AaronDiyaWedding&url=http://diyaaron.s3-website.ap-south-1.amazonaws.com?utm_source=webshare%26utm_medium=tw"
                 target="_blank">
                 <img style="padding: 0 9px;" src="assets/twitter.svg" />
             </a>
