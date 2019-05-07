@@ -14,7 +14,6 @@
 }
 .brand{
     font-family: Zilla slab;
-    font-weight: bold;
     font-size: 24px;
 }
 #share {
@@ -51,7 +50,6 @@
     }
     .brand{
         font-family: Zilla slab;
-        font-weight: bold;
         font-size: 17px;
     }
 }

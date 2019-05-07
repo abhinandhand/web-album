@@ -5,7 +5,7 @@
             <div class="land header">
                 <div class="row">
                     <div class="col-4 back-col">
-                        <div (click)="goToPage();">
+                        <div (click)="goToPage();sendAlbumBackEvent()">
                             <img class="back-icon" src="assets/left-arrow.svg">
                         </div>
                     </div>
@@ -17,10 +17,10 @@
                     <div class="col-4">
                         <div id="social-icons">
                             <span class="share-label d-none d-sm-none d-md-block">Share Photo:</span>
-                            <a class="share-link" href="http://www.facebook.com/sharer/sharer.php?u={{pageUrl}}" target="_blank">
+                            <a (click)="sendPhotoShareEvent('fb share')" class="share-link" href="http://www.facebook.com/sharer/sharer.php?u={{pageUrl}}" target="_blank">
                                 <img class="share-img" src="assets/fb.svg" />
                             </a>
-                            <a class="share-link" [href]="encoderTwitterURL()" target="_blank">
+                            <a (click)="sendPhotoShareEvent('tw share')" class="share-link" [href]="encoderTwitterURL()" target="_blank">
                                 <img class="share-img" src="assets/twitter.svg" />
                             </a>
                             <!-- <img style="padding: 0 9px;" src="assets/insta.svg" /> -->

@@ -21,6 +21,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   lgScreen:number;
   albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
   currentImg: string;
+  viewedImg: string;
   imgId: string;
   pinchZommerInitalised = false;
 
@@ -46,6 +47,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     this.route.queryParamMap
       .subscribe(params => {
         this.currentImg = params.get('url') ? params.get('url') : undefined;
+        this.viewedImg = this.currentImg;
         this.eventName = params.get('name');
         this.click = params.get('c') ? true : false;
         this.imgId = params.get('id') ? params.get('id') : undefined;
@@ -134,6 +136,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index + 1].url + '&id=' + this.albumData.data[this.index + 1]._id);
       this.pageUrl = location.href;
       this.index = this.index + 1;
+      this.viewedImg = this.albumData.data[this.index + 1].url;
+      this.sendAlbumPhotosChangeEvent('next', this.viewedImg);
     }
   }
 
@@ -144,6 +148,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       this.location.replaceState('/albums?name=' + this.eventName + '&url=' + this.albumData.data[this.index - 1].url + '&id=' + this.albumData.data[this.index - 1]._id);
       this.pageUrl = location.href;
       this.index = this.index - 1;
+      this.viewedImg = this.albumData.data[this.index - 1].url;
+      this.sendAlbumPhotosChangeEvent('previous', this.viewedImg);
     }
   }
 
@@ -156,5 +162,32 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     setTimeout(() => {
       this.routes.navigate(['/']);
     }, 1000);
+  }
+
+  sendAlbumPhotosChangeEvent = (clickType: string, imgUrl:string) => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Album Gallery clicks',
+      eventAction: 'Viewed ' + clickType + ' photo in ' + this.eventName,
+      eventLabel: 'Viewed: ' + imgUrl,
+      eventValue: 0
+    });
+  }
+
+  sendAlbumBackEvent = () => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Back to Home Page From Album',
+      eventLabel: 'Album viewed before navigated to Home ' + this.eventName,
+      eventAction: 'Image viewed before navigated to Home ' + this.viewedImg,
+      eventValue: 0
+    });
+  }
+
+  sendPhotoShareEvent = (name: string) => {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Image Shares',
+      eventAction: 'Share on ' + name,
+      eventLabel: 'Image Shared ' + this.viewedImg,
+      eventValue: 0
+    });
   }
 }
