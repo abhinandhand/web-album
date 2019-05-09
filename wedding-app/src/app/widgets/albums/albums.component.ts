@@ -76,7 +76,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   encoderTwitterURL() {
    // console.log(this.pageUrl.toString());
-   return ('https://twitter.com/intent/tweet?text=AaronDiyaWedding%26url=' + encodeURI( this.pageUrl.toString()));
+   let twUrl = 'diyaaron.s3-website.ap-south-1.amazonaws.com?utm_source=webshare%26utm_medium=tw';
+   return ('https://twitter.com/intent/tweet?text=AaronDiyaWedding%26url=' + encodeURI( twUrl.toString()));
   }
 
   fetchAlbumData() {
