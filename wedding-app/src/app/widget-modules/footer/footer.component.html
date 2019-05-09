@@ -2,8 +2,8 @@
     <div class="footer with-love">
         <span>handcrafted with 
             <img src="assets/heart.svg" /> by 
-            <a class="brand" *ngIf="lgScreen" style="text-decoration: none;" (click)="sendFCVisitEvent()" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
-            <p class="brand" *ngIf="!lgScreen" style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="http://www.foreverCelebrations.com" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
+            <a class="brand" *ngIf="lgScreen" style="text-decoration: none;" (click)="sendFCVisitEvent()" href="{{'https://www.foreverCelebrations.com?utm_medium=da-website&utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
+            <p class="brand" *ngIf="!lgScreen" style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="{{'https://www.foreverCelebrations.com?utm_medium=DA&utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
         </span>
     </div>
 

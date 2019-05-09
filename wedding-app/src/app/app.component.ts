@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { WeddingOverviewService } from './data-access/wedding-overview/wedding-overview.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 declare var $: any;
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ declare var $: any;
 })
 export class AppComponent implements OnInit {
   currentRoute:string;
-  constructor(private router: Router) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     $(document).bind('keydown', function(e) {
       if (e.keyCode === 83 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
@@ -17,8 +17,11 @@ export class AppComponent implements OnInit {
         return false;
       }
     });
-
-  //   $(document.body).on("touchmove", function(event) {
+    this.activatedRoute.queryParamMap
+    .subscribe(params => {
+      localStorage.setItem('utm_source', params.get('utm_source') ? params.get('utm_source') : 'da');
+    });
+    //   $(document.body).on("touchmove", function(event) {
   //     event.preventDefault();
   //     event.stopPropagation();
   // });

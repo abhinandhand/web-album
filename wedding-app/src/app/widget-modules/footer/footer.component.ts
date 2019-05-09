@@ -8,6 +8,7 @@ declare var $:any;
 })
 export class FooterComponent implements OnInit {
   lgScreen: boolean;
+  utmSource: string;
   constructor() { }
 
   ngOnInit() {
@@ -15,6 +16,8 @@ export class FooterComponent implements OnInit {
     $(window).resize(() => {
       this.reSizeImgCont();
       });
+      this.utmSource = localStorage.getItem('utm_source');
+
   }
 
   

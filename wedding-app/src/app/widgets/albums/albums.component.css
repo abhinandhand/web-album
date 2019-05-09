@@ -11,7 +11,7 @@ position: fixed;
 	left: 0%;
 }
 .modal-trans-opacity-leave{
-	left: -100%;
+	left: 100%;
 }
 .modal-trans:target {
 	opacity: 1;
