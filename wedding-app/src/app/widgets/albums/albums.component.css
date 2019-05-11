@@ -146,6 +146,9 @@ width: 90%;
 	.header{
 		z-index: 1030;
 	}
+	.landscape{
+		max-height: 100%;
+	}
   }
 
 /*Portrait Tablet */

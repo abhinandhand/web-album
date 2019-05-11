@@ -43,8 +43,7 @@
                     <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans" (swiperight)="prevImage()"
                     (swipeleft)="nextImage()" >
                                           <pinch-zoom style="display: unset" height="inherit" auto-zoom-out="true" zoom-button="false">
-                                <img *ngFor="let img of this.albumData.data;index as i" style="    max-width: 100%;
-                                max-height: 100%;" class="img-fluid smallscreen trans {{'img1'+i}}"  (load)="checkBgLoaded()" [ngClass]="i === index ? 'opaque':'non-opaque'"
+                                <img *ngFor="let img of this.albumData.data;index as i"  class="img-fluid landscape smallscreen trans {{'img1'+i}}"  (load)="checkBgLoaded()" [ngClass]="i === index ? 'opaque':'non-opaque'"
                                     [src]="img.url" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
                                 />
                                 <img class="placeholder-img img-fluid trans" [src]="currentImg">
