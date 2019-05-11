@@ -36,7 +36,6 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   }
 
   ngAfterViewChecked() {
-    //  $('.in').pinchzoomer();
   }
 
 
@@ -55,7 +54,6 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
         setTimeout(()=>{
           $('.modal-trans').addClass('modal-trans-opacity');
           },200);
-        //console.log();
         this.fetchAlbumData();
       });
      
@@ -92,29 +90,17 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
       } else {
         this.intialiseImageIndex(data);
       }
-      console.log($('.img1' + this.index));
       $('.img1' + this.index.toString()).addClass('opaque');
       $('.trans').addClass('trans-height');
-
-
-      $('.in').on('load', () => {
-        if(!this.pinchZommerInitalised){
-          $('.in').pinchzoomer();
-          this.pinchZommerInitalised = true;
-        }
-      });
+      setTimeout(()=>{
+        this.loadImageArrayAsync(0);
+      },200);
     });
-  }
-  checkBgLoaded(){
-    // setTimeout(()=>{
-    //   $('.placeholder-img').addClass('non-opaque');
-    // },100);
   }
 
   reSizeImgCont() {
     this.lgScreen = window.innerWidth > 980 ? 85 : 0;
     $('.content-block').height(window.innerHeight - this.lgScreen );
-    //$(window).PinchZoomer.init();
   }
 
   intialiseImageIndex(data) {
@@ -128,6 +114,11 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     this.albumData = data;
     $('.preload').attr('src', this.albumData.data[this.index + 1].url);
   }
+
+  loadImageArrayAsync(index) {
+    console.log($('#img1' + index));
+    $('#img1' + index).attr('src', this.albumData.data[index].url);
+}
 
 
   nextImage() {
