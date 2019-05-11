@@ -269,13 +269,6 @@ textarea {
      font-size: 28px;
      line-height: 45px;
     }
-    .guest-book-wish-text {
-        height: 69%;
-        text-indent: 3px;
-        left: 18%;
-        width: 74%;
-    
-    }
     .guest-wisher-info {
         bottom: 5%;
         right: 7%;
@@ -308,6 +301,26 @@ textarea {
     }
     .form-input-spacing{
         margin-top: 20px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 699px) {
+    .guest-book-wish-text {
+        height: 69%;
+        text-indent: 3px;
+        left: 18%;
+        width: 74%;
+    
+    }
+}
+
+/*Portrait Mobile */
+@media (min-width: 700px) and (max-width: 812px) {
+    .guest-book-wish-text {
+        height: 69%;
+        text-indent: 3px;
+        left: 34%;
+        width: 59%;
     }
 }
 

@@ -78,6 +78,44 @@
     height:210px;
 }
 
+
+@media (min-width: 481px) and (max-width: 699px) {
+    .couple-name-div {
+        position: relative;
+        top: 0;
+        height: 120px;
+        left: 0;
+        right: 0;
+    }
+    #marriage-date-summary{
+        font-size: 7vw;
+        line-height: 38px;
+       }
+
+      .duration-summary {
+        height: 116px;
+      }
+       
+}
+
+/*Portrait Tablet */
+@media (min-width: 700px) and (max-width: 812px) {
+    .couple-name-div {
+        position: relative;
+        top: 0px;
+        height: 145px;
+        left: 0px;
+        right: 0px;
+    }
+    .duration-summary {
+        height: 140px;
+    }
+    #marriage-date-summary {
+        font-size: 7vw;
+        line-height: 50px;
+    }
+}
+
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -91,27 +129,13 @@
         color: #9d45278a;
         margin-top: 17px;
        }
-       .couple-name-div{
-        position: relative;
-        top: 0px;
-        height: 90px;
-        left: 0px;
-        right: 0px;
-       }
-    
 
-       #marriage-date-summary{
-        font-size: 7vw;
-        line-height: 30px;
-       }
        
       #marriage-date {
         font-size: 6.5vw;
         line-height: 35px;
       }
-      .duration-summary {
-        height: 116px;
-      }
+      
     
     
   }

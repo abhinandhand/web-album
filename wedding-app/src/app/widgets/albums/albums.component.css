@@ -133,6 +133,33 @@ width: 90%;
 .back-col{
 	left: -50px;
 }
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 699px) {
+	.modal-content {
+		
+		background-color: #000000de;
+	}
+	.header{
+		z-index: 1030;
+	}
+  }
+
+/*Portrait Tablet */
+@media (min-width: 700px) and (max-width: 812px) {
+    .modal-content {
+		background-color: #fff;
+	}
+	.header{
+		z-index: 1030;
+	}
+}
+
+
+
  /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -180,9 +207,6 @@ width: 90%;
 	}
 	.modal-landscape {
 		background-color: white;
-	}
-	.modal-content{
-		background-color: #000000de;
 	}
 	.trans{
 		height: unset;
