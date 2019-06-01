@@ -1,10 +1,17 @@
 <div id="share" class="target">
     <div class="footer with-love">
-        <span>handcrafted with 
+        <span *ngIf="lgScreen">handcrafted with 
             <img src="assets/heart.svg" /> by 
-            <a class="brand" *ngIf="lgScreen" style="text-decoration: none;" (click)="sendFCVisitEvent()" href="{{'https://www.foreverCelebrations.com?utm_medium=da-website%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
-            <p class="brand" *ngIf="!lgScreen" style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="{{'https://www.foreverCelebrations.com?utm_medium=DA%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
+            <a class="brand"  style="text-decoration: none;" (click)="sendFCVisitEvent()" href="{{'https://www.foreverCelebrations.com?utm_medium=da-website%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
         </span>
+        <div *ngIf="!lgScreen" class="footer-sm-div">
+            <div class="hand-scale-static"> handcrafted with 
+                    <img src="assets/heart.svg" /> by</div>
+            <div class="brand-sm-div">
+                    <p class="brand brand-action"  style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="{{'https://www.foreverCelebrations.com?utm_medium=DA%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
+       
+            </div>
+        </div>
     </div>
 
     <div class="d-none d-sm-none d-md-none d-lg-block">

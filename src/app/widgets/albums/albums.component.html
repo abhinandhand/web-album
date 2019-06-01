@@ -32,19 +32,18 @@
 
                 <div onmousedown="return false" class="img-container">
 
-                    <div *ngIf="lgScreen" id="img-bucket" class="img-div-trans" style="height:inherit">
+                    <div *ngIf="lgScreen" id="img-bucket"  style="height:inherit">
                         <div  style="height: inherit;" (click)="nextImage()">
                             <img id="{{'img1'+i}}" *ngFor="let img of this.albumData.data;index as i"  [ngClass]="i === index ? 'opaque':'non-opaque'" class="img-fluid trans {{'img1'+i}}"
-                                 style="margin: auto;" (load)="loadImageArrayAsync(i+1)" data-src="" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
-                            />
-                            <img class="placeholder-img img-fluid trans" [src]="currentImg">
+                                 style="margin: auto;"  data-src="" src=""  />
+                            <img class="placeholder-img img-fluid trans"  [src]="currentImg">
                         </div>
                     </div>
-                    <div *ngIf="!lgScreen " id="zoomHolders" class="img-div-trans" (swiperight)="prevImage()"
+                    <div *ngIf="!lgScreen " id="zoomHolders"  (swiperight)="prevImage()"
                     (swipeleft)="nextImage()" >
                                           <pinch-zoom style="display: unset" height="inherit" auto-zoom-out="true" zoom-button="false">
-                                <img id="{{'img1'+i}}" (load)="loadImageArrayAsync(i+1)"  *ngFor="let img of this.albumData.data;index as i"  class="img-fluid   landscape smallscreen trans {{'img1'+i}}"   [ngClass]="i === index ? 'opaque':'non-opaque'"
-                                data-src="" onError="this.src='https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png'"
+                                <img id="{{'img1'+i}}"   *ngFor="let img of this.albumData.data;index as i" onError="this.src=''" alt=""  class="img-fluid   landscape smallscreen trans {{'img1'+i}}"   [ngClass]="i === index ? 'opaque':'non-opaque'"
+                                data-src="" src="" 
                                 />
                                 <img class="placeholder-img img-fluid trans" [src]="currentImg">
 
@@ -61,6 +60,6 @@
             </div>
         </div>
     </div>
-    <!-- <img class="preload" onload="this.style.display = 'block'" [src]="albumData.data[this.index+1].url" style="width: 1px;height: 1px;"> -->
+    <img *ngFor="let img of this.albumData.data;index as i" (load)="loadImageArrayAsync(i+1)" class="{{'preload'+i}}" onload="this.style.display = 'block'" data-src="" style="width: 1px;height: 1px;">
 
 </div>

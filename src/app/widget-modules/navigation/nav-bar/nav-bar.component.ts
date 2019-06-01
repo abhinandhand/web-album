@@ -34,9 +34,17 @@ export class NavBarComponent implements OnInit{
 
 
   sendGA(position) {
-    (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + position});
-    $('.nav-scroll a').removeClass('nav-active');
-		$('.nav-scroll a[href=#'+ position +']').addClass('nav-active');
+    // (<any>window).ga('send', 'pageview', {'page': location.pathname + location.search + position});
+    if (position !== 'hamburger'){
+      $('.nav-scroll a').removeClass('nav-active');
+      $('.nav-scroll a[href=#'+ position +']').addClass('nav-active');
+    }
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Menu Bar Clicks',
+      eventAction: 'menu-click: ' + position,
+      eventLabel: 'nav bar',
+      eventValue: 0
+    });
   }
   onChange (){
     this.isCollapsed = !this.isCollapsed;
@@ -73,6 +81,8 @@ export class NavBarComponent implements OnInit{
       eventValue: 0
     });
   }
+
+  
 
 
 }

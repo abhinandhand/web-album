@@ -43,6 +43,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     $('#exampleModal').ontouchmove = (e) => { e.preventDefault(); return false; };
     $('body').addClass('modal-open');
     $('.placeholder-img').removeClass('non-opaque');
+    $('#img10').addClass('img-div-trans');
+    $('#img11').addClass('img-div-trans');
     this.route.queryParamMap
       .subscribe(params => {
         this.currentImg = params.get('url') ? params.get('url') : undefined;
@@ -54,6 +56,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
         setTimeout(()=>{
           $('.modal-trans').addClass('modal-trans-opacity');
           },200);
+          
         this.fetchAlbumData();
       });
      
@@ -107,7 +110,6 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
     for (const index in data.data) {
       if (data.data[index]._id === this.imgId) {
         this.albumData = data;
-        console.log(index);
         this.index = parseInt(index);
       }
     }
@@ -116,8 +118,16 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   }
 
   loadImageArrayAsync(index) {
-    console.log($('#img1' + index));
-    $('#img1' + index).attr('src', this.albumData.data[index].url);
+    var i = parseInt(index) - 1;
+    $('#img1' + index).addClass('img-div-trans');
+    $('.preload' + index).attr('src', this.albumData.data[index].url);
+    $('#img1' + i).attr('src', this.albumData.data[i].url);
+    $('#img1' + i).removeClass('img-div-trans');
+    if(this.albumData.data.length === (index + 1)) {
+      $('#img1' + index).attr('src', this.albumData.data[index].url);
+      $('#img1' + index).removeClass('img-div-trans');
+    }
+    
 }
 
 

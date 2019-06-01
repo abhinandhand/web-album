@@ -48,7 +48,10 @@
           <span style="color: #ff000091;" *ngIf="location.errors.required">Location is required</span>
         </div>
       <div  class="form-input-spacing">
-        <input name="email" [(ngModel)]="wishObj.email" placeholder="Email" />
+        <input name="email" [(ngModel)]="wishObj.email" #email="ngModel" placeholder="Email" required/>
+      </div>
+      <div *ngIf="guestForm.submitted && email.invalid">
+        <span style="color: #ff000091;" *ngIf="email.errors.required">Email is required</span>
       </div>
       <div  class="form-input-spacing">
         <textarea name="message" [(ngModel)]="wishObj.message" #message="ngModel"  placeholder="Write your thoughts and wishes for the newly wedded couple." required></textarea>

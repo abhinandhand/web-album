@@ -1,6 +1,7 @@
 #couple-name{
     text-align: center;
-    font-family: Great Vibes, Regular;
+    font-family: 'English 111 Vivace BT', arial;
+    /* font-family: Great Vibes, Regular; */
     /* font-size: 142px; */
     font-size: 8.395vw;
     line-height: 178px;
@@ -127,7 +128,7 @@
         font-size: 13.395vw;
         line-height: 0;
         color: #9d45278a;
-        margin-top: 17px;
+        margin-top: -5px;
        }
 
        
@@ -151,7 +152,7 @@
     font-size: 15.395vw;
     line-height: 0;
     color: #9d45278a;
-    margin-top: 17px;
+    margin-top: 4px;
    }
    .couple-name-div{
     position: relative;
@@ -165,6 +166,7 @@
    #marriage-date-summary{
            font-size: 7vw;
            line-height: 30px;
+           margin-top: -6px;
        }
     
     #marriage-date {

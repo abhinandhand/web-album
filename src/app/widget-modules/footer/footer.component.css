@@ -15,6 +15,7 @@
 .brand{
     font-family: Zilla slab;
     font-size: 24px;
+    transition: all 1s ease-in-out;
 }
 #share {
     display: flex;
@@ -34,10 +35,35 @@
     padding: 0px 9px;
 }
 .highlight-blue {
-    color: #209cff;
+    color: #4970db;
 }
 .highlight-black{
-    color: #111111;
+    color: #0a1525;
+}
+.footer-sm-div{
+    position: relative;
+    height: inherit;
+    width: 100%;
+}
+.hand-scale-static{
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    top: 3px;
+    left: -2px;
+}
+.brand-sm-div{
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 31px;
+}
+
+.brand-pop{
+    font-size: 35px !important;
+    margin-top: -36% !important;
+   
 }
 @media (min-width: 481px) and (max-width: 812px) {
     .with-love {

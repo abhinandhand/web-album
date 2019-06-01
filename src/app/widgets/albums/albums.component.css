@@ -103,6 +103,10 @@ width: 90%;
 	font-size: 35px;
     color: #80808091;
 }
+.img-div-trans{
+  background: transparent url('/assets/cube.gif')  center no-repeat ;
+  
+}
 .page-left{
 	position: absolute;
     top: 48%;
@@ -149,6 +153,11 @@ width: 90%;
 	.landscape{
 		max-height: 100%;
 	}
+	.img-div-trans{
+		width: 21%;
+top: 15%;
+background-size: 114px;
+	}
   }
 
 /*Portrait Tablet */
@@ -158,6 +167,11 @@ width: 90%;
 	}
 	.header{
 		z-index: 1030;
+	}
+	.img-div-trans{
+		width: 21%;
+top: 15%;
+background-size: 114px;
 	}
 }
 
@@ -227,6 +241,11 @@ width: 90%;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;
+	}
+	.img-div-trans{
+		top: 40%;
+    height: 80px !important;
+    width: 80px;
 	}
 }
 
@@ -305,6 +324,11 @@ transition: all 0.5s ease-in-out;
 		.trans-placeholder{
 			width: 100%;
 			z-index: unset;
+		}
+		.img-div-trans{
+			width: 76px;
+			top: 15%;
+			background-size: 76px;
 		}
 }
 
