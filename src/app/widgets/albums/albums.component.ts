@@ -19,7 +19,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   click: boolean = false;
   pageUrl: string;
   lgScreen:number;
-  albumUrl = 'http://ec2-52-66-182-119.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
+  albumUrl = 'http://13.234.233.5:8080/album?eventName=';
   currentImg: string;
   viewedImg: string;
   imgId: string;
@@ -77,8 +77,8 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
 
   encoderTwitterURL() {
    // console.log(this.pageUrl.toString());
-   let twUrl = 'diyaaron.s3-website.ap-south-1.amazonaws.com?utm_source=webshare%26utm_medium=tw';
-   return ('https://twitter.com/intent/tweet?text=AaronDiyaWedding%26url=' + encodeURI( twUrl.toString()));
+   let twUrl = 'www.diyaaron.com?utm_source=webshare%26utm_medium=tw';
+   return ('https://twitter.com/intent/tweet?text=Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book. ' + encodeURI( twUrl.toString()));
   }
 
   fetchAlbumData() {
