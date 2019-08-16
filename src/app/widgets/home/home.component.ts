@@ -25,12 +25,12 @@ export class HomeComponent implements OnInit {
 		localStorage.setItem('isPausedByUser', 'false');
 		this.fetchWedOverview();
 		$(window).scroll(function () {
-			if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight -50)) {
-				setTimeout(()=> {
-					$(".brand-action").removeClass("brand-pop");
-				},7000);
-				$(".brand-action").addClass("brand-pop");
-			}
+			// if((window.innerHeight + window.scrollY) >= (document.body.offsetHeight -50)) {
+			// 	setTimeout(()=> {
+			// 		$(".brand-action").removeClass("brand-pop");
+			// 	},7000);
+			// 	$(".brand-action").addClass("brand-pop");
+			// }
 			var height = $('.key-bg').height();
 			var scrollTop = $(window).scrollTop();
 			if (scrollTop >= height - 210) {
