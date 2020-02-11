@@ -33,8 +33,8 @@
 }
 #marriage-date {
     text-align: center;
-    font-family: Playfair Display, Regular;
-    font-size: 60px;
+    font-family: 'English 111 Vivace BT', arial;
+    font-size: 62px;
     line-height: 80px;
     color: #303B44;
 }
@@ -44,7 +44,8 @@
     font-size: 52px;
     line-height: 52px;
     word-spacing: 10;
-    color: #303B44;
+    padding-top:20px;
+    color: #720702;
 
 }
 .couple-name-div{
@@ -76,7 +77,8 @@
     
 }
 .duration-summary {
-    height:210px;
+    /* height:210px; */
+    padding-bottom: 20px;
 }
 
 

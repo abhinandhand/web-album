@@ -19,7 +19,7 @@ export class AlbumsComponent implements OnInit, OnDestroy, AfterViewChecked {
   click: boolean = false;
   pageUrl: string;
   lgScreen:number;
-  albumUrl = 'http://13.234.233.5:8080/album?eventName=';
+  albumUrl = 'http://ec2-13-233-223-187.ap-south-1.compute.amazonaws.com:8080/album?eventName=';
   currentImg: string;
   viewedImg: string;
   imgId: string;
