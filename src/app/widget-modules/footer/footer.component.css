@@ -1,0 +1,96 @@
+.footer {
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+.with-love {
+    display: flex;
+    justify-content: center;
+    font-family: Great Vibes, Regular;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    color: #445563;
+}
+.brand{
+    font-family: Zilla slab;
+    font-size: 24px;
+    transition: all 1s ease-in-out;
+}
+#share {
+    display: flex;
+    height: 68px;
+    background-color: #E4E0DD;
+    width: 100%;
+}
+#social-icons {
+    position: absolute;
+    right: 8%;
+    bottom: 22px;
+}
+.share-label{
+    font-family: Playfair Display, Regular;
+    font-size: 15px;
+    color: #445563;
+    padding: 0px 9px;
+}
+.highlight-blue {
+    color: #4970db;
+}
+.highlight-black{
+    color: #0a1525;
+}
+.footer-sm-div{
+    position: relative;
+    height: inherit;
+    width: 100%;
+}
+.hand-scale-static{
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    top: 3px;
+    left: -2px;
+}
+.brand-sm-div{
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 31px;
+}
+
+.brand-pop{
+    font-size: 35px !important;
+    margin-top: -36% !important;
+   
+}
+@media (min-width: 481px) and (max-width: 812px) {
+    .with-love {
+       font-size: 20px;
+       letter-spacing: 0.5px;
+    }
+    .footer {
+        height: max-content;
+        padding: 4px 0px;
+    }
+    .brand{
+        font-family: Zilla slab;
+        font-size: 17px;
+    }
+}
+
+/*Portrait Mobile */
+@media (min-width: 320px) and (max-width: 480px) {
+    .with-love {
+        font-size: 19px;
+        letter-spacing: 0.5px;
+     }
+     .footer {
+        height: max-content;
+        padding: 4px 0px;
+    }
+    .brand{
+        font-size: 17px;
+    }
+}

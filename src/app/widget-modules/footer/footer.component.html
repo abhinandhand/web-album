@@ -1,0 +1,33 @@
+<div id="share" class="target">
+    <div class="footer with-love">
+        <span *ngIf="lgScreen">handcrafted with 
+            <img src="assets/heart.svg" /> by 
+            <a class="brand"  style="text-decoration: none;" (click)="sendFCVisitEvent()" href="{{'https://www.foreverCelebrations.com?utm_medium=da-website%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a>
+        </span>
+        <div *ngIf="!lgScreen" class="footer-sm-div">
+            <div class="hand-scale-static"> handcrafted with 
+                    <img src="assets/heart.svg" /> by</div>
+            <div class="brand-sm-div">
+                    <p class="brand brand-action"  style="text-align: center; margin: -1px 0 0 -7px;">  <a (click)="sendFCVisitEvent()"  style="text-decoration: none;" href="{{'https://www.foreverCelebrations.com?utm_medium=DA%26utm_source='+utmSource}}" target="_blank"><span class="highlight-blue">forever</span><span class="highlight-black">Celebrations</span></a></p>
+       
+            </div>
+        </div>
+    </div>
+
+    <div class="d-none d-sm-none d-md-none d-lg-block">
+        <div id="social-icons">
+            <span class="share-label">Share this wedding website on:</span>
+            <a (click)="sendShareEvent('Facebook')" href="http://www.facebook.com/sharer/sharer.php?u=diyaaron.com?utm_source=webshare%26utm_medium=fb" target="_blank">
+                <img style="padding: 0 9px;" src="assets/fb.svg" />
+            </a>
+            <a (click)="sendShareEvent('Twitter')" href="https://twitter.com/intent/tweet?text=Visit Aaron and Diya’s wedding website to celebrate their wedding moments. Browse through their wedding album and leave your message in their wedding guest book.&url=http://diyaaron.com?utm_source=webshare%26utm_medium=tw"
+                target="_blank">
+                <img style="padding: 0 9px;" src="assets/twitter.svg" />
+            </a>
+            <!-- <img style="padding: 0 9px;" src="assets/insta.svg" /> -->
+        </div>
+    </div>
+</div>
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button> -->

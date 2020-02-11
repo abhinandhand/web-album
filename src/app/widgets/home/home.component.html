@@ -1,0 +1,41 @@
+<div>
+    <router-outlet></router-outlet>
+</div>
+<div>
+  <div class="key-bg col-md-12 col-sm-12 col-xs-12" [ngStyle]="{'background-image':'url(' +wedddingOverviewData?.data?.welcome+ ')'}">
+          <div  class="header-cont" [ngStyle]="(!isCollapsed && !lgScreen) ? {'height':'300px','transition': 'height 0.35s ease'}:{'height':'45px', 'transition': 'height 0.35s ease'}">
+              <app-nav-bar [(playMusic)]="playMusic" (isMusicOnChange)="onMusicChange($event)" [audioUrl]="wedddingOverviewData?.data?.bg_music" style="height: inherit;"
+                [imageUrl]="wedddingOverviewData?.data?.welcome" [(isCollapsed)]="isCollapsed"
+              ></app-nav-bar>
+  
+            </div>
+            <audio id="player"[src]="wedddingOverviewData?.data?.bg_music"  loop preload></audio>
+            <img (load)="checkBgLoaded()"  class="img-fluid hidden-img" [src]="wedddingOverviewData?.data?.welcome" style="visibility: hidden;" /> 
+    </div>
+  <div class="container-fluid-nomax">
+        <div class="parent-container">
+          <div>
+              <div style="padding-left: 0px;padding-right: 0px" >
+              <div class="couple-container">
+                <app-container [(playMusic)]="playMusic" (isMusicOnChange)="onMusicChange($event)" [weddingData]="wedddingOverviewData" ></app-container>
+              </div>
+            </div>
+            <div style="padding-left: 0px;padding-right: 0px">
+                <div style="min-height: 1000px;background-color: #F6F2EF;width: 100%;position: relative;">
+                    <app-guest-book [(playMusic)]="playMusic" (isMusicOnChange)="onMusicChange($event)" ></app-guest-book>
+                </div>
+            </div>
+            <div style="padding-left: 0px;padding-right: 0px;">
+                <app-footer></app-footer>
+            </div>
+          </div>
+          <img onload="this.style.display = 'none'"  style="width: 0px;height: 0px;" src="https://www.tiffinmotorhomes.com.au/wp-content/uploads/2016/01/image-placeholder.png">
+          <img onload="this.style.display = 'none'"  style="width: 0px;height: 0px;" src="assets/play-button.svg">
+          <img onload="this.style.display = 'none'"  style="width: 0px;height: 0px;" src="assets/cube.gif">
+          </div>
+        </div>
+    </div>
+
+    
+
+

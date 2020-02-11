@@ -1,0 +1,59 @@
+<div id="events">
+                
+                                
+                <!-- [routerLink]="['/albums',event.title,event.background,true]" -->
+
+         <div *ngFor="let event of weddingEventList;index as i" [ngClass]="event.type === 'large' ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)">
+                                    <div  (click)="goToPage(event.title,event.background,$event);"  *ngIf="event.type === 'large'" class="event-large-card">
+                                                <a  class="tilter tilter--1">
+                                                                <figure class="tilter__figure">
+                                                                        <img class="tilter__image" [src]="event.background" alt="img02" />
+                                                                        <div class="tilter__deco tilter__deco--shine"><div ></div></div>
+                                                                        <div class="event-label">{{event.title}}</div>
+                                                                </figure>
+                                                        </a>
+                                              
+                                    </div>
+                                    <div (click)="goToPage(event.title,event.background,$event);"  *ngIf="event.type !== 'large'" class="event-small-card" [ngClass]="(i+1) % 2 !== 0 ? 'small-card-left-padding' : 'small-card-right-padding'">
+                                                <a  class="tilter tilter--1">
+                                                                <figure class="tilter__figure">
+                                                                        <img class="tilter__image" [src]="event.background" alt="img02" />
+                                                                        <div class="tilter__deco tilter__deco--shine"><div></div></div>
+                                                                        <div class="event-label">{{event.title}}</div>
+                                                                </figure>
+                                                        </a>   
+                                     </div>
+        </div>
+
+
+
+           <div class="d-none d-sm-none d-md-none d-lg-block">
+                <div id="bottom-mandala" >
+                        <img style="width: 37vw;height: 250px;" src="assets/illustrators/mandala-bottom.png"/>
+                </div>
+           </div> 
+           <div id="guestbook" class="target">
+
+           </div>            
+        
+  <!-- <div *ngFor="let eventList of weddingEventList;index as i">
+            <div [ngClass]="i === 0 ? 'event-big-card-conatiner' : 'event-small-card-conatiner'" (click)="fetchAlbum(event.action)" *ngFor="let event of eventList.row;index as j">
+                <div  *ngIf="i === 0" class="event-large-card">
+                         <img style="max-height: inherit;width: 100%" [src]="event.backgroundImage"/>
+                        <div class="event-label">{{event.name}}</div>
+                          
+                </div>
+                <div *ngIf="i === 1" class="event-small-card" [ngClass]="(j+1) % 2 !== 0 ? 'small-card-right-padding' : 'small-card-left-padding'">
+                        <img style="max-height: inherit;width: 100%" [src]="event.backgroundImage"/>
+                                <div class="event-label">{{event.name}}</div>
+                 </div>
+            </div>
+    </div> -->
+    
+    <!-- <div *ngIf="albumOverviewData?.data?.albumItems?.length>0">
+        <app-albums [albumArray] ="albumOverviewData?.data?.albumItems"></app-albums>
+    </div>
+    <div *ngIf="albumOverviewData?.data?.albumItems?.length>0">
+            <app-albums [albumArray] ="albumOverviewData?.data?.albumItems"></app-albums>
+        </div> -->
+</div>
