@@ -28,5 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deployment build command
 ng build --prod --base-href https://abhinandhand.github.io/wedding-app/diyaaron/
+
 ngh -no-silent
 
