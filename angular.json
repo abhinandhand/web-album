@@ -17,7 +17,7 @@
               "styles": false,
               "vendor": true
             },
-            "outputPath": "dist/web-album",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

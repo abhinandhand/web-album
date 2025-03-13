@@ -22,7 +22,7 @@ export class WeddingOverviewService {
 
   getWishes() {
     return this.http.get(
-      "https://run.mocky.io/v3/9af76ee0-b24f-4252-aacf-ecf93612607d"
+      "https://raw.githubusercontent.com/abhinandhand/static-data/refs/heads/main/web-album/guestwish.json"
     );
   }
 }
