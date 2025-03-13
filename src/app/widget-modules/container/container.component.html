@@ -1,50 +1,52 @@
 <div (click)="playAudio()">
-  <div style="padding-left: 0%;padding-right: 0%;" class="middle-container">
-    <div id="con-marriage-info">
-      <app-couplestory [imageUrl]="weddingData?.data?.welcome"></app-couplestory>
+  <div style="padding-left: 0%; padding-right: 0%" class="middle-container">
+    <div id="con-marriage-info" *ngIf="weddingData">
+      <app-couplestory
+        [imageUrl]="weddingData?.data?.welcome"
+      ></app-couplestory>
     </div>
-    
-      <div id="con-album-label">
-          <hr  class="hr-text" data-content="ALBUMS">
-        <!-- <img class="con-album-label-hr" src="assets/rectangle.svg" />
+
+    <div id="con-album-label">
+      <hr class="hr-text" data-content="ALBUMS" />
+      <!-- <img class="con-album-label-hr" src="assets/rectangle.svg" />
         <span id="album" style="padding-left: 20px;padding-right: 17px;"
           >ALBUMS</span>
         <img
           class="con-album-label-hr"
           style="transform: scale(-1);"
           src="assets/rectangle.svg" /> -->
+    </div>
+    <div class="con-event-container" *ngIf="weddingData">
+      <app-wedding-events
+        [(playMusic)]="playMusic"
+        [weddingEventList]="weddingData?.data?.album"
+      ></app-wedding-events>
+    </div>
+    <div class="d-none d-sm-none d-md-none d-lg-block">
+      <div class="top-left-mandala">
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
       </div>
-    <div class="con-event-container">
-        <app-wedding-events [(playMusic)]="playMusic"
-          [weddingEventList]="weddingData?.data?.album"
-        ></app-wedding-events>
+      <div class="top-right-mandala">
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
       </div>
-   <div class="d-none d-sm-none d-md-none d-lg-block">
-    <div class="top-left-mandala">
-      <img class="img-mandala" src="assets/illustrators/mandala.png" />
-    </div>
-    <div class="top-right-mandala">
-      <img class="img-mandala" src="assets/illustrators/mandala.png" />
-    </div>
-    <div class="middle-left-mandala">
-      <img class="img-mandala" src="assets/illustrators/mandala.png" />
-    </div>
-    <div class="middle-right-mandala">
-      <img class="img-mandala" src="assets/illustrators/mandala.png" />
-    </div>
-    <div class="middle-left2-mandala">
+      <div class="middle-left-mandala">
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
+      </div>
+      <div class="middle-right-mandala">
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
+      </div>
+      <div class="middle-left2-mandala">
         <img class="img-mandala" src="assets/illustrators/mandala.png" />
       </div>
       <div class="middle-right2-mandala">
         <img class="img-mandala" src="assets/illustrators/mandala.png" />
       </div>
       <div class="middle-left3-mandala">
-          <img class="img-mandala" src="assets/illustrators/mandala.png" />
-        </div>
-        <div class="middle-right3-mandala">
-          <img class="img-mandala" src="assets/illustrators/mandala.png" />
-        </div>
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
+      </div>
+      <div class="middle-right3-mandala">
+        <img class="img-mandala" src="assets/illustrators/mandala.png" />
+      </div>
+    </div>
   </div>
 </div>
-
-

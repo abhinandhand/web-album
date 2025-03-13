@@ -1,32 +1,34 @@
 <div>
-    <div class="couple-name-div"  >
-            <!-- <div class="couple-name-bg"  [ngStyle]="{'background':'url('+ imageUrl +')'}" ></div>  -->
-                <!-- <div class="couple-name-bg"   ></div>  -->
-                <div  class="cp-bg d-none d-sm-none d-md-none d-lg-block" [ngStyle]="{'background':'url('+ imageUrl +')'}" >
-                    
-   
-                </div>
-                
-                <h1 id="couple-name">{{'Diya & Aaron'}}</h1> 
+  <div class="couple-name-div">
+    <!-- <div class="couple-name-bg"  [ngStyle]="{'background':'url('+ imageUrl +')'}" ></div>  -->
+    <!-- <div class="couple-name-bg"   ></div>  -->
+    <div
+      class="cp-bg d-none d-sm-none d-md-none d-lg-block"
+      [ngStyle]="{ background: 'url(' + imageUrl + ')' }"
+    ></div>
+
+    <h1 id="couple-name">{{ "Diya & Aaron" }}</h1>
+  </div>
+  <div class="duration-summary">
+    <div class="nav-container"></div>
+    <div id="marriage-date-summary">
+      <span style="padding-left: 20px; padding-right: 17px"
+        >Celebrating
+        <span *ngIf="togetherMonth >= 0" class="duration"
+          >{{ togetherMonth }}
+          <span *ngIf="togetherMonth <= 1">month</span>
+          <span *ngIf="togetherMonth > 1">months</span>
+        </span>
+        <span *ngIf="togetherYear >= 0" class="duration"
+          >{{ togetherYear }}
+          <span *ngIf="togetherYear <= 1">year</span>
+          <span *ngIf="togetherYear > 1">years</span>
+        </span>
+        of togetherness
+      </span>
+      <div>since</div>
     </div>
-    <div class="duration-summary">
-         <div  class="nav-container"></div>
-            <div id="marriage-date-summary">
-                    <span style="padding-left: 20px;padding-right: 17px;">Celebrating 
-                        <span *ngIf="togetherMonth>=0" class="duration">{{togetherMonth}} 
-                            <span *ngIf="togetherMonth<=1">month</span>
-                            <span *ngIf="togetherMonth>1">months</span>
-                        </span>
-                         <span *ngIf="togetherYear>=0" class="duration">{{togetherYear}} 
-                                <span *ngIf="togetherYear<=1">year</span>
-                                <span *ngIf="togetherYear>1">years</span>
-                        </span> of togetherness
-                    </span>
-                 <div>since</div>
-            </div>
-            <div id="album" class="target"></div> 
-            <h1 id="marriage-date">10 February 2019</h1>
-    </div>
+    <div id="album" class="target"></div>
+    <h1 id="marriage-date">10 February 2019</h1>
+  </div>
 </div>
-
-

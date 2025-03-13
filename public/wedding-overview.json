@@ -1,0 +1,210 @@
+{
+  "status": "success",
+  "message": "",
+  "data": {
+    "welcome": "https://images.pixieset.com/96161171/41fd204323654ca997802b24f30a3783-xxlarge.jpg",
+    "album": [
+      {
+        "title": "CHURCH NUPTIALS",
+        "background": "https://images.pixieset.com/96161171/8f4f58a3c99cb0ec69338b4f6528205e-large.jpg",
+        "action": "#",
+        "type": "large"
+      },
+      {
+        "title": "DIYA’S ROCE",
+        "background": "https://images.pixieset.com/96161171/e0057c607e93a2cefbe18ac0cddd88af-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "AARON’S ROCE",
+        "background": "https://images.pixieset.com/96161171/13ce4c186ddb4d58e017acf801d2a14a-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "DUBAI",
+        "background": "https://images.pixieset.com/96161171/c82dd398ccca2d657d82a3e2c95d4024-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "POOL PARTY",
+        "background": "https://images.pixieset.com/96161171/629871bacbbfb34885532e5f2787c331-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "CARNIVAL NIGHT",
+        "background": "https://images.pixieset.com/96161171/163d1beb5a3e7bada9d7bd03d7259e52-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "COCKTAIL PARTY",
+        "background": "https://images.pixieset.com/96161171/40a4eca4ce07ef7dedfeff615211c885-large.jpg",
+        "action": "#",
+        "type": "medium"
+      },
+      {
+        "title": "RECEPTION",
+        "background": "https://images.pixieset.com/96161171/9ed66e1e2b22ba5a247b0a25f61cf3da-large.jpg",
+        "action": "#",
+        "type": "large"
+      }
+    ],
+    "guestWishes": [
+      {
+        "_id": "5c7a9051096632211538d91f",
+        "name": "Jason",
+        "location": "Mangalore",
+        "email": "jason.pinto@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the lovely couple",
+        "createdDate": "2019-03-02T14:16:49.475Z",
+        "modifiedDate": "2019-03-02T14:39:02.935Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b5ecb35457023be4cfde8",
+        "name": "Sachin Bharadwaj",
+        "location": "Mangalore",
+        "email": "alertsachinbharadwaj@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T04:57:47.509Z",
+        "modifiedDate": "2019-03-03T04:57:47.509Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b5efa35457023be4cfde9",
+        "name": "Abhinandan",
+        "location": "Mangalore",
+        "email": "abhinandan@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T04:58:34.998Z",
+        "modifiedDate": "2019-03-03T04:58:34.998Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8bd6e917f2245df7df65",
+        "name": "Rajesh",
+        "location": "Mangalore",
+        "email": "rajesh@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:09:58.019Z",
+        "modifiedDate": "2019-03-03T08:09:58.019Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8bf1e917f2245df7df66",
+        "name": "Darshan",
+        "location": "Mangalore",
+        "email": "bharadwaj.darshan@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:10:25.288Z",
+        "modifiedDate": "2019-03-03T08:10:25.288Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8c03e917f2245df7df67",
+        "name": "Sunay",
+        "location": "Bengaluru",
+        "email": "bharadwaj.sunay@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:10:43.637Z",
+        "modifiedDate": "2019-03-03T08:10:43.637Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8c23e917f2245df7df68",
+        "name": "Madhu K",
+        "location": "Bengaluru",
+        "email": "madhukrishnamurthi@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:11:15.673Z",
+        "modifiedDate": "2019-03-03T08:11:15.673Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8c35e917f2245df7df69",
+        "name": "Sagar",
+        "location": "Bengaluru",
+        "email": "sagar@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:11:33.423Z",
+        "modifiedDate": "2019-03-03T08:11:33.423Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8c49e917f2245df7df6a",
+        "name": "Dinesh",
+        "location": "Bengaluru",
+        "email": "dineshdoddaraju@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:11:53.894Z",
+        "modifiedDate": "2019-03-03T08:11:53.894Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8c84e917f2245df7df6b",
+        "name": "Chandrashekar",
+        "location": "Bengaluru",
+        "email": "nadurChandrashekhar@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:12:52.935Z",
+        "modifiedDate": "2019-03-03T08:12:52.935Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8cc9e917f2245df7df6c",
+        "name": "Ajay Shetty",
+        "location": "Bengaluru",
+        "email": "shettyajay@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:14:01.064Z",
+        "modifiedDate": "2019-03-03T08:14:01.064Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8d6be917f2245df7df6d",
+        "name": "Narendra Modi",
+        "location": "Delhi",
+        "email": "namo@gmail.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:16:43.126Z",
+        "modifiedDate": "2019-03-03T08:16:43.126Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8d8ee917f2245df7df6e",
+        "name": "Nandakishor",
+        "location": "Udupi",
+        "email": "nandakishor@robosoftin.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:17:18.864Z",
+        "modifiedDate": "2019-03-03T08:17:18.864Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8da1e917f2245df7df6f",
+        "name": "Akshay Rao",
+        "location": "Udupi",
+        "email": "rao.akshay@robosoftin.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:17:37.023Z",
+        "modifiedDate": "2019-03-03T08:17:37.023Z",
+        "__v": 0
+      },
+      {
+        "_id": "5c7b8db8e917f2245df7df70",
+        "name": "Rajeev",
+        "location": "Udupi",
+        "email": "rajeev@robosoftin.com",
+        "message": "Happy 1st month wedding aniversary to the couple",
+        "createdDate": "2019-03-03T08:18:00.218Z",
+        "modifiedDate": "2019-03-03T08:18:00.218Z",
+        "__v": 0
+      }
+    ],
+    "bg_music": "https://github.com/abhinandhand/static-data/raw/refs/heads/main/web-album/web_album.mp3"
+  }
+}
