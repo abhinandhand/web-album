@@ -60,7 +60,7 @@ width: 90%;
 	height: inherit;
 }
 .header{
-	position: absolute;
+	/* position: absolute; */
 	height: 85px;
     width: 100%;
     /* border: 1px solid blue; */
@@ -75,8 +75,9 @@ width: 90%;
     align-items: center;
 }
 .content-block{
-	position: absolute;
-	top: 85px;
+	height: calc(100vh - 85px);
+	/* position: absolute; */
+	/* top: 85px; */
 	width: 100%;
 	/* position: relative; */
 	/* margin-top: 20px; */
@@ -99,7 +100,7 @@ width: 90%;
 .page-right{
 	position: absolute;
     top: 48%;
-	right: 8px;
+	right: 15rem;
 	font-size: 35px;
     color: #80808091;
 }
@@ -110,7 +111,7 @@ width: 90%;
 .page-left{
 	position: absolute;
     top: 48%;
-	left: 8px;
+	left: 15rem;
 	font-size: 35px;
     color: #80808091;
 }
@@ -119,10 +120,15 @@ width: 90%;
 	width: 100%;
 	height: inherit;
 	position: relative;
-	overflow: hidden
+	overflow: hidden;
+	
 }
 #zoomHolders div{
 	 height: inherit;
+	 display: flex;
+	height: inherit;
+	justify-content: center;
+	align-items: center;
  }
 
 .dispaly-img-cont{
@@ -240,7 +246,7 @@ background-size: 114px;
 		-webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in;
 	}
 	.img-div-trans{
 		top: 40%;
@@ -276,13 +282,13 @@ transition: all 0.5s ease-in-out;
 		height: inherit;
 	}
 	.page-left{
-		top: 43%;
+		top: 52%;
 		left: 1px;
 		color: #808080a6;
 		font-size: 26px;
 		}
 		.page-right{
-			top: 43%;
+			top: 52%;
 			right: 1px;
 			color: #808080a6;
 			font-size: 26px;
@@ -303,18 +309,19 @@ transition: all 0.5s ease-in-out;
 		height: unset;
 		left: unset;
 		right: unset;
-		top: 25%;
-		bottom: 25%;
+		/* top: 25%;
+		bottom: 25%; */
 		margin: unset;
 		display: unset;
 	   }
 	   .trans-placeholder{
+		position: relative;
 		height: unset;
 		height: unset;
 		left: unset;
 		right: unset;
-		top: 25%;
-		bottom: 25%;
+		/* top: 25%;
+		bottom: 25%; */
 		margin: unset;
 		display: unset;
 		}
@@ -353,6 +360,7 @@ transition: all 0.5s ease-in-out;
 	}
 	.page-right{
 		right: 2px;
+		
 }
 .page-left{
 	left: 2px;

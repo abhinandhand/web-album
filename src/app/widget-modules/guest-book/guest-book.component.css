@@ -228,13 +228,6 @@ textarea {
     font-size: 30px;
     color: #2e2d2c5e;
 }
-
-.book-depth {
-    border-right: 15px solid rgba(117, 117, 117, 0.46);
-    border-bottom: 9px solid rgba(117, 117, 117, 0.51);
-    border-radius: 7px;
-}
-
 .form-input-spacing{
     margin-top: 50px;
 }
@@ -407,13 +400,17 @@ textarea {
     
 }
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
-    input { 
-        height: 80px;
+    @media {
+        input { 
+            height: 80px;
+        }
     }
 }
 
 @media not all and (min-resolution:.001dpcm) { 
-    input { 
-        height: 80px; 
+    @media {
+        input { 
+            height: 80px; 
+        }
     }
 }
