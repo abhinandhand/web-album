@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding-app": {
+    "web-album": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
               "styles": false,
               "vendor": true
             },
-            "outputPath": "dist/wedding-app",
+            "outputPath": "dist/web-album",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,11 +71,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wedding-app:build"
+            "browserTarget": "web-album:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "wedding-app:build:production"
+              "browserTarget": "web-album:build:production"
             },
             "development": {
               "sourceMap": true
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wedding-app:build"
+            "browserTarget": "web-album:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
       }
     }
   },
-  "defaultProject": "wedding-app",
+  "defaultProject": "web-album",
   "cli": {
     "analytics": false
   }
