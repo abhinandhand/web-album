@@ -1,36 +1,21 @@
-# WeddingApp . DiyaAaron
+# 📸 Digital Memory Album
 
 
-URL: https://abhinandhand.github.io/wedding-app/diyaaron/
+### 🌟 Project Overview
+The Digital Memory Album is a web-based application designed to replace traditional hardcopy photo albums with a modern, interactive digital experience. This project allows users to cherish and revisit the beautiful moments of life with just a click. Whether it's a wedding, anniversary, or any special event, couples, friends, and relatives can browse through a digital web album filled with photos and memories.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
-## Development server
+### ✨ Key Features
+- **Interactive Browsing**: 🖱️ Users can easily navigate through various events and photos, making the experience engaging and user-friendly.
+- **Guest Wishes**: 💌  Visitors can post heartfelt wishes to newlyweds or anniversary couples, adding a personal touch to the digital album.
+- **Customization**: 🎨 The album is fully customizable based on JSON API responses, allowing couples to tailor their wedding website to their preferences.
+- 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### 🛠️ Technologies Used
+* **Angular 4+**: 🚀 This project was my first side project using Angular, which significantly elevated my software career.
+* **Bootstrap**: 💻 For responsive and visually appealing design.
+* **TypeScript**: 🛡️ Ensuring robust and maintainable code.
+  
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Deployment build command
-ng build --prod --base-href https://abhinandhand.github.io/wedding-app/diyaaron/
-
-ngh -no-silent
-
+### 🎯 Purpose
+This project not only showcases my technical skills but also my ability to create meaningful and user-centric applications. Feel free to explore the code and see how this digital album can transform the way we preserve and share memories.
