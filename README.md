@@ -1,5 +1,6 @@
 # 📸 Digital Memory Album
 
+[Demo](https://web-album.netlify.app/)
 
 ### 🌟 Project Overview
 The Digital Memory Album is a web-based application designed to replace traditional hardcopy photo albums with a modern, interactive digital experience. This project allows users to cherish and revisit the beautiful moments of life with just a click. Whether it's a wedding, anniversary, or any special event, couples, friends, and relatives can browse through a digital web album filled with photos and memories.
